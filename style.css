@@ -54,7 +54,7 @@ body {
     font-family: "AU Passata", sans-serif;
     color: black;
     font-size: 1.5rem;
-    background-color: white;
+    background-color: rgba(135, 135, 135, .2);
 }
 
 .orange {
@@ -94,6 +94,24 @@ div.interactive .interactive-text {
 div.interactive, div.interactive * {
     transition: all 250ms;
     cursor: pointer;
+}
+
+a.grayscale {
+    transition: all 250ms;
+    filter: grayscale(1);
+}
+
+a.grayscale:hover {
+    filter: grayscale(0);
+}
+
+a.black {
+    transition: all 250ms;
+    background-color: white;
+}
+
+a.black:hover {
+    filter: invert(1);
 }
 
 @media (pointer: fine) {
