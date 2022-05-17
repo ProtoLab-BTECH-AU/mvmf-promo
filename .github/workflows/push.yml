@@ -1,0 +1,19 @@
+name: Push
+
+on:
+  push:
+    tags:
+      - "*.*.*"
+  workflow_dispatch:
+
+jobs:
+  Push:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install sshpass
+        run: sudo apt-get install sshpass
+      - name: Push
+        run: |
+          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" ssh ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }} -e "mkdir -p /htdocs/${{ secrets.WORDPRESS_PAGE }}"
+          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
