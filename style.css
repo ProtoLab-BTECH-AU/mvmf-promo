@@ -107,7 +107,6 @@ a.grayscale:hover {
 
 a.black {
     transition: all 250ms;
-    background-color: white;
 }
 
 a.black:hover {
