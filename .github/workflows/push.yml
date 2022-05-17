@@ -10,8 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Push
-        uses: sebastianpopp/git-ftp-action@3.0.0
+        uses: Automattic/FTP-Deploy-Action@4.3.0
         with:
-          url: ftp://${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
-          user: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
+          server: ${{ secrets.WORDPRESS_SFTP_HOST }}
+          server-dir: /htdocs/${{ secrets.WORDPRESS_PAGE }}
+          username: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
           password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
