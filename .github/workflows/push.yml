@@ -9,8 +9,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Install sshpass
-        run: sudo apt-get install sshpass
       - name: Push
-        run: |
-          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/mvmf_promo
+        uses: garygrossgarten/github-action-scp@release
+        with:
+          local: ./
+          remote: /htdocs/${{ secrets.WORDPRESS_PAGE }}
+          host: ${{ secrets.WORDPRESS_SFTP_HOST }}
+          username: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
+          password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
+          rmRemote: true
