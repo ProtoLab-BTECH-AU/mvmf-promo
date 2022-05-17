@@ -129,7 +129,7 @@ a.black:hover {
 
     div.interactive:hover .interactive-text {
         opacity: 100%;
-        padding: 0 .125rem .50rem;
+        padding: 0 .25rem .25rem;
     }
 }
 
@@ -148,6 +148,6 @@ a.black:hover {
 
     div.interactive[data-active="1"] .interactive-text {
         opacity: 100%;
-        padding: 0 .125rem .50rem;
+        padding: 0 .25rem .25rem;
     }
 }
