@@ -12,6 +12,8 @@ jobs:
       - name: Install sshpass
         run: sudo apt-get install sshpass
       - name: Push
+        env:
+          WORDPRESS_PAGE: ${{ secrets.WORDPRESS_PAGE }}
         run: |
-          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" ssh ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }} -e "mkdir -p /htdocs/${{ secrets.WORDPRESS_PAGE }}"
-          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
+          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" ssh ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }} -e "mkdir -p /htdocs/$WORDPRESS_PAGE"
+          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}:${{ secrets.WORDPRESS_SFTP_PORT }}/htdocs/$WORDPRESS_PAGE
