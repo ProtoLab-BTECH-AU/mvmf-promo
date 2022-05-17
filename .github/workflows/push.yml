@@ -12,6 +12,6 @@ jobs:
       - name: Push
         uses: sebastianpopp/git-ftp-action@3.0.0
         with:
-          url: sftp://${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
+          url: ftp://${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
           user: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
           password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
