@@ -13,4 +13,4 @@ jobs:
         run: sudo apt-get install sshpass
       - name: Push
         run: |
-          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}:/htdocs/mvmf_promo
+          sshpass -p "${{ secrets.WORDPRESS_SFTP_PASSWORD }}" scp -r * ${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/mvmf_promo
