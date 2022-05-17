@@ -14,6 +14,7 @@ jobs:
         with:
           server: ${{ secrets.WORDPRESS_SFTP_HOST }}
           port: ${{ secrets.WORDPRESS_SFTP_PORT }}
+          protocol: ftps
           server-dir: /htdocs/${{ secrets.WORDPRESS_PAGE }}/
           username: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
           password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
