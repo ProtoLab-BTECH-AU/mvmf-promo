@@ -10,11 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Push
-        uses: garygrossgarten/github-action-scp@release
+        uses: sebastianpopp/git-ftp-action@3.0.0
         with:
-          local: ./
-          remote: /htdocs/${{ secrets.WORDPRESS_PAGE }}
-          host: ${{ secrets.WORDPRESS_SFTP_HOST }}
-          username: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
+          url: sftp://${{ secrets.WORDPRESS_SFTP_HOST }}/htdocs/${{ secrets.WORDPRESS_PAGE }}
+          user: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
           password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
-          rmRemote: true
