@@ -42,13 +42,13 @@
              style="height: 80vh; background-image: url('./images/Woods1.jpg'); background-size: cover; background-position: 50% 50%">
         </div>
         <div class="position-absolute top-0 start-0" style="height: 80vh;">
-            <h1 class="position-absolute text-end pe-2" style="font-size: 2rem; top: .75rem; right: .75rem">
+            <h1 class="position-absolute text-end pe-2" style="font-size: 3rem; top: .75rem; right: .75rem">
                 ER DU EN<br/>
                 MIDTVEST<br/>
                 MAK<span class="orange">ER</span>?
             </h1>
             <h1 class="position-absolute orange"
-                style="font-size: 2rem; right: .75rem; top: 9.75rem; transform: rotate(-90deg)">
+                style="font-size: 3rem; right: .75rem; top: 14rem; transform: rotate(-90deg)">
                 UDVIKL
             </h1>
             <h1 class="position-absolute fw-bold"
@@ -124,8 +124,8 @@
 
         <div class="col-12 col-md-6 col-xl-7 pe-4">
             <h1 class="text-end fw-bold" style="font-size: 4rem;">
-                MIDTVEST<br/>
-                <span id="maker-text">MAKER</span><br/>
+                MIDTVEST
+                MAKER
                 <span class="orange">FEST</span>
             </h1>
         </div>
@@ -265,13 +265,6 @@
       elem.dataset.active = isActive ? "" : "1";
     });
 
-  let makerTimer = null;
-  let makerTexts = [
-    "MAKER",
-    "DEVELOPER",
-    "HACKER",
-  ];
-
   let headerTimer = null;
   let headerImages = [
     "./images/Woods1.jpg",
@@ -282,11 +275,6 @@
   ];
 
   window.onpageshow = () => {
-    makerTimer = setInterval(() => {
-      makerTexts = [...makerTexts.slice(1), makerTexts[0]];
-      document.getElementById("maker-text").innerText = makerTexts[0];
-    }, 1075);
-
     headerTimer = setInterval(() => {
       headerImages = [...headerImages.slice(1), headerImages[0]];
       const header = document.getElementById("header");
@@ -297,7 +285,6 @@
   };
 
   window.onpagehide = () => {
-    makerTimer && clearInterval(makerTimer);
     headerTimer && clearInterval(headerTimer);
   };
 </script>
