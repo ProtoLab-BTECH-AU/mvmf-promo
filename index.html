@@ -38,8 +38,8 @@
 
 <div class="container-fluid mt-0">
     <div class="row text-light px-0 position-relative overflow-hidden">
-        <div class="position-relative" id="header"
-             style="height: 80vh; background-image: url('./images/Woods1.jpg'); background-size: cover; background-position: 50% 50%">
+        <div class="position-relative"
+             style="height: 80vh; background-image: url('./images/Woods1.jpg'); background-size: cover; background-position: 50% 50%; filter: blur(150px) brightness(.8);">
         </div>
         <div class="position-absolute top-0 start-0" style="height: 80vh;">
             <h1 class="position-absolute text-end pe-2" style="font-size: 3rem; top: .75rem; right: .75rem">
@@ -273,29 +273,6 @@
       document.querySelectorAll(".interactive").forEach((elem) => elem.dataset.active = "");
       elem.dataset.active = isActive ? "" : "1";
     });
-
-  let headerTimer = null;
-  let headerImages = [
-    "./images/Woods1.jpg",
-    "./images/Woods2.jpg",
-    "./images/Woods3.jpg",
-    "./images/Woods4.jpg",
-    "./images/Woods5.jpg",
-  ];
-
-  window.onpageshow = () => {
-    headerTimer = setInterval(() => {
-      headerImages = [...headerImages.slice(1), headerImages[0]];
-      const header = document.getElementById("header");
-      header.classList.add("blur");
-      header.style.backgroundImage = `url("${headerImages[0]}")`;
-      setTimeout(() => header.classList.remove("blur"), 500);
-    }, 5000);
-  };
-
-  window.onpagehide = () => {
-    headerTimer && clearInterval(headerTimer);
-  };
 </script>
 </body>
 </html>
