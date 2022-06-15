@@ -9,6 +9,48 @@
           integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <style>
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes translate {
+            0% {
+                transform: translate(0) rotate(0deg);
+            }
+            33.33333% {
+                transform: translate(-25%) rotate(120deg);
+            }
+            66.66667% {
+                transform: translate(25%) rotate(240deg);
+            }
+            100% {
+                transform: translate(0) rotate(360deg);
+            }
+        }
+
+        #header-img-1 {
+            animation: rotate 11s linear 0s infinite normal none;
+            background: rgb(229,242,176);
+            background: linear-gradient(39deg, rgba(222,247,116,1) 10%, rgba(119,200,254,1) 30%, rgba(199,229,228,1) 50%, rgba(250,174,67,1) 70%, rgba(205,234,215,1) 90%);
+        }
+
+        #header-img-2 {
+            animation: rotate 13s linear 0s infinite reverse none;
+            background: rgb(229,242,176);
+            background: linear-gradient(126deg, rgba(222,247,116,1) 10%, rgba(119,200,254,1) 30%, rgba(199,229,228,1) 50%, rgba(250,174,67,1) 70%, rgba(205,234,215,1) 90%);
+        }
+
+        #header-img-3 {
+            animation: translate 17s linear 0s infinite normal none;
+            background: rgb(229,242,176);
+            background: linear-gradient(-64deg, rgba(222,247,116,1) 10%, rgba(119,200,254,1) 30%, rgba(199,229,228,1) 50%, rgba(250,174,67,1) 70%, rgba(205,234,215,1) 90%);
+        }
+
         .blur {
             filter: blur(20px);
         }
@@ -34,8 +76,10 @@
 
 <div class="container-fluid mt-0">
     <div class="row text-light px-0 position-relative overflow-hidden">
-        <div class="position-relative"
-             style="height: 80vh; background-image: url('./images/blur02.png'); background-size: cover; background-position: 50% 50%; filter: brightness(.9)">
+        <div class="position-relative" style="filter: blur(75px); z-index: -1; height: 80vh">
+            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-1" style="opacity: .75"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-2" style="opacity: .75"></div>
+            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-3" style="opacity: .75"></div>
         </div>
         <div class="position-absolute top-0 start-0" style="height: 80vh;">
             <h1 class="position-absolute text-end pe-2" style="font-size: 3rem; top: .75rem; right: .75rem">
@@ -174,7 +218,7 @@
     </div>
 </div>
 
-<div class="container-fluid pb-5" style="background-color: rgba(135, 135, 135, .2)">
+<div class="container-fluid pb-5 mt-1" style="background-color: rgba(135, 135, 135, .2)">
     <div class="row">
         <div class="col-12 text-center">
             <h3 class="fw-bold mt-3">Arrangører</h3>
