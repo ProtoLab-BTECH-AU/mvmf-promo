@@ -52,7 +52,7 @@
 
 body {
     font-family: "AU Passata", sans-serif;
-    color: black;
+    color: var(--au-color-8-comp);
     font-size: 1.5rem;
     background-color: rgba(135, 135, 135, .2);
 }
