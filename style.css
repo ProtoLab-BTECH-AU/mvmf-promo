@@ -144,7 +144,7 @@ a.black:hover {
         opacity: 0;
     }
 
-    div.interactive:hover .square-image {
+    div.interactive:hover .square-image, div.interactive:hover .interactive-img {
         border-radius: .25rem !important;
     }
 
@@ -162,7 +162,7 @@ a.black:hover {
         opacity: 0;
     }
 
-    div.interactive[data-active="1"] .square-image {
+    div.interactive[data-active="1"] .square-image, div.interactive[data-active="1"] .interactive-img {
         border-radius: .25rem !important;
     }
 
