@@ -34,19 +34,19 @@
         }
 
         #header-img-1 {
-            animation: rotate 11s linear 0s infinite normal none;
+            animation: rotate 3s linear 0s infinite normal none;
             background: rgb(229, 242, 176);
             background: linear-gradient(39deg, rgba(222, 247, 116, 1) 10%, rgba(119, 200, 254, 1) 30%, rgba(199, 229, 228, 1) 50%, rgba(250, 174, 67, 1) 70%, rgba(205, 234, 215, 1) 90%);
         }
 
         #header-img-2 {
-            animation: rotate 13s linear 0s infinite reverse none;
+            animation: rotate 5s linear 0s infinite reverse none;
             background: rgb(229, 242, 176);
             background: linear-gradient(126deg, rgba(222, 247, 116, 1) 10%, rgba(119, 200, 254, 1) 30%, rgba(199, 229, 228, 1) 50%, rgba(250, 174, 67, 1) 70%, rgba(205, 234, 215, 1) 90%);
         }
 
         #header-img-3 {
-            animation: translate 17s linear 0s infinite normal none;
+            animation: translate 7s linear 0s infinite normal none;
             background: rgb(229, 242, 176);
             background: linear-gradient(-64deg, rgba(222, 247, 116, 1) 10%, rgba(119, 200, 254, 1) 30%, rgba(199, 229, 228, 1) 50%, rgba(250, 174, 67, 1) 70%, rgba(205, 234, 215, 1) 90%);
         }
@@ -74,15 +74,16 @@
 </head>
 <body>
 
-<div class="container-fluid mt-0">
-    <div class="row text-light px-0 position-relative overflow-hidden">
-        <div class="position-relative" style="filter: blur(75px); z-index: -1; height: 80vh">
-            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-1" style="opacity: .75"></div>
-            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-2" style="opacity: .75"></div>
-            <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-3" style="opacity: .75"></div>
-        </div>
-        <div class="position-absolute top-0 start-0" style="height: 80vh;">
-            <h1 class="position-absolute text-end pe-2" style="font-size: 3rem; top: .75rem; right: .75rem">
+<div class="position-fixed" style="filter: blur(75px); width: 100vw; height: 100vh">
+    <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-1" style="opacity: .75"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-2" style="opacity: .75"></div>
+    <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-3" style="opacity: .75"></div>
+</div>
+
+<div class="container-fluid position-absolute">
+    <div class="row text-light px-0 position-relative overflow-hidden" style="height: 80vh; min-height: 425px">
+        <div class="position-absolute top-0 start-0" style="height: 80vh; min-height: 425px">
+            <h1 class="position-absolute text-end pe-2 text-dark" style="font-size: 3rem; top: .75rem; right: .75rem">
                 ER DU EN<br/>
                 MIDTVEST<br/>
                 MAK<span class="orange">ER</span>?
@@ -91,12 +92,13 @@
                 style="font-size: 3rem; right: .75rem; top: 14rem; transform: rotate(-90deg)">
                 UDVIKL
             </h1>
-            <h1 class="position-absolute fw-bold"
+            <h1 class="position-absolute fw-bold text-dark"
                 style="font-size: 7.25rem; left: -6.55rem; bottom: 5.55rem; transform: rotate(-90deg)">
                 MVM<span class="orange">F</span>
             </h1>
-            <h1 class="position-absolute text-start" style="font-size: 2rem; bottom: 0; right: .75rem">
+            <h1 class="position-absolute text-end text-dark" style="font-size: 2rem; bottom: 0; right: .75rem">
                 22-24 Sep 2022<br>
+                Birk Centerpark 15, Herning, Danmark
             </h1>
         </div>
     </div>
@@ -216,10 +218,8 @@
             </div>
         </div>
     </div>
-</div>
 
-<div class="container-fluid pb-5 mt-1" style="background-color: rgba(135, 135, 135, .2)">
-    <div class="row">
+    <div class="row pb-5">
         <div class="col-12 text-center">
             <h3 class="fw-bold mt-3">Arrangører</h3>
             <a class="d-block mx-auto text-decoration-none text-body p-2 grayscale"
@@ -237,48 +237,50 @@
             </a>
             <span style="font-size: 75%">HERNING</span>
         </div>
-    </div>
 
-    <div class="row text-center mt-5">
-        <h3 class="fw-bold">
-            Partnere
-        </h3>
-        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
-            <a class="d-block mx-auto text-decoration-none text-body p-2 grayscale"
-               href="https://www.baeredygtigherning.dk"
-               style="width: fit-content; height: calc(100% - 2.15rem)">
-                <img class="img-fluid" src="./images/logo/baeredygtig-herning.svg" style="max-height: 35px" alt="">
-            </a>
-            <span style="font-size: 75%">HERNING</span>
-        </div>
-        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
-            <a class="d-block mx-auto text-decoration-none text-body p-2 black"
-               href="https://www.herningsholm.dk"
-               style="width: fit-content; height: calc(100% - 2.15rem)">
-                <img class="img-fluid" src="./images/logo/herningsholm.svg" style="max-height: 35px" alt="">
-            </a>
-            <span style="font-size: 75%">IKAST-BRANDE</span>
-        </div>
-        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
-            <a class="d-block mx-auto text-decoration-none text-body p-2 black"
-               href="https://teknologicenter.dk/"
-               style="width: fit-content; height: calc(100% - 2.15rem)">
-                <img class="img-fluid" src="./images/logo/itc-text.png" style="max-height: 50px" alt="">
-            </a>
-            <span style="font-size: 75%">RINGKØBING-SKJERN</span>
-        </div>
+        <div class="col-12 text-center mt-5">
+            <div class="row">
+                <h3 class="fw-bold">
+                    Partnere
+                </h3>
+                <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
+                    <a class="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+                       href="https://www.baeredygtigherning.dk"
+                       style="width: fit-content; height: calc(100% - 2.15rem)">
+                        <img class="img-fluid" src="./images/logo/baeredygtig-herning.svg" style="max-height: 35px"
+                             alt="">
+                    </a>
+                    <span style="font-size: 75%">HERNING</span>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
+                    <a class="d-block mx-auto text-decoration-none text-body p-2 black"
+                       href="https://www.herningsholm.dk"
+                       style="width: fit-content; height: calc(100% - 2.15rem)">
+                        <img class="img-fluid" src="./images/logo/herningsholm.svg" style="max-height: 35px" alt="">
+                    </a>
+                    <span style="font-size: 75%">IKAST-BRANDE</span>
+                </div>
+                <div class="col-12 col-md-4 col-lg-3 mt-5 mt-md-0 mx-auto">
+                    <a class="d-block mx-auto text-decoration-none text-body p-2 black"
+                       href="https://teknologicenter.dk/"
+                       style="width: fit-content; height: calc(100% - 2.15rem)">
+                        <img class="img-fluid" src="./images/logo/itc-text.png" style="max-height: 50px" alt="">
+                    </a>
+                    <span style="font-size: 75%">RINGKØBING-SKJERN</span>
+                </div>
 
-        <div class="col-12 col-md-4 col-lg-3 mt-5 mt-lg-0 mx-auto">
-            <a class="d-block mx-auto text-decoration-none text-body p-2 grayscale"
-               href="https://elvaerketskive.dk"
-               style="width: fit-content; height: calc(100% - 2.15rem)">
-                <img class="img-fluid" src="./images/logo/elvaerket-color.png" style="max-height: 35px" alt="">
-            </a>
-            <span style="font-size: 75%">SKIVE</span>
+                <div class="col-12 col-md-4 col-lg-3 mt-5 mt-lg-0 mx-auto">
+                    <a class="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+                       href="https://elvaerketskive.dk"
+                       style="width: fit-content; height: calc(100% - 2.15rem)">
+                        <img class="img-fluid" src="./images/logo/elvaerket-color.png" style="max-height: 35px" alt="">
+                    </a>
+                    <span style="font-size: 75%">SKIVE</span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
-
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
