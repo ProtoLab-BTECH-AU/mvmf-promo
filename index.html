@@ -70,6 +70,32 @@
                 padding-bottom: calc(23.50% - 1.25rem);
             }
         }
+
+        .text-large {
+            font-size: 7.25rem;
+        }
+
+        .text-big {
+            font-size: 3rem;
+        }
+
+        .text-small {
+            font-size: 2rem;
+        }
+
+        @media (max-width: 650px), (orientation: landscape) and (max-width: 700px), (orientation: landscape) and (max-height: 525px) {
+            .text-large {
+                font-size: 5rem;
+            }
+
+            .text-big {
+                font-size: 2rem;
+            }
+
+            .text-small {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -81,22 +107,23 @@
 </div>
 
 <div class="container-fluid position-absolute">
-    <div class="row text-light px-0 position-relative overflow-hidden" style="height: 80vh; min-height: 425px">
-        <div class="position-absolute top-0 start-0" style="height: 80vh; min-height: 425px">
-            <h1 class="position-absolute text-end pe-2 text-dark" style="font-size: 3rem; top: .75rem; right: .75rem">
-                ER DU EN<br/>
-                MIDTVEST<br/>
-                MAK<span class="orange">ER</span>?
-            </h1>
-            <h1 class="position-absolute orange"
-                style="font-size: 3rem; right: .75rem; top: 14rem; transform: rotate(-90deg)">
-                UDVIKL
-            </h1>
-            <h1 class="position-absolute fw-bold text-dark"
-                style="font-size: 7.25rem; left: -6.55rem; bottom: 5.55rem; transform: rotate(-90deg)">
+    <div class="row px-0 position-relative overflow-hidden" style="height: 80vh; min-height: 325px">
+        <div class="position-absolute top-0 start-0 h-100 w-100">
+            <div class="position-absolute" style="top: .75rem; right: .75rem">
+                <h1 class="text-end text-big">
+                    ER DU EN<br/>
+                    MIDTVEST<br/>
+                    MAK<span class="orange">ER</span>?
+                </h1>
+                <h1 class="orange text-big" style="transform: rotate(-90deg) translateY(.75em) translateX(-.125em)">
+                    UDVIKL
+                </h1>
+            </div>
+            <h1 class="position-absolute fw-bold text-large"
+                style="left: .75rem; bottom: -.25em; transform: rotate(-90deg) translateX(1em) translateY(-1em)">
                 MVM<span class="orange">F</span>
             </h1>
-            <h1 class="position-absolute text-end text-dark" style="font-size: 2rem; bottom: 0; right: .75rem">
+            <h1 class="position-absolute text-end text-small" style="bottom: 0; right: .75rem">
                 22-24 Sep 2022<br>
                 Birk Centerpark 15, Herning, Danmark
             </h1>
