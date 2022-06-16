@@ -91,6 +91,20 @@ div.interactive .interactive-text {
     padding: .25rem;
 }
 
+div.interactive .interactive-img {
+    width: 100%;
+    height: 100%;
+    padding-bottom: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 250ms;
+}
+
 div.interactive, div.interactive * {
     transition: all 250ms;
     cursor: pointer;
@@ -113,30 +127,46 @@ a.black:hover {
     filter: invert(1);
 }
 
+.darken-hover:hover {
+    filter: brightness(.75);
+}
+
+.hide-hover:hover {
+    opacity: 0;
+}
+
 @media (pointer: fine) {
+    div.interactive:hover .darken-hover {
+        filter: brightness(.75);
+    }
+
+    div.interactive:hover .hide-hover {
+        opacity: 0;
+    }
+
     div.interactive:hover .square-image {
         border-radius: .25rem !important;
     }
 
-    div.interactive:hover .square-image {
-        filter: brightness(.5);
-    }
-
-    div.interactive:hover .interactive-text {
+    div.interactive:hover .interactive-text, div.interactive:hover .interactive-img {
         opacity: 100%;
     }
 }
 
 @media (pointer: coarse) {
+    div.interactive[data-active="1"] .darken-hover {
+        filter: brightness(.75);
+    }
+
+    div.interactive[data-active="1"] .hide-hover {
+        opacity: 0;
+    }
+
     div.interactive[data-active="1"] .square-image {
         border-radius: .25rem !important;
     }
 
-    div.interactive[data-active="1"] .square-image {
-        filter: brightness(.5);
-    }
-
-    div.interactive[data-active="1"] .interactive-text {
+    div.interactive[data-active="1"] .interactive-text, div.interactive[data-active="1"] .interactive-img {
         opacity: 100%;
     }
 }
