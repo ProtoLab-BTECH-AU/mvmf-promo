@@ -145,7 +145,7 @@ a.black:hover {
     }
 
     div.interactive:hover .square-image, div.interactive:hover .interactive-img {
-        border-radius: .25rem !important;
+        border-radius: .375rem !important;
     }
 
     div.interactive:hover .interactive-text, div.interactive:hover .interactive-img {
@@ -163,7 +163,7 @@ a.black:hover {
     }
 
     div.interactive[data-active="1"] .square-image, div.interactive[data-active="1"] .interactive-img {
-        border-radius: .25rem !important;
+        border-radius: .375rem !important;
     }
 
     div.interactive[data-active="1"] .interactive-text, div.interactive[data-active="1"] .interactive-img {
