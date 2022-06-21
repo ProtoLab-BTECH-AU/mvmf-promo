@@ -92,6 +92,13 @@
             position: relative;
         }
 
+        div.interactive .interactive-title {
+            position: absolute;
+            top: 0;
+            color: white;
+            padding: .25rem;
+        }
+
         div.interactive .interactive-text {
             opacity: 0;
             position: absolute;
@@ -273,11 +280,11 @@
 </head>
 <body>
 
-<div class="position-fixed" style="filter: blur(75px); width: 100vw; height: 100vh">
+<!--<div class="position-fixed" style="filter: blur(75px); width: 100vw; height: 100vh">
     <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-1" style="opacity: .75"></div>
     <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-2" style="opacity: .75"></div>
     <div class="position-absolute top-0 start-0 w-100 h-100" id="header-img-3" style="opacity: .75"></div>
-</div>
+</div>-->
 
 <div class="container-fluid position-absolute">
     <div class="row px-0 position-relative overflow-hidden" style="height: 80vh; min-height: 325px">
@@ -333,7 +340,7 @@
                                      style="background-image: url('./images/Elia.jpg')"></div>
                                 <div class="interactive-img"
                                      style="background-image: url('./images/walking_tour_map.png')"></div>
-                                <div class="interactive-text">Birk Design Walks</div>
+                                <div class="interactive-title">Birk Design Walks</div>
                                 <a href="https://goo.gl/maps/2XEgqB67vN5QvMb98"
                                    class="stretched-link" target="_blank" rel="noreferrer"></a>
                             </div>
@@ -368,7 +375,11 @@
             <div class="row px-0_5">
                 <div class="col-4 px-0_5">
                     <div class="interactive">
-                        <div class="square-image" style="background-image: url('./images/Infra.jpg')"></div>
+                        <div class="square-image" style="background-image: url('./images/3D printer.jpg')">
+                            <div class="interactive-title">
+                                BTECH Labs Workshops
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-4 px-0_5">
@@ -394,7 +405,7 @@
                 </div>
                 <div class="col-4 px-0_5 mt-1">
                     <div class="interactive">
-                        <div class="square-image" style="background-image: url('./images/3D printer.jpg')"></div>
+                        <div class="square-image" style="background-image: url('./images/Infra.jpg')"></div>
                     </div>
                 </div>
             </div>
