@@ -179,6 +179,10 @@ a.black:hover {
     font-size: 2rem;
 }
 
+.text-xsmall {
+    font-size: 1.5rem
+}
+
 @media (max-width: 650px), (orientation: landscape) and (max-width: 700px), (orientation: landscape) and (max-height: 525px) {
     .text-large {
         font-size: 5rem;
@@ -189,6 +193,10 @@ a.black:hover {
     }
 
     .text-small {
+        font-size: 1rem;
+    }
+
+    .text-xsmall {
         font-size: 1rem;
     }
 }
