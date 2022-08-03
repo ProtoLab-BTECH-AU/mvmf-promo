@@ -16,7 +16,7 @@ export const Header: FC<IProps> = (props) => {
         <Col className="mx-auto my-0 p-0 d-flex"
              xs={props.xs} md={props.md} lg={props.lg} xl={props.xl} xxl={props.xxl}>
           <Link to={props.backURl ?? "/"} style={{height: "fit-content"}}>
-            <img src="images/icons/arrow-left.svg" alt="" style={{height: "2.375rem", marginTop: ".375rem"}}/>
+            <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt="" style={{height: "2.375rem", marginTop: ".375rem"}}/>
           </Link>
           <div className="d-inline ms-2"><LanguageSelector/></div>
 
