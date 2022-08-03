@@ -16,6 +16,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build && ls -l build
+      - name: Commit Changes
+        run: |
+          git add .
+          git commit -m "post-install commit"
       - name: Populate .git-ftp-include
         run: |
           touch .git-ftp-include
