@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18.6.0
+      - name: Install Dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - run: cd build
       - name: Push
         uses: Automattic/FTP-Deploy-Action@3.0.1
         with:
