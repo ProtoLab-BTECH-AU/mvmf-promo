@@ -1,0 +1,43 @@
+{
+  "name": "erp",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": "https://protobtech.dk/mvmf2022/",
+  "scripts": {
+    "postinstall": "cp webpack.config.js node_modules/react-scripts/config/webpack.config.js",
+    "start:react": "react-scripts start",
+    "start": "yarn start:react",
+    "build:react": "react-scripts build",
+    "build:watch": "nodemon --watch src -e ts,tsx,css --exec 'npm run build'",
+    "build": "yarn build:react",
+    "serve": "serve -s -n build"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "react": "^17.0.2",
+    "react-bootstrap": "^2.5.0-beta.1",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.3.0",
+    "react-scripts": "^5.0.1",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.45",
+    "@types/react": "^17.0.47",
+    "@types/react-dom": "^18.0.6",
+    "nodemon": "^2.0.19",
+    "yarn": "^1.22.19"
+  }
+}
