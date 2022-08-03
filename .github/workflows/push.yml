@@ -19,6 +19,8 @@ jobs:
       - name: Commit Changes
         run: |
           git diff-files --quiet && exit 0
+          git config user.email "actions@github.com"
+          git config user.name "GitHub Actions"
           git add .
           git commit -m "post-install commit"
       - name: Populate .git-ftp-include
