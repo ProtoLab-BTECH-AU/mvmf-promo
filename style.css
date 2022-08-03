@@ -223,7 +223,7 @@ a.black:hover {
 }
 
 #blob {
-    animation: blob 5s linear infinite alternate, rotate 20s linear infinite;
+    animation: blob 25s linear infinite alternate, rotate 100s linear infinite;
     width: 80vmax;
     height: 80vmax;
     top: calc(50vh - 40vmax);
