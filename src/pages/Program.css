@@ -1,0 +1,76 @@
+#program table {
+    width: 100%;
+}
+
+#program table td,
+#program table th {
+    font-size: 1.5rem;
+    font-weight: bold;
+    overflow: hidden !important;
+}
+
+#program table tr {
+    max-width: 100vw !important;
+    overflow: hidden !important;
+}
+
+@media (max-width: 650px), (orientation: landscape) and (max-width: 700px), (orientation: landscape) and (max-height: 525px) {
+    #program table td,
+    #program table th {
+        font-size: 1rem;
+    }
+}
+
+#program table thead tr {
+    height: 4.50rem !important;
+}
+
+#program table td:first-child,
+#program table th:first-child {
+    width: 10% !important;
+    min-width: 10% !important;
+    max-width: 10% !important;
+    padding: 0;
+}
+
+#program table td,
+#program table th {
+    width: 30% !important;
+    min-width: 30% !important;
+    max-width: 30% !important;
+    padding: .25rem;
+}
+
+#program table td {
+    vertical-align: top !important;
+    border: 2px solid var(--au-color-7);
+    background: rgba(var(--au-color-7-rgb), .75) !important;
+}
+
+#program table td.empty {
+    vertical-align: top !important;
+    border: none !important;
+    background: none !important;
+}
+
+#program table td.border {
+    border: 2px solid var(--au-color-7) !important;
+}
+
+#program table td.time {
+    height: 10rem !important;
+    position: relative;
+    border: 2px solid var(--au-color-7) !important;
+}
+
+#program table td.time div {
+    position: absolute;
+    white-space: nowrap;
+    top: 0;
+    left: calc(50% - .875rem);
+    height: 1.75rem;
+    line-height: 1.75rem;
+    transform-origin: left bottom;
+    transform: rotate(90deg) translateX(-1.75rem);
+    padding-left: .5rem;
+}
