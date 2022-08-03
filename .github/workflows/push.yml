@@ -16,6 +16,12 @@ jobs:
         run: npm install --no-save
       - name: Build
         run: npm run build && ls -l build
+      - name: Populate index.html Links
+        run: |
+          mkdir build/about
+          cp build/index.html build/about/
+          mkdir build/program
+          cp build/index.html build/program/
       - name: Populate .git-ftp-include
         run: |
           touch .git-ftp-include
