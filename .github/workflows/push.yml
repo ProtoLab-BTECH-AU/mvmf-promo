@@ -16,6 +16,7 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build && ls -l build
+      - run: git status
       - name: Push
         uses: Automattic/FTP-Deploy-Action@3.0.1
         with:
