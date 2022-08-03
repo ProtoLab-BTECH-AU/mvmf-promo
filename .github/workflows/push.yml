@@ -16,10 +16,10 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - run: cd build
       - name: Push
         uses: Automattic/FTP-Deploy-Action@3.0.1
         with:
+          local-dir: build
           ftp-server: sftp://sftp.wp.com/htdocs/${{ secrets.WORDPRESS_PAGE }}
           ftp-username: ${{ secrets.WORDPRESS_SFTP_USERNAME }}
           ftp-password: ${{ secrets.WORDPRESS_SFTP_PASSWORD }}
