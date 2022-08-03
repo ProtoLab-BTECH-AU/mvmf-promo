@@ -18,6 +18,7 @@ jobs:
         run: npm run build && ls -l build
       - name: Commit Changes
         run: |
+          git diff-files --quiet && exit 0
           git add .
           git commit -m "post-install commit"
       - name: Populate .git-ftp-include
