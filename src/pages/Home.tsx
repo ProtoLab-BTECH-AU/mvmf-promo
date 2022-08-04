@@ -92,7 +92,7 @@ const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background
       </div>
     )}
     {props.link && (
-      props.link.search(/^https?:\/\//) ?
+      props.link.search(/^https?:\/\//) >= 0 ?
         <a href={props.link} className="stretched-link"/> :
         <Link to={props.link} className="stretched-link"/>
     )}
