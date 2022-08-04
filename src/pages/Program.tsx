@@ -16,8 +16,8 @@ interface IEvent {
 
 const headers: Record<TLanguage, [string, string, string]> = {
   danish: [
-    "Maker skov",
-    "BTECH labs",
+    "Maker Skov",
+    "BTECH Labs",
     "Oplev Birk",
   ],
   english: [
@@ -29,70 +29,53 @@ const headers: Record<TLanguage, [string, string, string]> = {
 
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
   "2022-09-22": {
-    9: [
-      {text: {danish: "Kommune Platform Setup", english: "Kommune Platform Setup"}},
-    ],
     10: [
-      {text: {danish: "Welcome Speech", english: "Welcome Speech"}},
+      {text: {danish: "Åbning og Velkomst af MVMF + Introduktion til Kommunerne", english: "Opening and welcome to MVMF +  Introduction of the Kommunes"}},
     ],
     11: [
-      {text: {danish: "STUDENT ACTIVITY: BTECH Labs Visit", english: "STUDENT ACTIVITY: BTECH Labs Visit"}},
+      {text: {danish: "SKOV: Mulighed for at Besøge Kommune Platforme", english: "FOREST: Visit the Kommune Platforms"}},
+      {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
-      {span: 3, text: {danish: "Lunch break", english: "Lunch break"}},
+      {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {text: {danish: "STUDENT ACTIVITY: BTECH Labs Visit", english: "STUDENT ACTIVITY: BTECH Labs Visit"}},
+      {hours: 2, text: {danish: "SKOV: Mulighed for at Besøge Kommune Platforme", english: "FOREST: Visit the Kommune Platforms"}},
+      {
+        hours: 2,
+        text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
+      },
+      {
+        hours: 5,
+        text: {
+          danish: "BIRK DESIGN WALK Udendørs",
+          english: "BIRK DESIGN WALK Outside",
+        },
+      },
     ],
     14: [
-      {
-        text: {
-          danish: "STUDENT ACTIVITY: Making at Kommune Platforms",
-          english: "STUDENT ACTIVITY: Making at Kommune Platforms",
-        },
-      },
+      undefined,
     ],
     15: [
-      {text: {danish: "COFFEE BREAK: Maker Kage and Kaffe", english: "COFFEE BREAK: Maker Kage and Kaffe"}},
-      undefined,
-      {
-        hours: 3,
-        text: {
-          danish: <>
-            BIRK DESIGN WALK<br/>
-            1) Sculpture Parken<br/>
-            2) De Geometriske Haver<br/>
-            3) Elia
-          </>,
-          english: <>
-            BIRK DESIGN WALK<br/>
-            1) Sculpture Parken<br/>
-            2) De Geometriske Haver<br/>
-            3) Elia
-          </>,
-        },
-      },
+      {text: {danish: "KAFFE: Maker Kage", english: "COFFEE: Maker Kage"}},
     ],
     16: [
-      {text: {danish: "WORKSHOP: Hacking Maker Station Screens", english: "WORKSHOP: Hacking Maker Station Screens"}},
-      {text: {danish: "Citizens project showcase", english: "Citizens project showcase"}},
+      {text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking Maker Station Screens"}},
     ],
     17: [
-      {text: {danish: "MUSIC: Replica", english: "MUSIC: Replica"}},
+      {text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
     ],
     18: [
-      {span: 3, text: {danish: "Dinner break", english: "Dinner break"}},
+      {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
     ],
     19: [
       {
         hours: 2,
         text: {
-          danish: "MUSIC: Smashing Pumpkins Jam",
+          danish: "MUSIK: Smashing Pumpkins Jam",
           english: "MUSIC: Smashing Pumpkins Jam",
         },
       },
-      undefined,
-      {hours: 2, text: {danish: "SAA Event", english: "SAA Event"}},
     ],
     20: [undefined],
   },
@@ -101,26 +84,16 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 2,
         text: {
-          danish: "PRESENTATIONS: 'Making' Business in Midtvest",
+          danish: "PRÆSENTATION:  Forskellige Forretnings \"Makers\" og projekter fra MidtVest                                                                                   ",
           english: "PRESENTATIONS: 'Making' Business in Midtvest",
         },
       },
-      {text: {danish: "WORKSHOP: IoT hardware and software", english: "WORKSHOP: IoT hardware and software"}},
+      {text: {danish: "WORKSHOP: IoT hardware og software", english: "WORKSHOP: IoT hardware and software"}},
       {
         hours: 3,
         text: {
-          danish: <>
-            BIRK DESIGN WALK<br/>
-            1) Sculpture Parken<br/>
-            2) De Geometriske Haver<br/>
-            3) Elia
-          </>,
-          english: <>
-            BIRK DESIGN WALK<br/>
-            1) Sculpture Parken<br/>
-            2) De Geometriske Haver<br/>
-            3) Elia
-          </>,
+          danish: "BIRK DESIGN WALK Indendørs",
+          english: "BIRK DESIGN WALK Inside",
         },
       },
     ],
@@ -135,40 +108,44 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     11: [
       {
         text: {
-          danish: "PANEL DISCUSSION: 'Making' Business in Midtvest",
+          danish: "PANELDEBAT: med udvalgte Makers fra MidtVest ",
           english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
         },
       },
       {text: {danish: "WORKSHOP: Making with laser cutting", english: "WORKSHOP: Making with laser cutting"}},
     ],
     12: [
-      {span: 3, text: {danish: "Lunch break", english: "Lunch break"}},
+      {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {text: {danish: "COMPETITION: MV Makers Hule 1", english: "COMPETITION: MV Makers Hule 1"}},
+      {text: {danish: "MAKER HULE P1: Repræsentanter fra hver Kommune", english: "MidtVest Makers Hule P1: Representatives from Kommunes"}},
+      undefined,
+      {
+        hours: 5,
+        text: {
+          danish: "BIRK DESIGN WALK Indendørs",
+          english: "BIRK DESIGN WALK Inside",
+        },
+      },
     ],
     14: [
-      {text: {danish: "COMPETITION: MV Makers Hule 2", english: "COMPETITION: MV Makers Hule 2"}},
+      {text: {danish: "MAKER HULE P2: Åben tilmelding for alle", english: "MidtVest Makers Hule P2: Open Call and Competition"}},
     ],
     15: [
-      {text: {danish: "KEYNOTE: Digital Craftsmanship", english: "KEYNOTE: Digital Craftsmanship"}},
+      {text: {danish: "TALK: Digital Craftsmanship", english: "TALK: Digital Craftsmanship"}},
     ],
     16: [
-      {text: {danish: "MAKERS LOUNGE", english: "MAKERS LOUNGE"}},
-      {text: {danish: "MVMF STAKEHOLDERS MEETING", english: "MVMF STAKEHOLDERS MEETING"}},
+      {text: {danish: "KAFFE: Makers Lounge", english: "COFFEE: Makers Lounge"}},
+      {text: {danish: "MidtVest Maker Fest STAKEHOLDERS MØDE", english: "MidtVest Maker Fest STAKEHOLDERS MEETING"}},
     ],
     17: [
-      {text: {danish: "MUSIC: DJ/VJ", english: "MUSIC: DJ/VJ"}},
-      undefined,
-      {text: {danish: "SAA Event", english: "SAA Event"}},
+      {text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"}},
     ],
     18: [
-      {span: 3, text: {danish: "Dinner break", english: "Dinner break"}},
+      {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
     ],
     19: [
-      {hours: 2, text: {danish: "MUSIC: DJ/VJ", english: "MUSIC: DJ/VJ"}},
-      undefined,
-      {hours: 2, text: {danish: "SAA Event", english: "SAA Event"}},
+      {hours: 2, text: {danish: "MUSIC: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"}},
     ],
     20: [null],
   },
@@ -177,8 +154,22 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 3,
         text: {
-          danish: "PRESENTATIONS: MV Maker Market + Tech makers sponsors showcase",
-          english: "PRESENTATIONS: MV Maker Market + Tech makers sponsors showcase",
+          danish: <>
+            PRÆSENTATION: Teknologi "Makers" and Cases<br/><br/>
+            SKOV: Mulighed for at Besøge Kommune Platforme
+          </>,
+          english: <>
+            PRESENTATION: Industry 'Makers' Show Cases<br/><br/>
+            FOREST: Visit the Kommune Platforms
+          </>,
+        },
+      },
+      undefined,
+      {
+        hours: 3,
+        text: {
+          danish: "BIRK DESIGN WALK Inden- og Udendørs ",
+          english: "BIRK DESIGN WALK Inside and Outside",
         },
       },
     ],
