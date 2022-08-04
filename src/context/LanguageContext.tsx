@@ -20,8 +20,14 @@ export const LanguageContextProvider: FC = ({children}) => {
   const [locale, setLocale] = useState<TLocale>("da-dk")
 
   useEffect(() => {
-    if (language === "danish") setLocale("da-dk")
-    else if (language === "english") setLocale("en-dk")
+    if (language === "danish") {
+      setLocale("da-dk")
+      document.documentElement.lang = "da"
+    }
+    else if (language === "english") {
+      setLocale("en-dk")
+      document.documentElement.lang = "en"
+    }
   }, [language])
 
   const change = (newLanguage: TLanguage) => setLanguage(newLanguage)
