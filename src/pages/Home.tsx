@@ -93,6 +93,7 @@ export const Home: FC = () => {
 
   document.title = "MVMF 2022"
 
+  // noinspection HtmlUnknownTarget
   return (
     <Container fluid>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "80vh", minHeight: "325px"}}>
