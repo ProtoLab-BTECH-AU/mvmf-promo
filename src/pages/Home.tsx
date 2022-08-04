@@ -53,8 +53,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Maker-marked</li>
       <li>Workshops og præsentationer</li>
       <li>Kreative kodningsforestillinger</li>
-      <li>Lydkunst</li>
-      <li>Udviklingslounge</li>
+      <li>Fireside talk</li>
       <li>Designinspirerede taler og gåture i Birk Centerpark</li>
     </ul>,
     english: <ul>
@@ -62,8 +61,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Maker market</li>
       <li>Workshops and presentations</li>
       <li>Kreative coding performances</li>
-      <li>Audio art</li>
-      <li>Development lounge</li>
+      <li>Fireside talk</li>
       <li>Design-inspired talks and walks around Birk Centerpark</li>
     </ul>,
   },
