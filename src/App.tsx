@@ -10,15 +10,13 @@ import {Program} from "./pages/Program"
 export const App: FC = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Background/>
-    <div className="position-absolute w-100">
-      <LanguageContextProvider>
-        <Routes>
-          <Route path="" element={<Home/>}/>
-          <Route path="about" element={<About/>}/>
-          <Route path="program" element={<Program/>}/>
-          <Route path="*" element={<NotFound/>}/>
-        </Routes>
-      </LanguageContextProvider>
-    </div>
+    <LanguageContextProvider>
+      <Routes>
+        <Route path="" element={<Home/>}/>
+        <Route path="about" element={<About/>}/>
+        <Route path="program" element={<Program/>}/>
+        <Route path="*" element={<NotFound/>}/>
+      </Routes>
+    </LanguageContextProvider>
   </BrowserRouter>
 )
