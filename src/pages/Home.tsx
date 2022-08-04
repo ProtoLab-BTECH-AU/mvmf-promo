@@ -91,8 +91,11 @@ const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background
         </span>
       </div>
     )}
-    {(!!props.link && props.link.startsWith("http")) && <a href={props.link} className="stretched-link"/>}
-    {(!!props.link && !props.link.startsWith("http")) && <Link to={props.link} className="stretched-link"/>}
+    {props.link && (
+      props.link.search(/^https?:\/\//) ?
+        <a href={props.link} className="stretched-link"/> :
+        <Link to={props.link} className="stretched-link"/>
+    )}
   </div>
 )
 
