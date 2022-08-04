@@ -4,6 +4,7 @@ import {Background} from "./components/Background"
 import {LanguageContextProvider} from "./context/LanguageContext"
 import {About} from "./pages/About"
 import {Home} from "./pages/Home"
+import {Map} from "./pages/Map"
 import {NotFound} from "./pages/NotFound"
 import {Program} from "./pages/Program"
 
@@ -15,6 +16,7 @@ export const App: FC = () => (
         <Route path="" element={<Home/>}/>
         <Route path="about" element={<About/>}/>
         <Route path="program" element={<Program/>}/>
+        <Route path="map" element={<Map/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>
     </LanguageContextProvider>

@@ -10,6 +10,7 @@ const tiles: Record<string, Record<TLanguage, string>> = {
   about: {danish: "Om", english: "About"},
   register: {danish: "Tilmeld Dig", english: "Register"},
   program: {danish: "Program", english: "Program"},
+  map: {danish: "Kort", english: "Map"},
 }
 
 const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
@@ -151,7 +152,7 @@ export const Home: FC = () => {
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1">
-                  <Tile background={"images/Elia.jpg"}/>
+                  <Tile background={"images/Elia.jpg"} title={tiles.map[languageContext.language]} link="map"/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1">
