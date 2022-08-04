@@ -12,13 +12,15 @@ export const App: FC = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Background/>
     <LanguageContextProvider>
-      <Routes>
-        <Route path="" element={<Home/>}/>
-        <Route path="about" element={<About/>}/>
-        <Route path="program" element={<Program/>}/>
-        <Route path="map" element={<Map/>}/>
-        <Route path="*" element={<NotFound/>}/>
-      </Routes>
+      <div className="position-absolute w-100">
+        <Routes>
+          <Route path="" element={<Home/>}/>
+          <Route path="about" element={<About/>}/>
+          <Route path="program" element={<Program/>}/>
+          <Route path="map" element={<Map/>}/>
+          <Route path="*" element={<NotFound/>}/>
+        </Routes>
+      </div>
     </LanguageContextProvider>
   </BrowserRouter>
 )

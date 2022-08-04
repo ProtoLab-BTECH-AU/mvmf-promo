@@ -11,7 +11,7 @@ const backgroundStyle: CSSProperties = {
 }
 
 export const Background: FC = () => {
-  return <div className="position-fixed" style={{width: "100vw", height: "100vh", zIndex: -1}}>
+  return <div className="position-fixed" style={{width: "100vw", height: "100vh"}}>
     <div className="position-absolute" style={backgroundStyle}></div>
   </div>
 }
