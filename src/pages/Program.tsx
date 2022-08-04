@@ -233,28 +233,34 @@ export const Program: FC = () => {
 
               <table id={day}>
                 <tbody>
-                {Object.entries(hours).map(([hour, [ev1, ev2, ev3]], i) => (
-                  <tr key={i} id={!i ? day : ""}>
+                {Object.entries(hours).map(([hour, [ev1, ev2, ev3]], i) => {
+                  let col1: JSX.Element | null = null
+                  let col2: JSX.Element | null = null
+                  let col3: JSX.Element | null = null
+
+                  if (ev1) col1 = <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>{ev1.text[languageContext.language]}</td>
+                  else if (ev1 === null) col1 = null
+                  else if (ev2 || ev3) col1 = <td className="empty"/>
+                  else if (i === 0) col1 = <td className="empty"/>
+
+                  if (ev2) col2 = <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>{ev2.text[languageContext.language]}</td>
+                  else if (ev2 === null) col2 = null
+                  else if (ev3) col2 = <td className="empty"/>
+                  else if (i === 0) col2 = <td className="empty"/>
+
+                  if (ev3) col3 = <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>{ev3.text[languageContext.language]}</td>
+                  else if (ev3 === null) col3 = null
+                  else if (i === 0) col3 = <td className="empty"/>
+
+                  return <tr key={i} id={!i ? day : ""}>
                     <td className="time">
                       <div>{hour.padStart(2, "0")}.00-{String(Number(hour) + 1).padStart(2, "0")}.00</div>
                     </td>
-                    {ev1 ?
-                      <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>{ev1.text[languageContext.language]}</td>
-                      :
-                      ev1 === null ? null :
-                        ((!i || ev2 !== null || ev3 !== null) && <td className="empty"/>)}
-                    {ev2 ?
-                      <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>{ev2.text[languageContext.language]}</td>
-                      :
-                      ev2 === null ? null :
-                        ((!i || ev3 !== null) && <td className="empty"/>)}
-                    {ev3 ?
-                      <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>{ev3.text[languageContext.language]}</td>
-                      :
-                      ev3 === null ? null :
-                        (!i && <td className="empty"/>)}
+                    {col1}
+                    {col2}
+                    {col3}
                   </tr>
-                ))}
+                })}
                 </tbody>
               </table>
             </>
