@@ -31,7 +31,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
   },
   description: {
     danish: "Maker-kompetencer, læring, vidensdeling og showcases fra midt- og vestjyske kommuner",
-    english: "",
+    english: "Maker skills, learning, sharing of knowledge, and showcases from central and western Jutland kommunes",
   },
   date: {
     danish: <>
@@ -40,7 +40,12 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       Birk Centerpark 15<br/>
       Herning
     </>,
-    english: "",
+    english: <>
+      22-24 Sep. 2022<br/>
+      Aarhus Universitet<br/>
+      Birk Centerpark 15<br/>
+      Herning
+    </>,
   },
   events: {
     danish: <ul>
@@ -52,7 +57,15 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Udviklingslounge</li>
       <li>Designinspirerede taler og gåture i Birk Centerpark</li>
     </ul>,
-    english: "",
+    english: <ul>
+      <li>Demos of maker technologies</li>
+      <li>Maker market</li>
+      <li>Workshops and presentations</li>
+      <li>Kreative coding performances</li>
+      <li>Audio art</li>
+      <li>Development lounge</li>
+      <li>Design-inspired talks and walks around Birk Centerpark</li>
+    </ul>,
   },
 }
 
@@ -60,7 +73,8 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
 const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background?: string }> = (props) => (
   <div className="interactive h-100">
     {props.background &&
-      <div className="square-image h-100" style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${encodeURIComponent(props.background)})`}}/>}
+      <div className="square-image h-100"
+           style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${encodeURIComponent(props.background)})`}}/>}
     {props.title && (
       <div className="interactive-title text-xsmall fw-bold"
            style={{background: props.titleLight ? colors.au7 : colors.au7comp}}>
