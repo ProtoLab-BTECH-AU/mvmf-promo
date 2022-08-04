@@ -79,7 +79,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
 
 
 const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background?: string }> = (props) => (
-  <div className="interactive h-100">
+  <div className={`interactive h-100 ${props.link ? "link" : ""}`}>
     {props.background &&
       <div className="square-image h-100"
            style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${encodeURIComponent(props.background)})`}}/>}
