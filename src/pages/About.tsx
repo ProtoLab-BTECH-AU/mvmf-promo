@@ -22,7 +22,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
       </Figure>
     </>,
     <>
-      For en akademisk beskrivelse af den "maker movement", se Dale Doughertys tekst:
+      For en akademisk beskrivelse af den "maker movement", se Dale Doughertys tekst:&nbsp;
       <a href="https://muse.jhu.edu/article/499244">The Maker Movement</a>.
     </>,
     <>
