@@ -16,10 +16,6 @@ jobs:
         run: npm install --no-save
       - name: Build
         run: npm run build && ls -l build
-      - name: Populate .git-ftp-include
-        run: |
-          touch .git-ftp-include
-          find build -type f | while read file; do printf '!%s\n' "$file" >> .git-ftp-include; done
       - name: Push
         uses: Automattic/FTP-Deploy-Action@3.0.1
         with:
