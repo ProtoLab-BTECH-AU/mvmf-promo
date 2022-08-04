@@ -109,6 +109,7 @@ div.interactive .interactive-title {
     top: 0;
     color: white;
     padding: .25rem;
+    max-width: 75%;
 }
 
 div.interactive .interactive-text {
