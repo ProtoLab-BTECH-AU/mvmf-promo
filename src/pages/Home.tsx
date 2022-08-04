@@ -75,6 +75,10 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
     danish: "Partnere",
     english: "Partners",
   },
+  sponsors: {
+    danish: "Sponsorer",
+    english: "Sponsors",
+  },
 }
 
 
@@ -238,7 +242,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 mb-5">
+      <Row className="mt-5">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.partners[languageContext.language]}</h3>
         </Col>
@@ -277,6 +281,28 @@ export const Home: FC = () => {
                  style={{maxHeight: "35px"}} alt=""/>
           </a>
           <span style={{fontSize: "75%"}}>SKIVE</span>
+        </Col>
+      </Row>
+
+      <Row className="mt-5 mb-5">
+        <Col xs={12} className="text-center">
+          <h3 className="fw-bold">{text.sponsors[languageContext.language]}</h3>
+        </Col>
+
+        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto mt-2 text-decoration-none text-body p-2 grayscale"
+             href="https://www.velux.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/velux.svg`}
+                 style={{maxHeight: "50px"}} alt=""/>
+          </a>
+        </Col>
+
+        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://www.ngiot.eu/eu-iot/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/euiot.png`}
+                 style={{maxHeight: "65px"}} alt=""/>
+          </a>
         </Col>
       </Row>
     </Container>
