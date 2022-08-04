@@ -67,6 +67,14 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Design-inspired talks and walks around Birk Centerpark</li>
     </ul>,
   },
+  organizers: {
+    danish: "Arrangører",
+    english: "Organizers",
+  },
+  partners: {
+    danish: "Partnere",
+    english: "Partners",
+  },
 }
 
 
@@ -204,6 +212,68 @@ export const Home: FC = () => {
           <div className="fw-bold mt-3">
             {text.events[languageContext.language]}
           </div>
+        </Col>
+      </Row>
+
+      <Row className="mt-5">
+        <Col xs={12} className="text-center">
+          <h3 className="fw-bold">{text.organizers[languageContext.language]}</h3>
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://btech.au.dk" style={{width: "fit-content"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/btech-color.png`}
+                 style={{maxHeight: "75px"}} alt=""/>
+          </a>
+        </Col>
+
+        <Col xs={12} className="text-center">
+          <a className="d-block mx-auto text-decoration-none text-body mt-3 grayscale"
+             href="https://protobtech.dk" style={{width: "fit-content"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/protolab-color.png`}
+                 style={{maxWidth: "90px"}} alt=""/>
+          </a>
+          <span style={{fontSize: "75%"}}>HERNING</span>
+        </Col>
+      </Row>
+
+      <Row className="mt-5 mb-5">
+        <Col xs={12} className="text-center">
+          <h3 className="fw-bold">{text.partners[languageContext.language]}</h3>
+        </Col>
+
+        <Col xs={12} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://www.baeredygtigherning.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/baeredygtig-herning.svg`}
+                 style={{maxHeight: "35px"}} alt=""/>
+          </a>
+          <span style={{fontSize: "75%"}}>HERNING</span>
+        </Col>
+
+        <Col xs={12} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 black"
+             href="https://www.herningsholm.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/herningsholm.svg`}
+                 style={{maxHeight: "35px"}} alt=""/>
+          </a>
+          <span style={{fontSize: "75%"}}>IKAST-BRANDE</span>
+        </Col>
+
+        <Col xs={12} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 black"
+             href="https://teknologicenter.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/itc-text.png`}
+                 style={{maxHeight: "50px"}} alt=""/>
+          </a>
+          <span style={{fontSize: "75%"}}>RINGKØBING-SKJERN</span>
+        </Col>
+
+        <Col xs={12} md={4} lg={3} className="mt-5 mt-lg-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://elvaerketskive.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/elvaerket-color.png`}
+                 style={{maxHeight: "35px"}} alt=""/>
+          </a>
+          <span style={{fontSize: "75%"}}>SKIVE</span>
         </Col>
       </Row>
     </Container>
