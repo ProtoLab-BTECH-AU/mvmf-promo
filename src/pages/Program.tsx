@@ -199,7 +199,8 @@ export const Program: FC = () => {
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
           <p className="px-2 px-lg-0 pt-2 text-xsmall">
-            The program is not finalised and may be subject to changes
+            {languageContext.language === "danish" && "Programmet er ikke afsluttet og det er muligt der kommer ændringer"}
+            {languageContext.language === "english" && "The program is not finalised and may be subject to changes"}
           </p>
 
           <table className="sticky-top" style={{zIndex: 1021, top: "4.75rem"}}>
