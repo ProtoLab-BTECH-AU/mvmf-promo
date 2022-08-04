@@ -18,7 +18,7 @@ export const Header: FC<IProps> = (props) => {
           <Link to={props.backURl ?? "/"} style={{height: "fit-content"}}>
             <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt="" style={{height: "2.375rem", marginTop: ".375rem"}}/>
           </Link>
-          <div className="d-inline ms-2"><LanguageSelector/></div>
+          <div className="d-inline ms-2 text-small"><LanguageSelector/></div>
 
           <h1 className="text-big fw-bold d-inline ms-auto">
             {props.title}
