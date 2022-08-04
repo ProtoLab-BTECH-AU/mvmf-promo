@@ -15,9 +15,14 @@
 }
 
 @media (max-width: 650px), (orientation: landscape) and (max-width: 700px), (orientation: landscape) and (max-height: 525px) {
-    #program table td,
     #program table th {
         font-size: 1rem;
+    }
+    #program table td {
+        font-size: .75rem;
+    }
+    #program table td.time {
+        height: 7rem !important;
     }
 }
 
@@ -58,7 +63,7 @@
 }
 
 #program table td.time {
-    height: 10rem !important;
+    height: 10rem;
     position: relative;
     border: 2px solid var(--au-color-7) !important;
 }
