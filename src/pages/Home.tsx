@@ -153,11 +153,11 @@ export const Home: FC = () => {
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1">
-                  <Tile background={"images/Laser control.jpg"}/>
+                  <Tile background={"images/Elia.jpg"}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1">
-                  <Tile background={"images/Elia.jpg"}/>
+                  <Tile background={"images/Laser control.jpg"}/>
                 </Col>
               </Row>
             </Col>
