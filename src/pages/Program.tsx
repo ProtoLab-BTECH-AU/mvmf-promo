@@ -18,12 +18,12 @@ const headers: Record<TLanguage, [string, string, string]> = {
   danish: [
     "Maker skov",
     "BTECH labs",
-    "Experience Birk",
+    "Oplev Birk",
   ],
   english: [
     "Maker Forest",
     "BTECH Labs",
-    "Oplev Birk",
+    "Experience Birk",
   ],
 }
 
