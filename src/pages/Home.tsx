@@ -1,4 +1,4 @@
-import {FC, useContext} from "react"
+import {FC, useContext, useEffect} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {Link} from "react-router-dom"
 import {colors} from "../colors"
@@ -104,6 +104,7 @@ const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background
 
 export const Home: FC = () => {
   const languageContext = useContext(LanguageContext)
+  useEffect(() => window.scrollTo(0, 0), [])
 
   document.title = "MVMF 2022"
 

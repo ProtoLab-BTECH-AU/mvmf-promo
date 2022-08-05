@@ -1,4 +1,4 @@
-import {FC, useContext} from "react"
+import {FC, useContext, useEffect} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
@@ -15,6 +15,7 @@ const title: Record<TLanguage, string> = {
 
 export const Map: FC = () => {
   const languageContext = useContext(LanguageContext)
+  useEffect(() => window.scrollTo(0, 0), [])
 
   document.title = `MVMF 2022 | ${title[languageContext.language]}`
 

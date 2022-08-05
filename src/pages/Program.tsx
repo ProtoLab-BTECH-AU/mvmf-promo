@@ -1,4 +1,4 @@
-import {FC, useContext} from "react"
+import {FC, useContext, useEffect} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {colors} from "../colors"
 import {Header} from "../components/Header"
@@ -181,6 +181,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
 
 export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
+  useEffect(() => window.scrollTo(0, 0), [])
 
   document.title = "MVMF 2022 | Program"
 
