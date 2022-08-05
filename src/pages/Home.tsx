@@ -298,8 +298,9 @@ export const Home: FC = () => {
         </Col>
 
         <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
-          <a className="d-block mx-auto mt-2 text-decoration-none text-body p-2 grayscale"
-             href="https://www.velux.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://www.velux.dk"
+             style={{width: "fit-content", height: "calc(100% - 2.15rem)", marginTop: "0.75rem"}}>
             <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/velux.svg`}
                  style={{maxHeight: "50px"}} alt=""/>
           </a>
