@@ -9,6 +9,7 @@ import "./Program.css"
 interface IEvent {
   text: Record<TLanguage, string | JSX.Element>
   details?: Record<TLanguage, string | JSX.Element>
+  location?: string
   hours?: number
   span?: number
 }
@@ -30,17 +31,23 @@ const headers: Record<TLanguage, [string, string, string]> = {
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
   "2022-09-22": {
     10: [
-      {text: {danish: "Åbning og Velkomst af MVMF + Introduktion til Kommunerne", english: "Opening and welcome to MVMF +  Introduction of the Kommunes"}},
+      {
+        location: "Main Stage",
+        text: {
+          danish: "Åbning og Velkomst af MVMF + Introduktion til Kommunerne",
+          english: "Opening and welcome to MVMF +  Introduction of the Kommunes",
+        },
+      },
     ],
     11: [
-      {text: {danish: "SKOV: Mulighed for at Besøge Kommune Platforme", english: "FOREST: Visit the Kommune Platforms"}},
+      {text: {danish: "Mulighed for at Besøge Kommune Platforme", english: "Visit the Kommune Platforms"}},
       {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {hours: 2, text: {danish: "SKOV: Mulighed for at Besøge Kommune Platforme", english: "FOREST: Visit the Kommune Platforms"}},
+      {hours: 2, text: {danish: "Mulighed for at Besøge Kommune Platforme", english: "Visit the Kommune Platforms"}},
       {
         hours: 2,
         text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
@@ -48,8 +55,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 5,
         text: {
-          danish: "BIRK DESIGN WALK Udendørs",
-          english: "BIRK DESIGN WALK Outside",
+          danish: "BIRK DESIGN WALK Have",
+          english: "BIRK DESIGN WALK Garden",
         },
       },
     ],
@@ -60,16 +67,20 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {text: {danish: "KAFFE: Maker Kage", english: "COFFEE: Maker Kage"}},
     ],
     16: [
-      {text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking Maker Station Screens"}},
+      {
+        location: "BTECH Platform",
+        text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking Maker Station Screens"},
+      },
     ],
     17: [
-      {text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
+      {location: "Main Stage", text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
     ],
     18: [
       {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
     ],
     19: [
       {
+        location: "Main Stage",
         hours: 2,
         text: {
           danish: "MUSIK: Smashing Pumpkins Jam",
@@ -82,6 +93,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
   "2022-09-23": {
     9: [
       {
+        location: "Main Stage",
         hours: 2,
         text: {
           danish: "PRÆSENTATION:  Forskellige Forretnings \"Makers\" og projekter fra MidtVest                                                                                   ",
@@ -92,8 +104,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 3,
         text: {
-          danish: "BIRK DESIGN WALK Indendørs",
-          english: "BIRK DESIGN WALK Inside",
+          danish: "BIRK DESIGN WALK Museum",
+          english: "BIRK DESIGN WALK Museum",
         },
       },
     ],
@@ -107,6 +119,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     11: [
       {
+        location: "Main Stage",
         text: {
           danish: "PANELDEBAT: med udvalgte Makers fra MidtVest ",
           english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
@@ -118,49 +131,71 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {text: {danish: "MAKER HULE P1: Repræsentanter fra hver Kommune", english: "MidtVest Makers Hule P1: Representatives from Kommunes"}},
+      {
+        location: "Main Stage",
+        text: {
+          danish: "MAKER HULE P1: Repræsentanter fra hver Kommune",
+          english: "MidtVest Makers Hule P1: Representatives from Kommunes",
+        },
+      },
       undefined,
       {
         hours: 5,
         text: {
-          danish: "BIRK DESIGN WALK Indendørs",
-          english: "BIRK DESIGN WALK Inside",
+          danish: "BIRK DESIGN WALK Museum",
+          english: "BIRK DESIGN WALK Museum",
         },
       },
     ],
     14: [
-      {text: {danish: "MAKER HULE P2: Åben tilmelding for alle", english: "MidtVest Makers Hule P2: Open Call and Competition"}},
+      {
+        location: "Main Stage",
+        text: {
+          danish: "MAKER HULE P2: Åben tilmelding for alle",
+          english: "MidtVest Makers Hule P2: Open Call and Competition",
+        },
+      },
     ],
     15: [
-      {text: {danish: "TALK: Digital Craftsmanship", english: "TALK: Digital Craftsmanship"}},
+      {
+        location: "Main Stage",
+        text: {danish: "KEYNOTE: Digital Craftsmanship", english: "KEYNOTE: Digital Craftsmanship"},
+      },
     ],
     16: [
       {text: {danish: "KAFFE: Makers Lounge", english: "COFFEE: Makers Lounge"}},
-      {text: {danish: "MidtVest Maker Fest STAKEHOLDERS MØDE", english: "MidtVest Maker Fest STAKEHOLDERS MEETING"}},
     ],
     17: [
-      {text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"}},
+      {
+        location: "Main Stage",
+        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
+      },
     ],
     18: [
       {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
     ],
     19: [
-      {hours: 2, text: {danish: "MUSIC: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"}},
+      {
+        location: "Main Stage",
+        hours: 2,
+        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
+      },
     ],
     20: [null],
   },
   "2022-09-24": {
     9: [
       {
+        location: "Main Stage",
         hours: 3,
         text: {
           danish: <>
             PRÆSENTATION: Teknologi "Makers" and Cases<br/><br/>
-            SKOV: Mulighed for at Besøge Kommune Platforme
+            Mulighed for at Besøge Kommune Platforme
           </>,
           english: <>
             PRESENTATION: Industry 'Makers' Show Cases<br/><br/>
-            FOREST: Visit the Kommune Platforms
+            Visit the Kommune Platforms
           </>,
         },
       },
@@ -168,8 +203,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 3,
         text: {
-          danish: "BIRK DESIGN WALK Inden- og Udendørs ",
-          english: "BIRK DESIGN WALK Inside and Outside",
+          danish: "BIRK DESIGN WALK Museum og Have ",
+          english: "BIRK DESIGN WALK Museum and Garden",
         },
       },
     ],
@@ -239,17 +274,26 @@ export const Program: FC = () => {
                   let col2: JSX.Element | null = null
                   let col3: JSX.Element | null = null
 
-                  if (ev1) col1 = <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>{ev1.text[languageContext.language]}</td>
+                  if (ev1) col1 = <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>
+                    {ev1.location && <div style={{fontSize: "75%"}}><em>{ev1.location}</em></div>}
+                    {ev1.text[languageContext.language]}
+                  </td>
                   else if (ev1 === null) col1 = null
                   else if (ev2 || ev3) col1 = <td className="empty"/>
                   else if (i === 0) col1 = <td className="empty"/>
 
-                  if (ev2) col2 = <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>{ev2.text[languageContext.language]}</td>
+                  if (ev2) col2 = <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>
+                    {ev2.location && <div style={{fontSize: "75%"}}><em>{ev2.location}</em></div>}
+                    {ev2.text[languageContext.language]}
+                  </td>
                   else if (ev2 === null) col2 = null
                   else if (ev3) col2 = <td className="empty"/>
                   else if (i === 0) col2 = <td className="empty"/>
 
-                  if (ev3) col3 = <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>{ev3.text[languageContext.language]}</td>
+                  if (ev3) col3 = <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>
+                    {ev3.location && <div style={{fontSize: "75%"}}><em>{ev3.location}</em></div>}
+                    {ev3.text[languageContext.language]}
+                  </td>
                   else if (ev3 === null) col3 = null
                   else if (i === 0) col3 = <td className="empty"/>
 
