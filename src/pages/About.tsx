@@ -18,7 +18,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
           you make something, you’re doing both at once.
         </blockquote>
         <Figure.Caption className="blockquote-footer mb-0">
-          <a href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
+          <a target="_blank" rel="noreferrer" href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
             <em>What Is a Maker? You Are</em> af Caleb Kraft
           </a>
         </Figure.Caption>
@@ -26,11 +26,15 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </div>,
     <div style={{fontSize: "70%"}}>
       For en akademisk beskrivelse af den "maker movement" se Dale Doughertys tekst:&nbsp;
-      <a href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">The Maker Movement</a>.
+      <a target="_blank" rel="noreferrer" href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">
+        The Maker Movement
+      </a>.
     </div>,
     <div style={{fontSize: "70%"}}>
       For en mere generisk forståelse henvises til&nbsp;
-      <a href="https://en.wikipedia.org/wiki/Maker_culture">artiklen om makerkultur på Wikipedia (på engelsk)</a>.
+      <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Maker_culture">
+        artiklen om makerkultur på Wikipedia (på engelsk)
+      </a>.
     </div>,
   ],
   english: [
@@ -47,7 +51,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
           you make something, you’re doing both at once.
         </blockquote>
         <Figure.Caption className="blockquote-footer mb-0">
-          <a href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
+          <a target="_blank" rel="noreferrer" href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
             <em>What Is a Maker? You Are</em> by Caleb Kraft
           </a>
         </Figure.Caption>
@@ -55,11 +59,14 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </div>,
     <div style={{fontSize: "70%"}}>
       For an articulation of "maker movement" please refer to Dale Dougherty’s text:&nbsp;
-      <a href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">The Maker Movement</a>.
+      <a target="_blank" rel="noreferrer" href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">
+        The Maker Movement</a>.
     </div>,
     <div style={{fontSize: "70%"}}>
       For a more generic understanding of maker culture please refer to the&nbsp;
-      <a href="https://en.wikipedia.org/wiki/Maker_culture">Maker culture article on Wikipedia</a>.
+      <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Maker_culture">
+        Maker culture article on Wikipedia
+      </a>.
     </div>,
   ],
 }
