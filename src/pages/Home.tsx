@@ -160,7 +160,7 @@ export const Home: FC = () => {
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1">
-                  <Tile background={"images/Laser control.jpg"}/>
+                  <Tile background={"images/Basketball and flower.jpg"}/>
                 </Col>
               </Row>
             </Col>
@@ -203,7 +203,7 @@ export const Home: FC = () => {
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">
-              <Tile background="images/Basketball and flower.jpg"/>
+              <Tile background="images/Laser control.jpg"/>
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">
