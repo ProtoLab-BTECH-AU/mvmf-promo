@@ -23,7 +23,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </>,
     <>
       For en akademisk beskrivelse af den "maker movement" se Dale Doughertys tekst:&nbsp;
-      <a href="https://muse.jhu.edu/article/499244">The Maker Movement</a>.
+      <a href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">The Maker Movement</a>.
     </>,
     <>
       For en mere generisk forståelse henvises til&nbsp;
@@ -52,7 +52,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </>,
     <>
       For an articulation of "maker movement" please refer to Dale Dougherty’s text:&nbsp;
-      <a href="https://muse.jhu.edu/article/499244">The Maker Movement</a>.
+      <a href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">The Maker Movement</a>.
     </>,
     <>
       For a more generic understanding of maker culture please refer to the&nbsp;
