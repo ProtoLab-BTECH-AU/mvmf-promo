@@ -228,9 +228,9 @@ export const Home: FC = () => {
           <div className="fw-bold mt-3">
             {text.events[languageContext.language]}
           </div>
-          <div className="ps-2 fw-bold mt-4 fst-italic" style={{fontSize: "75%"}}>
+          {/*<div className="ps-2 fw-bold mt-4 fst-italic" style={{fontSize: "75%"}}>
             {text.research[languageContext.language]}
-          </div>
+          </div>*/}
         </Col>
       </Row>
 
