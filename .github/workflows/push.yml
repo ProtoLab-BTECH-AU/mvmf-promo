@@ -21,11 +21,7 @@ jobs:
       - name: Populate .git-ftp-include
         run: |
           touch .git-ftp-include
-          find build -type f | while read file; do
-            if [[ -e "public/${file#build/}" ]]; then printf '!%s\n' "$file:/public/${file#build/}" >> .git-ftp-include
-            else printf '!%s\n' "$file" >> .git-ftp-include
-            fi
-          done
+          find build -type f | while read file; do printf '!%s\n' "$file" >> .git-ftp-include; done
       - name: Push
         uses: Automattic/FTP-Deploy-Action@3.0.1
         with:
