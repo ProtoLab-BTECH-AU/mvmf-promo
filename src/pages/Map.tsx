@@ -4,8 +4,8 @@ import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 const text: Record<TLanguage, string[]> = {
-  danish: ["Kortet er foreløbigt, ændringer kan forekomme"],
-  english: ["The map is preliminary, changes may occur"],
+  danish: ["Kortet kommer snart."],
+  english: ["The map is coming soon."],
 }
 
 const title: Record<TLanguage, string> = {
@@ -25,10 +25,6 @@ export const Map: FC = () => {
       <Row>
         <Col xs={12}>
           {text[languageContext.language].map((p, i) => <p key={i}>{p}</p>)}
-        </Col>
-
-        <Col xs={12}>
-          <img src={`${process.env.PUBLIC_URL}/images/walking_tour_map.png`} alt=""/>
         </Col>
       </Row>
     </Container>
