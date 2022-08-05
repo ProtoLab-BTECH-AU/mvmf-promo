@@ -1,4 +1,4 @@
-import {FC, useContext, useEffect} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {Link} from "react-router-dom"
 import {colors} from "../colors"
@@ -66,6 +66,10 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Design-inspired talks and walks around Birk Centerpark</li>
     </ul>,
   },
+  research: {
+    danish: "Dette arrangement er et research event, der har fokus at få et fælles netværk på tværs af kommunerne i region Midt- og Vestjylland styrker håndværk digitalt.",
+    english: "The event is a research event that focuses on making a  network across the municipalities in the region of Central and West Jutland to strengthen craftsmanship digitally.",
+  },
   organizers: {
     danish: "Arrangører",
     english: "Organizers",
@@ -104,7 +108,6 @@ const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background
 
 export const Home: FC = () => {
   const languageContext = useContext(LanguageContext)
-  useEffect(() => window.scrollTo(0, 0), [])
 
   document.title = "MVMF 2022"
 
@@ -218,6 +221,9 @@ export const Home: FC = () => {
           </div>
           <div className="fw-bold mt-3">
             {text.events[languageContext.language]}
+          </div>
+          <div className="ps-2 fw-bold mt-4 fst-italic" style={{fontSize: "75%"}}>
+            {text.research[languageContext.language]}
           </div>
         </Col>
       </Row>
