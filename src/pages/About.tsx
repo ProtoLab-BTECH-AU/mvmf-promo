@@ -22,12 +22,12 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
       </Figure>
     </>,
     <>
-      For en akademisk beskrivelse af den "maker movement", se Dale Doughertys tekst:&nbsp;
+      For en akademisk beskrivelse af den "maker movement" se Dale Doughertys tekst:&nbsp;
       <a href="https://muse.jhu.edu/article/499244">The Maker Movement</a>.
     </>,
     <>
       For en mere generisk forståelse henvises til&nbsp;
-      <a href="https://en.wikipedia.org/wiki/Maker_culture">artiklen om makerkultur i Wikipedia (på engelsk)</a>.
+      <a href="https://en.wikipedia.org/wiki/Maker_culture">artiklen om makerkultur på Wikipedia (på engelsk)</a>.
     </>,
     "Midtvest Maker Fest (MVMF) er en begivenhed, der støtter og hylder maker-kulturen som et fællesskab ved at forbinde det med lokalsamfund, industri og andre interesserede organisationer.",
     "Godt håndværk inden for design, materialeprocesser eller teknologiledelse er fundamentet for at fremstille gode produkter, services og oplevelser. Maker-spaces og maker-fællesskaber hjælper ikke blot med at udbrede godt håndværk, men de skaber og forfiner også færdigheder i anvendelsen af nye digitale værktøjer som eksempelvis 3D-printere, laserskærere og mikrocontrollere. Som et netværk af maker-spaces i Midt- og Vestjylland er det vores mål at facilitere maker-færdigheder, viden og informationsdeling mellem borgere, virksomheder, uddannelsesinstitutioner og civile organisationer.",
