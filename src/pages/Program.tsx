@@ -267,7 +267,7 @@ export const Program: FC = () => {
                 {date.toLocaleString(languageContext.locale, {month: "short"})}
               </div>
 
-              <table id={day}>
+              <table id={day} className="border-separate">
                 <tbody>
                 {Object.entries(hours).map(([hour, [ev1, ev2, ev3]], i) => {
                   let col1: JSX.Element | null = null

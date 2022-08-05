@@ -9,6 +9,13 @@
     overflow: hidden !important;
 }
 
+#program table.border-separate,
+#program table.border-separate tr,
+#program table.border-separate tr td {
+    border-collapse: separate !important;
+    border-spacing: 1px;
+}
+
 #program table tr {
     max-width: 100vw !important;
     overflow: hidden !important;
@@ -46,20 +53,10 @@
     padding: .25rem;
 }
 
-#program table td {
+#program table td:not(.empty) {
     vertical-align: top !important;
     border: 2px solid var(--au-color-7);
     background: rgba(var(--au-color-7-rgb), .0625) !important;
-}
-
-#program table td.empty {
-    vertical-align: top !important;
-    border-color: transparent !important;
-    background: none !important;
-}
-
-#program table td.border {
-    border: 2px solid var(--au-color-7) !important;
 }
 
 #program table td.time {
