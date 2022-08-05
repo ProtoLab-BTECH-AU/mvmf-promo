@@ -54,7 +54,7 @@
 
 #program table td.empty {
     vertical-align: top !important;
-    border: none !important;
+    border-color: transparent !important;
     background: none !important;
 }
 
