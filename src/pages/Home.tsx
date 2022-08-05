@@ -83,6 +83,10 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
     danish: "Sponsorer",
     english: "Sponsors",
   },
+  contact: {
+    danish: "Kontakt",
+    english: "Contact",
+  },
 }
 
 
@@ -320,6 +324,14 @@ export const Home: FC = () => {
             <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/tuborg-fondet.svg`}
                  style={{maxHeight: "65px"}} alt=""/>
           </a>
+        </Col>
+      </Row>
+
+      <Row className="mt-5 mb-5">
+        <Col xs={12} className="text-center" style={{fontSize: "75%"}}>
+          <h4 className="fw-bold">{text.contact[languageContext.language]}</h4>
+
+          <a href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> | Birk Centerpark 15, 7400 Herning
         </Col>
       </Row>
     </Container>
