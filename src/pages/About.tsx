@@ -19,7 +19,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
         </blockquote>
         <Figure.Caption className="blockquote-footer mb-0">
           <a target="_blank" rel="noreferrer" href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
-            <em>What Is a Maker? You Are</em> af Caleb Kraft
+            <em>What Is a Maker? You Are</em>
           </a>
         </Figure.Caption>
       </Figure>
@@ -52,7 +52,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
         </blockquote>
         <Figure.Caption className="blockquote-footer mb-0">
           <a target="_blank" rel="noreferrer" href="https://makezine.com/2016/04/01/what-is-a-maker-you-are/">
-            <em>What Is a Maker? You Are</em> by Caleb Kraft
+            <em>What Is a Maker? You Are</em>
           </a>
         </Figure.Caption>
       </Figure>
