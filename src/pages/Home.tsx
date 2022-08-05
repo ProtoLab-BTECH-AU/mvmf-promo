@@ -312,6 +312,14 @@ export const Home: FC = () => {
                  style={{maxHeight: "65px"}} alt=""/>
           </a>
         </Col>
+
+        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 black"
+             href="https://www.tuborgfondet.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/tuborg-fondet.svg`}
+                 style={{maxHeight: "65px"}} alt=""/>
+          </a>
+        </Col>
       </Row>
     </Container>
   )
