@@ -99,6 +99,14 @@ body {
     padding-right: 0.125rem;
 }
 
+.blockquote::before {
+    content: '“'
+}
+
+.blockquote::after {
+    content: '”'
+}
+
 div.interactive {
     position: relative;
 }
