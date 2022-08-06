@@ -128,7 +128,7 @@ export const Home: FC = () => {
   const [showModal, setShowModal] = useState<boolean>(false)
 
   useEffect(() => {
-    const pathname = location.pathname.replace(/(^\/+|\/+$)/, "")
+    const pathname = location.pathname.replace(/^\/+/, "").replace(/\/+$/, "")
     if (pathname === "") {
       setShowModal(false)
       setTitle({danish: "", english: ""})
