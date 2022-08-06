@@ -162,27 +162,27 @@ a.grayscale {
     filter: grayscale(1);
 }
 
-a.grayscale:hover {
-    filter: grayscale(0);
-}
-
 a.black {
     transition: all 250ms;
 }
 
-a.black:hover {
-    filter: invert(1);
-}
-
-.darken-hover:hover {
-    filter: brightness(.75);
-}
-
-.hide-hover:hover {
-    opacity: 0;
-}
-
 @media (pointer: fine) {
+    a.grayscale:hover {
+        filter: grayscale(0);
+    }
+
+    a.black:hover {
+        filter: invert(1);
+    }
+
+    .darken-hover:hover {
+        filter: brightness(.75);
+    }
+
+    .hide-hover:hover {
+        opacity: 0;
+    }
+
     div.interactive:hover .darken-hover {
         filter: brightness(.75);
     }
