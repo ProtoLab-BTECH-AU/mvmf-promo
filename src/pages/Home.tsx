@@ -176,7 +176,7 @@ export const Home: FC = () => {
       <Modal.Body className="px-0 pt-0" style={{paddingBottom: "25mm"}} children={modal}/>
     </Modal>
 
-    <Container fluid className={`fade ${showModal || location.pathname !== "/" ? "" : "show"}`}>
+    <Container id="main" className={`fade ${showModal || location.pathname !== "/" ? "" : "show"}`} fluid>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "80vh", minHeight: "325px"}}>
         <div className="position-absolute top-0 start-0 h-100 w-100">
           <div className="position-absolute" style={{top: ".75rem", left: ".75rem"}}>
