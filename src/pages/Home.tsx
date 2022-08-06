@@ -159,7 +159,7 @@ export const Home: FC = () => {
       <Modal.Header className="p-2 border-0 container">
         <div className="d-inline">
           <Link to="/" style={{height: "fit-content"}}>
-            <svg width="2.375rem" height="2.375rem" viewBox="0 0 64 64" fill={colors.au7comp}>
+            <svg viewBox="0 0 64 64" fill={colors.au7comp} style={{width: "2.375rem", height: "2.375rem"}}>
               <path
                 d="M38.454 13.627a2 2 0 00-2.827-.081l-18 17a2.001 2.001 0 000 2.908l18 17c.386.365.88.546 1.373.546a2 2 0 001.374-3.454L21.913 32l16.46-15.546a2 2 0 00.081-2.827z"/>
               <path
