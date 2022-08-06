@@ -155,7 +155,7 @@ export const Home: FC = () => {
 
   // noinspection HtmlUnknownTarget
   return <>
-    <Modal fullscreen={true} show={showModal} onHide={() => setShowModal(false)} scrollable={true}>
+    <Modal fullscreen={true} backdrop={false} show={showModal} onHide={() => setShowModal(false)} scrollable={true}>
       <Modal.Header className="p-2 border-0 container">
         <div className="d-inline">
           <Link to="/" style={{height: "fit-content"}}>
