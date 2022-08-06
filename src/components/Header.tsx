@@ -20,7 +20,7 @@ export const Header: FC<IProps> = (props) => {
           </Link>
           <div className="d-inline ms-2 text-small"><LanguageSelector/></div>
 
-          <h1 className="text-big fw-bold d-inline ms-auto">
+          <h1 className="text-big fw-bold d-inline ms-auto text-nowrap">
             {props.title}
           </h1>
         </Col>
