@@ -11,12 +11,15 @@ import {NotFound, title as notFoundTitle} from "./NotFound"
 import {Program, title as programTitle} from "./Program"
 
 
-const tiles: Record<string, Record<TLanguage, string>> = {
-  about: {danish: "Om", english: "About"},
-  register: {danish: "Tilmeld Dig", english: "Register"},
-  program: {danish: "Program", english: "Program"},
-  map: {danish: "Kort", english: "Map"},
-  competition: {danish: "MVMF Challenge", english: "MVMF Challenge"},
+type TTiles = "about" | "register" | "program" | "map" | "challenge"
+type TTileDetails = { [l in TLanguage]: string } & { link: string }
+
+const tiles: Record<TTiles, TTileDetails> = {
+  about: {link: "about", danish: "Om", english: "About"},
+  register: {link: "https://forms.office.com/r/i5m431jhpK", danish: "Tilmeld Dig", english: "Register"},
+  program: {link: "program", danish: "Program", english: "Program"},
+  map: {link: "map", danish: "Kort", english: "Map"},
+  challenge: {link: "challenge", danish: "MVMF Challenge", english: "MVMF Challenge"},
 }
 
 const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
@@ -129,16 +132,16 @@ export const Home: FC = () => {
     if (pathname === "") {
       setShowModal(false)
       setTitle({danish: "", english: ""})
-    } else if (pathname === "about") {
+    } else if (pathname === tiles.about.link) {
       setModal(<About/>)
       setTitle(aboutTitle)
-    } else if (pathname === "program") {
+    } else if (pathname === tiles.program.link) {
       setModal(<Program/>)
       setTitle(programTitle)
-    } else if (pathname === "map") {
+    } else if (pathname === tiles.map.link) {
       setModal(<Map/>)
       setTitle(mapTitle)
-    } else if (pathname === "challenge") {
+    } else if (pathname === tiles.challenge.link) {
       setModal(<Challenge/>)
       setTitle(challengeTitle)
     } else {
@@ -205,21 +208,21 @@ export const Home: FC = () => {
               <Row>
                 <Col xs={6} className="px-0_5" id="about">
                   <Tile background={"images/Chariot.jpg"} title={tiles.about[languageContext.language]}
-                        titleLight={true} link="about"/>
+                        titleLight={true} link={tiles.about.link}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5">
                   <Tile background={"images/Ivy.jpg"} title={tiles.register[languageContext.language]}
-                        link="https://forms.office.com/r/i5m431jhpK"/>
+                        link={tiles.register.link}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1" id="map">
-                  <Tile background={"images/Elia.jpg"} title={tiles.map[languageContext.language]} link="map"/>
+                  <Tile background={"images/Elia.jpg"} title={tiles.map[languageContext.language]} link={tiles.map.link}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1" id="challenge">
                   <Tile background={"images/Basketball and flower.jpg"}
-                        title={tiles.competition[languageContext.language]} link="challenge"/>
+                        title={tiles.challenge[languageContext.language]} link={tiles.challenge.link}/>
                 </Col>
               </Row>
             </Col>
@@ -228,7 +231,7 @@ export const Home: FC = () => {
               <Row className="px-0_5 h-100">
                 <Col xs={12} className="p-0 h-100" id="program">
                   <Tile background="images/trunkclaspers.jpg" title={tiles.program[languageContext.language]}
-                        titleLight={true} link="program"/>
+                        titleLight={true} link={tiles.program.link}/>
                 </Col>
               </Row>
             </Col>
