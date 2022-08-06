@@ -1,4 +1,4 @@
-import {FC, useContext} from "react"
+import {FC, useContext, useRef} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
@@ -220,9 +220,10 @@ export const title: Record<TLanguage, string> = {
 
 export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
+  const containerRef = useRef<HTMLDivElement>(null)
 
   return <>
-    <Container id="program" style={{marginBottom: "30vh"}} fluid>
+    <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
           <table className="sticky-top" style={{zIndex: 1021}}>
@@ -259,9 +260,9 @@ export const Program: FC = () => {
                      color: colors.au7,
                    }}
                    onClick={() => {
-                     const top = document.getElementById(day)?.getBoundingClientRect().top ?? 0
+                     const top = document.getElementById(day)?.getBoundingClientRect()?.top ?? 1
                      if (top > 0) return
-                     window.scrollBy({top: top - 380})
+                     containerRef.current?.parentElement?.scrollTo({top: top - 380})
                    }}>
                 {date.toLocaleString(languageContext.locale, {day: "numeric"})}<br/>
                 {date.toLocaleString(languageContext.locale, {month: "short"})}
