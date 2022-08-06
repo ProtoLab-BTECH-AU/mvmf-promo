@@ -340,7 +340,10 @@ export const Home: FC = () => {
         <Col xs={12} className="text-center" style={{fontSize: "75%"}}>
           <h4 className="fw-bold">{text.contact[languageContext.language]}</h4>
 
-          <a href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> | Birk Centerpark 15, 7400 Herning
+          <a href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a>
+          <span className="d-none d-md-inline">&nbsp;|&nbsp;</span>
+          <br className="d-md-none"/>
+          Birk Centerpark 15, 7400 Herning
         </Col>
       </Row>
     </Container>
