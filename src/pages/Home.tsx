@@ -147,7 +147,7 @@ export const Home: FC = () => {
     }
   }, [location])
 
-  useEffect(() => void (document.title = title[languageContext.language] ? `MVMF | ${title[languageContext.language]}` : "MVMF 2022"), [title, languageContext.language])
+  useEffect(() => void (document.title = title[languageContext.language] ? `MVMF 2022 | ${title[languageContext.language]}` : "MVMF 2022"), [title, languageContext.language])
   useEffect(() => setShowModal(!!modal), [modal])
 
   // noinspection HtmlUnknownTarget
