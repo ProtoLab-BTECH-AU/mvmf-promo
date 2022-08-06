@@ -93,7 +93,7 @@ export const title: Record<TLanguage, string> = {
 export const About: FC = () => {
   const languageContext = useContext(LanguageContext)
 
-  return <>
+  return (
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
@@ -101,5 +101,5 @@ export const About: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }

@@ -15,7 +15,7 @@ export const title: Record<TLanguage, string> = {
 export const Map: FC = () => {
   const languageContext = useContext(LanguageContext)
 
-  return <>
+  return (
     <Container>
       <Row>
         <Col xs={12}>
@@ -23,5 +23,5 @@ export const Map: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }

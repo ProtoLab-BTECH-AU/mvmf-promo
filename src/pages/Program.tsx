@@ -222,7 +222,7 @@ export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  return <>
+  return (
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
@@ -313,5 +313,5 @@ export const Program: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }

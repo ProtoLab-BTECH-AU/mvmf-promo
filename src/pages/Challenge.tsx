@@ -71,7 +71,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
 export const Challenge: FC = () => {
   const languageContext = useContext(LanguageContext)
 
-  return <>
+  return (
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
@@ -82,5 +82,5 @@ export const Challenge: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }

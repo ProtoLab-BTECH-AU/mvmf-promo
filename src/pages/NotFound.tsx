@@ -15,7 +15,7 @@ export const title: Record<TLanguage, string> = {
 export const NotFound: FC = () => {
   const languageContext = useContext(LanguageContext)
 
-  return <>
+  return (
     <Container className="mt-5 pt-5">
       <Row>
         <Col xs={12} lg={8} className="mx-auto text-center">
@@ -24,5 +24,5 @@ export const NotFound: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }
