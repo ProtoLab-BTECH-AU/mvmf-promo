@@ -156,22 +156,18 @@ export const Home: FC = () => {
   // noinspection HtmlUnknownTarget
   return <>
     <Modal fullscreen={true} show={showModal} onHide={() => setShowModal(false)} scrollable={true}>
-      <Modal.Header className="px-0 py-2 border-0">
-        <Container className="my-0 py-0">
-          <Col className="mx-auto my-0 p-0 d-flex justify-content-between">
-            <div className="d-inline">
-              <Link to="/" style={{height: "fit-content"}}>
-                <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt=""
-                     style={{height: "2.375rem", marginTop: ".375rem"}}/>
-              </Link>
-              <div className="d-inline ms-2 text-xsmall"><LanguageSelector/></div>
-            </div>
+      <Modal.Header className="p-2 border-0 container">
+        <div className="d-inline">
+          <Link to="/" style={{height: "fit-content"}}>
+            <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt=""
+                 style={{height: "2.375rem", marginTop: ".375rem"}}/>
+          </Link>
+          <div className="d-inline ms-2 text-xsmall"><LanguageSelector/></div>
+        </div>
 
-            <h1 className="text-big fw-bold d-inline text-nowrap">
-              {title[languageContext.language]}
-            </h1>
-          </Col>
-        </Container>
+        <h1 className="text-big fw-bold d-inline text-nowrap">
+          {title[languageContext.language]}
+        </h1>
       </Modal.Header>
       <Modal.Body className="p-0" children={modal}/>
     </Modal>
