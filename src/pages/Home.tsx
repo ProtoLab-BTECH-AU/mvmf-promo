@@ -15,11 +15,11 @@ type TTiles = "about" | "register" | "program" | "map" | "challenge"
 type TTileDetails = { [l in TLanguage]: string } & { link: string }
 
 const tiles: Record<TTiles, TTileDetails> = {
-  about: {link: "about", danish: "Om", english: "About"},
+  about: {link: "about", ...aboutTitle},
   register: {link: "https://forms.office.com/r/i5m431jhpK", danish: "Tilmeld Dig", english: "Register"},
-  program: {link: "program", danish: "Program", english: "Program"},
-  map: {link: "map", danish: "Kort", english: "Map"},
-  challenge: {link: "challenge", danish: "MVMF Challenge", english: "MVMF Challenge"},
+  program: {link: "program", ...programTitle},
+  map: {link: "map", ...mapTitle},
+  challenge: {link: "challenge", ...challengeTitle},
 }
 
 const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
