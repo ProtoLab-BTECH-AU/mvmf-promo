@@ -158,14 +158,16 @@ export const Home: FC = () => {
     <Modal fullscreen={true} show={showModal} onHide={() => setShowModal(false)} scrollable={true}>
       <Modal.Header className="px-0 py-2 border-0">
         <Container className="my-0 py-0">
-          <Col className="mx-auto my-0 p-0 d-flex">
-            <Link to="/" style={{height: "fit-content"}}>
-              <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt=""
-                   style={{height: "2.375rem", marginTop: ".375rem"}}/>
-            </Link>
-            <div className="d-inline ms-2 text-small"><LanguageSelector/></div>
+          <Col className="mx-auto my-0 p-0 d-flex justify-content-between">
+            <div className="d-inline">
+              <Link to="/" style={{height: "fit-content"}}>
+                <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt=""
+                     style={{height: "2.375rem", marginTop: ".375rem"}}/>
+              </Link>
+              <div className="d-inline ms-2 text-xsmall"><LanguageSelector/></div>
+            </div>
 
-            <h1 className="text-big fw-bold d-inline ms-auto text-nowrap">
+            <h1 className="text-big fw-bold d-inline text-nowrap">
               {title[languageContext.language]}
             </h1>
           </Col>
