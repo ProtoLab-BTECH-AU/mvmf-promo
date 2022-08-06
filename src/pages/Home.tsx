@@ -1,6 +1,6 @@
-import {FC, useContext} from "react"
+import {FC, useContext, useEffect} from "react"
 import {Col, Container, Row} from "react-bootstrap"
-import {Link} from "react-router-dom"
+import {Link, useLocation} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageSelector} from "../components/LanguageSelector"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
@@ -113,6 +113,15 @@ const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background
 
 export const Home: FC = () => {
   const languageContext = useContext(LanguageContext)
+  const location = useLocation()
+
+  useEffect(() => {
+    if (!location.hash) return
+    document.getElementById(location.hash.replace(/^#/, ""))?.scrollIntoView({block: "center"})
+    const url = new URL(window.location.href)
+    url.hash = ""
+    window.history.replaceState({}, "", url.href)
+  }, [location.hash])
 
   document.title = "MVMF 2022"
 
@@ -150,7 +159,7 @@ export const Home: FC = () => {
           <Row className="px-0_5">
             <Col xs={8}>
               <Row>
-                <Col xs={6} className="px-0_5">
+                <Col xs={6} className="px-0_5" id="about">
                   <Tile background={"images/Chariot.jpg"} title={tiles.about[languageContext.language]}
                         titleLight={true} link="about"/>
                 </Col>
@@ -160,11 +169,11 @@ export const Home: FC = () => {
                         link="https://forms.office.com/r/i5m431jhpK"/>
                 </Col>
 
-                <Col xs={6} className="px-0_5 mt-1">
+                <Col xs={6} className="px-0_5 mt-1" id="map">
                   <Tile background={"images/Elia.jpg"} title={tiles.map[languageContext.language]} link="map"/>
                 </Col>
 
-                <Col xs={6} className="px-0_5 mt-1">
+                <Col xs={6} className="px-0_5 mt-1" id="challenge">
                   <Tile background={"images/Basketball and flower.jpg"}
                         title={tiles.competition[languageContext.language]} link="challenge"/>
                 </Col>
@@ -173,7 +182,7 @@ export const Home: FC = () => {
 
             <Col xs={4}>
               <Row className="px-0_5 h-100">
-                <Col xs={12} className="p-0 h-100">
+                <Col xs={12} className="p-0 h-100" id="program">
                   <Tile background="images/trunkclaspers.jpg" title={tiles.program[languageContext.language]}
                         titleLight={true} link="program"/>
                 </Col>

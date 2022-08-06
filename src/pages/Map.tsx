@@ -20,7 +20,7 @@ export const Map: FC = () => {
   document.title = `MVMF 2022 | ${title[languageContext.language]}`
 
   return <>
-    <Header title={title[languageContext.language]} backURl="/" xs={12} lg={7} xl={6}/>
+    <Header title={title[languageContext.language]} backURl="/#map" xs={12} lg={7} xl={6}/>
     <Container>
       <Row>
         <Col xs={12}>

@@ -221,7 +221,7 @@ export const Program: FC = () => {
   document.title = "MVMF 2022 | Program"
 
   return <>
-    <Header title="Program" backURl="/" style={{background: "#E7E7E7"}} xs={12} lg={7} xl={6} sticky/>
+    <Header title="Program" backURl="/#program" style={{background: "#E7E7E7"}} xs={12} lg={7} xl={6} sticky/>
     <Container id="program" className="mb-5" fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
