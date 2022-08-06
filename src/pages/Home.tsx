@@ -173,7 +173,7 @@ export const Home: FC = () => {
           {title[languageContext.language]}
         </h1>
       </Modal.Header>
-      <Modal.Body className="p-0" children={modal}/>
+      <Modal.Body className="px-0 pt-0" style={{paddingBottom: "25mm"}} children={modal}/>
     </Modal>
 
     <Container fluid className={`fade ${showModal || location.pathname !== "/" ? "" : "show"}`}>
