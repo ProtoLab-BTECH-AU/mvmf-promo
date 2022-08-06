@@ -396,6 +396,14 @@ export const Home: FC = () => {
           Birk Centerpark 15, 7400 Herning
         </Col>
       </Row>
+
+      <Row className="p-0">
+        <div className="text-end p-1">
+          <a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">
+            <img src={`${process.env.PUBLIC_URL}/images/icons/cc-by-sa.svg`} alt="" height={24}/>
+          </a>
+        </div>
+      </Row>
     </Container>
   </>
 }

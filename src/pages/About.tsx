@@ -35,7 +35,11 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
         artiklen om makerkultur på Wikipedia (på engelsk)
       </a>.
     </p>,
-    <p style={{fontSize: "70%"}}>
+    <p style={{fontSize: "50%"}} className="mt-5">
+      <a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">
+        <img src={`${process.env.PUBLIC_URL}/images/icons/cc-by-sa.svg`} alt="" height={24}/>
+      </a>
+      <br/>
       Denne hjemmeside er open source, og distribueres med en Creative Commons Attribution-ShareAlike licens. Koden kan
       findes på ProtoLab's GitHub-side:&nbsp;
       <a target="_blank" rel="noreferrer" className="text-nowrap"
@@ -74,7 +78,11 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
         Maker culture article on Wikipedia
       </a>.
     </p>,
-    <p style={{fontSize: "70%"}}>
+    <p style={{fontSize: "50%"}}>
+      <a target="_blank" rel="noreferrer" href="https://creativecommons.org/licenses/by-sa/4.0/">
+        <img src={`${process.env.PUBLIC_URL}/images/icons/cc-by-sa.svg`} alt="" height={24}/>
+      </a>
+      <br/>
       This webpage is open source and is distributed with a Creative Commons Attribution-ShareAlike licence. The code
       can be found on the ProtoLab's GitHub page:&nbsp;
       <a target="_blank" rel="noreferrer" className="text-nowrap"
