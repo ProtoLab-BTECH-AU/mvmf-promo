@@ -10,7 +10,7 @@
     "build:react": "react-scripts build",
     "build:watch": "nodemon --watch src -e ts,tsx,css --exec 'npm run build'",
     "build": "yarn build:react",
-    "postbuild": "sh postbuild.sh",
+    "postbuild": "bash postbuild.sh",
     "serve": "serve -s -n build"
   },
   "browserslist": {
