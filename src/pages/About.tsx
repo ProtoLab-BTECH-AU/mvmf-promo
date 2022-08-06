@@ -87,7 +87,7 @@ export const About: FC = () => {
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
-          {text[languageContext.language].map((p, i) => <p key={i}>{p}</p>)}
+          {text[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
         </Col>
       </Row>
     </Container>
