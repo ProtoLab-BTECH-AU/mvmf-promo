@@ -69,7 +69,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
 }
 
 
-export const Competition: FC = () => {
+export const Challenge: FC = () => {
   const languageContext = useContext(LanguageContext)
   useEffect(() => window.scrollTo(0, 0), [])
 

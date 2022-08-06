@@ -3,7 +3,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom"
 import {Background} from "./components/Background"
 import {LanguageContextProvider} from "./context/LanguageContext"
 import {About} from "./pages/About"
-import {Competition} from "./pages/Competition"
+import {Challenge} from "./pages/Challenge"
 import {Home} from "./pages/Home"
 import {Map} from "./pages/Map"
 import {NotFound} from "./pages/NotFound"
@@ -19,7 +19,7 @@ export const App: FC = () => (
           <Route path="about" element={<About/>}/>
           <Route path="program" element={<Program/>}/>
           <Route path="map" element={<Map/>}/>
-          <Route path="challenge" element={<Competition/>}/>
+          <Route path="challenge" element={<Challenge/>}/>
           <Route path="*" element={<NotFound/>}/>
         </Routes>
       </div>
