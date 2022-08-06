@@ -7,12 +7,13 @@ interface IProps extends ColProps {
   title: string
   backURl?: string
   sticky?: boolean
+  fluid?: boolean
 }
 
 export const Header: FC<IProps> = (props) => {
   return (
     <Navbar className={`p-2 ${props.sticky ? "sticky-top" : ""}`} style={{height: "4.75rem", ...props.style}}>
-      <Container className="my-0 py-0">
+      <Container className="my-0 py-0" fluid={props.fluid}>
         <Col className="mx-auto my-0 p-0 d-flex"
              xs={props.xs} md={props.md} lg={props.lg} xl={props.xl} xxl={props.xxl}>
           <Link to={props.backURl ?? "/"} style={{height: "fit-content"}}>
