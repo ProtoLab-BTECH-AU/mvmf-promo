@@ -1,9 +1,8 @@
-import {FC, useContext, useEffect} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
-import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
-const title: Record<TLanguage, string> = {danish: "MVMF Challenge", english: "MVMF Challenge"}
+export const title: Record<TLanguage, string> = {danish: "MVMF Challenge", english: "MVMF Challenge"}
 
 const text: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
@@ -71,12 +70,8 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
 
 export const Challenge: FC = () => {
   const languageContext = useContext(LanguageContext)
-  useEffect(() => window.scrollTo(0, 0), [])
-
-  document.title = `MVMF 2022 | ${title[languageContext.language]}`
 
   return <>
-    <Header title={title[languageContext.language]} backURl="/#challenge" xs={12} lg={7} xl={6}/>
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">

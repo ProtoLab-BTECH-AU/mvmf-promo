@@ -1,7 +1,6 @@
-import {FC, useContext, useEffect} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {colors} from "../colors"
-import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 import "./Program.css"
 
@@ -213,15 +212,16 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
   },
 }
 
+export const title: Record<TLanguage, string> = {
+  danish: "Program",
+  english: "Program",
+}
+
 
 export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
-  useEffect(() => window.scrollTo(0, 0), [])
-
-  document.title = "MVMF 2022 | Program"
 
   return <>
-    <Header title="Program" backURl="/#program" style={{background: "#E7E7E7"}} xs={12} lg={7} xl={6} sticky/>
     <Container id="program" className="mb-5" fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
@@ -230,7 +230,7 @@ export const Program: FC = () => {
             {languageContext.language === "english" && "The program is preliminary, changes may occur"}
           </p>
 
-          <table className="sticky-top" style={{zIndex: 1021, top: "4.75rem"}}>
+          <table className="sticky-top" style={{zIndex: 1021}}>
             <thead>
             <tr style={{background: colors.au7comp, color: colors.au7}}>
               <th></th>
@@ -254,7 +254,7 @@ export const Program: FC = () => {
               <div className="my-3 sticky-top text-xsmall ps-1 d-inline-block pointer"
                    style={{
                      height: "4.50rem", width: "calc(10% + 1px)",
-                     zIndex: 1120, top: "4.75rem",
+                     zIndex: 1120,
                      background: colors.au7comp,
                      color: colors.au7,
                    }}

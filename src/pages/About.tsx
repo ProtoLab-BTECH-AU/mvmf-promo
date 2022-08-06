@@ -1,6 +1,5 @@
-import {FC, useContext, useEffect} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Figure, Row} from "react-bootstrap"
-import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 const text: Record<TLanguage, (JSX.Element | string)[]> = {
@@ -71,19 +70,15 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
   ],
 }
 
-const title: Record<TLanguage, string> = {
+export const title: Record<TLanguage, string> = {
   danish: "Om",
   english: "About",
 }
 
 export const About: FC = () => {
   const languageContext = useContext(LanguageContext)
-  useEffect(() => window.scrollTo(0, 0), [])
-
-  document.title = `MVMF 2022 | ${title[languageContext.language]}`
 
   return <>
-    <Header title={title[languageContext.language]} backURl="/#about" xs={12} lg={7} xl={6}/>
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">

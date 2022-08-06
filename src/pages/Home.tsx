@@ -1,9 +1,14 @@
-import {FC, useContext, useEffect} from "react"
-import {Col, Container, Row} from "react-bootstrap"
+import {FC, useContext, useEffect, useState} from "react"
+import {Col, Container, Modal, Row} from "react-bootstrap"
 import {Link, useLocation} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageSelector} from "../components/LanguageSelector"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
+import {About, title as aboutTitle} from "./About"
+import {Challenge, title as challengeTitle} from "./Challenge"
+import {Map, title as mapTitle} from "./Map"
+import {NotFound, title as notFoundTitle} from "./NotFound"
+import {Program, title as programTitle} from "./Program"
 
 
 const tiles: Record<string, Record<TLanguage, string>> = {
@@ -115,19 +120,58 @@ export const Home: FC = () => {
   const languageContext = useContext(LanguageContext)
   const location = useLocation()
 
-  useEffect(() => {
-    if (!location.hash) return
-    document.getElementById(location.hash.replace(/^#/, ""))?.scrollIntoView({block: "center"})
-    const url = new URL(window.location.href)
-    url.hash = ""
-    window.history.replaceState({}, "", url.href)
-  }, [location.hash])
+  const [modal, setModal] = useState<JSX.Element | null>(null)
+  const [title, setTitle] = useState<Record<TLanguage, string>>({danish: "", english: ""})
+  const [showModal, setShowModal] = useState<boolean>(false)
 
-  document.title = "MVMF 2022"
+  useEffect(() => {
+    const pathname = location.pathname.replace(/(^\/+|\/+$)/, "")
+    if (pathname === "") {
+      setShowModal(false)
+      setTitle({danish: "", english: ""})
+    } else if (pathname === "about") {
+      setModal(<About/>)
+      setTitle(aboutTitle)
+    } else if (pathname === "program") {
+      setModal(<Program/>)
+      setTitle(programTitle)
+    } else if (pathname === "map") {
+      setModal(<Map/>)
+      setTitle(mapTitle)
+    } else if (pathname === "challenge") {
+      setModal(<Challenge/>)
+      setTitle(challengeTitle)
+    } else {
+      setModal(<NotFound/>)
+      setTitle(notFoundTitle)
+    }
+  }, [location])
+
+  useEffect(() => void (document.title = title[languageContext.language] ? `MVMF | ${title[languageContext.language]}` : "MVMF 2022"), [title, languageContext.language])
+  useEffect(() => setShowModal(!!modal), [modal])
 
   // noinspection HtmlUnknownTarget
-  return (
-    <Container fluid>
+  return <>
+    <Modal fullscreen={true} show={showModal} onHide={() => setShowModal(false)} scrollable={true}>
+      <Modal.Header className="px-0 py-2 border-0">
+        <Container className="my-0 py-0">
+          <Col className="mx-auto my-0 p-0 d-flex">
+            <Link to="/" style={{height: "fit-content"}}>
+              <img src={`${process.env.PUBLIC_URL}/images/icons/arrow-left.svg`} alt=""
+                   style={{height: "2.375rem", marginTop: ".375rem"}}/>
+            </Link>
+            <div className="d-inline ms-2 text-small"><LanguageSelector/></div>
+
+            <h1 className="text-big fw-bold d-inline ms-auto text-nowrap">
+              {title[languageContext.language]}
+            </h1>
+          </Col>
+        </Container>
+      </Modal.Header>
+      <Modal.Body className="p-0" children={modal}/>
+    </Modal>
+
+    <Container fluid className={`fade ${showModal || location.pathname !== "/" ? "" : "show"}`}>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "80vh", minHeight: "325px"}}>
         <div className="position-absolute top-0 start-0 h-100 w-100">
           <div className="position-absolute" style={{top: ".75rem", left: ".75rem"}}>
@@ -347,5 +391,5 @@ export const Home: FC = () => {
         </Col>
       </Row>
     </Container>
-  )
+  </>
 }

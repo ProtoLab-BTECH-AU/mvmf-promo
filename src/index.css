@@ -94,6 +94,14 @@ body {
     position: relative;
 }
 
+.modal-backdrop {
+    display: none;
+}
+
+.modal-dialog, .modal-content {
+    background: none;
+}
+
 .px-0_5 {
     padding-left: 0.125rem;
     padding-right: 0.125rem;

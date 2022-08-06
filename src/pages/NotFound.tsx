@@ -1,6 +1,5 @@
-import {FC, useContext, useEffect} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
-import {Header} from "../components/Header"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 const text: Record<TLanguage, string> = {
@@ -8,14 +7,15 @@ const text: Record<TLanguage, string> = {
   english: "The page could not be found",
 }
 
+export const title: Record<TLanguage, string> = {
+  danish: "404",
+  english: "404",
+}
+
 export const NotFound: FC = () => {
   const languageContext = useContext(LanguageContext)
-  useEffect(() => window.scrollTo(0, 0), [])
-
-  document.title = "MVMF 2022 | 404"
 
   return <>
-    <Header title="" backURl="/" xs={12} lg={8}/>
     <Container className="mt-5 pt-5">
       <Row>
         <Col xs={12} lg={8} className="mx-auto text-center">
