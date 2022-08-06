@@ -222,7 +222,7 @@ export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
 
   return <>
-    <Container id="program" style={{marginBottom: "calc(100% - 10rem)"}} fluid>
+    <Container id="program" style={{marginBottom: "30vh"}} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
           <table className="sticky-top" style={{zIndex: 1021}}>
