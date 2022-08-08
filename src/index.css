@@ -98,6 +98,11 @@ body {
     display: none;
 }
 
+.main-modal .modal-dialog {
+    transition-delay: 250ms !important;
+    transform: none !important;
+}
+
 .modal-dialog, .modal-content {
     background: none;
 }
