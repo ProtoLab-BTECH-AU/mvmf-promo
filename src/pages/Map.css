@@ -1,0 +1,7 @@
+#map svg.language-english .danish {
+    visibility: hidden;
+}
+
+#map svg.language-danish .english {
+    visibility: hidden;
+}
