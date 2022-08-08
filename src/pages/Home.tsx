@@ -215,7 +215,7 @@ export const Home: FC = () => {
 
                 <Col xs={6} className="px-0_5">
                   <Tile background={"images/Ivy.jpg"} title={tiles.register[languageContext.language]}
-                        link={tiles.register.link}/>
+                        link={tiles.register.link + `?lang=${languageContext.locale}`}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1" id="map">
