@@ -226,7 +226,7 @@ export const Program: FC = () => {
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
-          <table className="sticky-top" style={{zIndex: 1021}}>
+          <table className="sticky-top" style={{zIndex: 1020}}>
             <thead>
             <tr style={{background: colors.au7comp, color: colors.au7}}>
               <th></th>
@@ -248,26 +248,26 @@ export const Program: FC = () => {
             {languageContext.language === "english" && "The program is preliminary, changes may occur"}
           </p>
 
-          {Object.entries(events).map(([day, hours]) => {
+          {Object.entries(events).map(([day, hours], j) => {
             const date = new Date(day)
 
             return [
               <div key={0} className="my-3 sticky-top text-xsmall ps-1 d-inline-block pointer"
                    style={{
                      height: "4.50rem", width: "calc(10% + 1px)",
-                     zIndex: 1120,
+                     zIndex: 1120 + j + 1,
                      background: colors.au7comp,
                      color: colors.au7,
                    }}
                    onClick={() => {
-                     const top = document.getElementById(day)?.getBoundingClientRect()?.top ?? 1
-                     if (top > 0) return
-                     containerRef.current?.parentElement?.scrollTo({top: top - 380})
+                     const top = containerRef.current?.querySelector(`#day${day}`)?.getBoundingClientRect().top ?? 380
+                     if (top >= 380) return
+                     containerRef.current?.parentElement?.scrollBy({top: top - 380})
                    }}>
                 {date.toLocaleString(languageContext.locale, {day: "numeric"})}<br/>
                 {date.toLocaleString(languageContext.locale, {month: "short"})}
               </div>,
-              <table key={1} id={day} className="border-separate">
+              <table key={1} id={`day${day}`} className="border-separate">
                 <tbody>
                 {Object.entries(hours).map(([hour, [ev1, ev2, ev3]], i) => {
                   let col1: JSX.Element | null = null
