@@ -1,5 +1,6 @@
 import {FC, useContext, useRef} from "react"
 import {Col, Container, Row} from "react-bootstrap"
+import {Link} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 import "./Program.css"
@@ -54,8 +55,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 5,
         text: {
-          danish: "BIRK DESIGN WALK Have",
-          english: "BIRK DESIGN WALK Garden",
+          danish: <>BIRK DESIGN WALK<br/>Haver</>,
+          english: <>BIRK DESIGN WALK<br/>Gardens</>,
         },
       },
     ],
@@ -95,7 +96,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: "Main Stage",
         hours: 2,
         text: {
-          danish: "PRÆSENTATION:  Forskellige Forretnings \"Makers\" og projekter fra MidtVest                                                                                   ",
+          danish: "PRÆSENTATION: Forskellige forretnings-makers og projekter fra MidtVest                                                                                   ",
           english: "PRESENTATIONS: 'Making' Business in Midtvest",
         },
       },
@@ -103,8 +104,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 3,
         text: {
-          danish: "BIRK DESIGN WALK Museum",
-          english: "BIRK DESIGN WALK Museum",
+          danish: <>BIRK DESIGN WALK<br/>Museum</>,
+          english: <>BIRK DESIGN WALK<br/>Museum</>,
         },
       },
     ],
@@ -120,7 +121,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: "Main Stage",
         text: {
-          danish: "PANELDEBAT: med udvalgte Makers fra MidtVest ",
+          danish: "PANELDEBAT: med udvalgte makers fra MidtVest",
           english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
         },
       },
@@ -133,16 +134,16 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: "Main Stage",
         text: {
-          danish: "MAKER HULE P1: Repræsentanter fra hver Kommune",
-          english: "MidtVest Makers Hule P1: Representatives from Kommunes",
+          danish: "MAKERS UDFORDRING P1: Repræsentanter fra hver af kommunerne",
+          english: "MAKERS CHALLENGE P1: Representatives from Kommunes",
         },
       },
       undefined,
       {
         hours: 5,
         text: {
-          danish: "BIRK DESIGN WALK Museum",
-          english: "BIRK DESIGN WALK Museum",
+          danish: <>BIRK DESIGN WALK<br/>Museum</>,
+          english: <>BIRK DESIGN WALK<br/>Museum</>,
         },
       },
     ],
@@ -150,8 +151,10 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: "Main Stage",
         text: {
-          danish: "MAKER HULE P2: Åben tilmelding for alle",
-          english: "MidtVest Makers Hule P2: Open Call and Competition",
+          danish: <>MAKER UDFORDRING P2: Åben tilmelding for alle – se <Link to="/challenge">MVMF Udfordring</Link> for
+            tilmelding</>,
+          english: <>MAKERS CHALLENGE P2: Open Call and Competition - see <Link to="/challenge">MVMF
+            Challenge</Link> for joining</>,
         },
       },
     ],
@@ -162,7 +165,13 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
     ],
     16: [
-      {text: {danish: "KAFFE: Makers Lounge", english: "COFFEE: Makers Lounge"}},
+      {
+        location: "Main Stage",
+        text: {
+          danish: "Fireside talk modereret af Bæredygtig Herning",
+          english: "Fireside talk moderated by Bæredygtig Herning",
+        },
+      },
     ],
     17: [
       {
@@ -188,22 +197,16 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: "Main Stage",
         hours: 3,
         text: {
-          danish: <>
-            PRÆSENTATION: Teknologi "Makers" and Cases<br/><br/>
-            Mulighed for at Besøge Kommune Platforme
-          </>,
-          english: <>
-            PRESENTATION: Industry 'Makers' Show Cases<br/><br/>
-            Visit the Kommune Platforms
-          </>,
+          danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + Mulighed for at Besøge Kommune Platforme",
+          english: "PRESENTATION: Industry-makers showcase projects + Visit the Kommune Platforms",
         },
       },
       undefined,
       {
         hours: 3,
         text: {
-          danish: "BIRK DESIGN WALK Museum og Have ",
-          english: "BIRK DESIGN WALK Museum and Garden",
+          danish: <>BIRK DESIGN WALK<br/>Museum og Haver</>,
+          english: <>BIRK DESIGN WALK<br/>Museum and Gardens</>,
         },
       },
     ],
