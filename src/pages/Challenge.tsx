@@ -2,7 +2,7 @@ import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
-export const title: Record<TLanguage, string> = {danish: "MVMF Challenge", english: "MVMF Challenge"}
+export const title: Record<TLanguage, string> = {danish: "MVMF Udfordring", english: "MVMF Challenge"}
 
 const text: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
