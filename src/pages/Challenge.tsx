@@ -410,8 +410,8 @@ export const Challenge: FC = () => {
 
   const [showChallenge, setShowChallenge] = useState<0 | 1 | 2 | 3>(0)
 
-  return <>
-    <Container className={`fade ${showChallenge !== 0 ? "show" : "position-absolute"}`}>
+  if (showChallenge) return (
+    <Container>
       <Row className="sticky-top">
         <Col xs={12} lg={7} xl={6} className="mx-auto text-end">
           <CloseButton onClick={() => setShowChallenge(0)}/>
@@ -424,8 +424,9 @@ export const Challenge: FC = () => {
         </Col>
       </Row>
     </Container>
-
-    <Container className={`fade ${showChallenge === 0 ? "show" : ""}`}>
+  )
+  else return (
+    <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
@@ -450,5 +451,5 @@ export const Challenge: FC = () => {
         </Col>
       </Row>
     </Container>
-  </>
+  )
 }
