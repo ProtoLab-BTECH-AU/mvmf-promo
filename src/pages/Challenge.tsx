@@ -85,7 +85,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <p>What do you need to participate?</p>,
     <ul>
       <li className="fw-bold">
-        The challenge period is open from 10<sup>th</sup> of August to 10<sup>th</sup> of September.
+        The challenge period is open from 11<sup>th</sup> of August to 11<sup>th</sup> of September.
       </li>
       <li>
         Within this month you can submit your entry as a maximum of 3 pages as a pdf (Including photos and
