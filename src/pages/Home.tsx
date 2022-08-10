@@ -45,7 +45,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
   },
   date: {
     danish: <>
-      22-24 Sep. 2022<br/>
+      22-24 sep. 2022<br/>
       Aarhus Universitet<br/>
       Birk Centerpark 15<br/>
       Herning
@@ -274,7 +274,7 @@ export const Home: FC = () => {
               <div className="ps-2 fw-bold">
                 {text.description[languageContext.language]}
               </div>
-              <div className="orange fw-bold mt-3 ps-2 ps-md-4">
+              <div className="fw-bold mt-3 ps-2 ps-md-4" style={{fontSize: "125%"}}>
                 {text.date[languageContext.language]}
               </div>
               <div className="fw-bold mt-3">
