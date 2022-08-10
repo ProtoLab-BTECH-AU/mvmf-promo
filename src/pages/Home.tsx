@@ -129,6 +129,9 @@ export const Home: FC = () => {
   const [modal, setModal] = useState<JSX.Element | null>(null)
   const [title, setTitle] = useState<Record<TLanguage, string>>({danish: "", english: ""})
   const [showModal, setShowModal] = useState<boolean>(false)
+  const [highlightCycle, setHighlightCycle] = useState<boolean>(false)
+
+  useEffect(() => void setTimeout(() => setHighlightCycle(!highlightCycle), 750), [highlightCycle])
 
   useEffect(() => {
     const pathname = location.pathname.replace(/^\/+/, "").replace(/\/+$/, "")
@@ -217,7 +220,7 @@ export const Home: FC = () => {
                     </Col>
 
                     <Col xs={6} className="px-0_5 mt-1" id="challenge">
-                      <Tile background={"images/Basketball and flower.jpg"}
+                      <Tile background={"images/Basketball and flower.jpg"} titleLight={highlightCycle}
                             title={tiles.challenge[languageContext.language]} link={tiles.challenge.link}/>
                     </Col>
                   </Row>
