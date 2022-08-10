@@ -40,7 +40,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
     <p>
       At the MidtVest Maker Fest Challenge winners will receive an award and the possibility to collaborate on product
-      development with BTECH Labs in Aarhus university in Herning.
+      development with BTECH Labs at Aarhus university in Herning.
     </p>,
   ],
 }
