@@ -47,7 +47,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
 const text2: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
     <hr/>,
-    <p>What do you need to participate?</p>,
+    <p>Hvad skal du gøre for at deltage?</p>,
     <ul>
       <li className="fw-bold">
         Perioden for deltagelse i denne udfordring er fra 11. august til 11. september 2022
