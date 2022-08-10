@@ -3,7 +3,7 @@ import {CloseButton, Col, Container, Row} from "react-bootstrap"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
-export const title: Record<TLanguage, string> = {danish: "MVMF Udfordring", english: "MVMF Challenge"}
+export const title: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 
 const text1: Record<TLanguage, (JSX.Element | string)[]> = {
