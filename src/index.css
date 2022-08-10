@@ -72,6 +72,18 @@
     font-style: normal
 }
 
+a {
+    color: var(--au-color-8);
+}
+
+a:visited {
+    color: var(--au-color-8);
+}
+
+a:hover {
+    color: var(--au-color-7)
+}
+
 body {
     font-family: "AU Passata", var(--bs-font-sans-serif);
     color: var(--au-color-7-comp);
