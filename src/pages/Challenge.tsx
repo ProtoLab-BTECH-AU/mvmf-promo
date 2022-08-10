@@ -429,17 +429,17 @@ export const Challenge: FC = () => {
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
           <div className="w-100 d-flex justify-content-between">
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
+                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(1)}>
               {titleChallenges[languageContext.language][0]} {challenge[languageContext.language]}
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
+                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(2)}>
               {titleChallenges[languageContext.language][1]} {challenge[languageContext.language]}
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
+                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(3)}>
               {titleChallenges[languageContext.language][2]} {challenge[languageContext.language]}
             </div>
