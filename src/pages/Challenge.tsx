@@ -4,6 +4,7 @@ import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 export const title: Record<TLanguage, string> = {danish: "MVMF Udfordring", english: "MVMF Challenge"}
+const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 
 const text1: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
@@ -16,7 +17,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Skaber og laver du objekter og produkter ved hjælp af værktøjer som 3D-printere, laserskærere, computerstøttet
       design eller ethvert andet digitalt værktøj?<br/>
     </p>,
-    <p className="text-center">
+    <p className="text-center fw-bold">
       Så er vi interesserede i dit arbejde!
     </p>,
     <p>
@@ -34,7 +35,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Do you build and make things and objects using tools like 3D printers, laser cutters, computer aided design or
       any other digital tool?<br/>
     </p>,
-    <p className="text-center">
+    <p className="text-center fw-bold">
       Then we are interested in your work!
     </p>,
     <p>
@@ -431,20 +432,20 @@ export const Challenge: FC = () => {
         <Col xs={12} lg={7} xl={6} className="mx-auto">
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
           <div className="w-100 d-flex justify-content-between">
-            <div className="d-inline-block text-center pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7comp, color: colors.au7}}
+            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(1)}>
-              {titleChallenges[languageContext.language][0]}
+              {titleChallenges[languageContext.language][0]} {challenge[languageContext.language]}
             </div>
-            <div className="d-inline-block text-center pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7comp, color: colors.au7}}
+            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(2)}>
-              {titleChallenges[languageContext.language][1]}
+              {titleChallenges[languageContext.language][1]} {challenge[languageContext.language]}
             </div>
-            <div className="d-inline-block text-center pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7comp, color: colors.au7}}
+            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+                 style={{width: "calc(33.33334% - .5rem)", background: colors.au7, color: colors.au7comp}}
                  onClick={() => setShowChallenge(3)}>
-              {titleChallenges[languageContext.language][2]}
+              {titleChallenges[languageContext.language][2]} {challenge[languageContext.language]}
             </div>
           </div>
           {text2[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
