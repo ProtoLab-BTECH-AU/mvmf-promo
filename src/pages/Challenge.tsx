@@ -47,7 +47,6 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
 
 const text2: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
-    <hr/>,
     <p>Hvad skal du gøre for at deltage?</p>,
     <ul>
       <li className="fw-bold">
@@ -58,7 +57,6 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         beskrivelse).
       </li>
       <li>Vælg en eller flere kategorier fra designtrussen, der skal anvendes</li>
-      <li>(The design briefs will be out on the 10<sup>th</sup> of August)</li>
       <li>
         Send dit bidrag med pdf'en som vedhæftet fil til <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som "MVMF Challenge (Se briefs
@@ -66,11 +64,11 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
       </li>
       <li className="fw-bold">
         Vi informerer dig/jer den 14. september, om dit bidrag er blevet valgt og om din/jeres deltagelse i at
-        præsentere til MidtVest Maker Fest 2022 Fredag den 23. september.
+        præsentere til MidtVest Maker Fest 2022 fredag den 23. september.
       </li>
     </ul>,
-    <hr/>,
-    <h4 className="text-center fw-bold mb-3">
+    <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
+    <h4 className="text-center fw-bold mb-3 mt-5">
       UDVÆLGELSESKRITERIER FOR ALLE 3 KATEGORIER
     </h4>,
     <p>
@@ -84,7 +82,6 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
   ],
   english: [
-    <hr/>,
     <p>What do you need to participate?</p>,
     <ul>
       <li className="fw-bold">
@@ -95,7 +92,6 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         description).
       </li>
       <li>Choose one or more categories from the design briefs to apply.</li>
-      <li>(The design briefs will be out on the 10<sup>th</sup> of August)</li>
       <li>
         Send your entry to <a href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as “MVMF
         Challenge (number)”.
@@ -105,8 +101,8 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         MidtVest Makers Hule on the 23<sup>th</sup> of September.
       </li>
     </ul>,
-    <hr/>,
-    <h4 className="text-center fw-bold mb-3">
+    <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
+    <h4 className="text-center fw-bold mb-3 mt-5">
       SELECTION CRITERIA FOR ALL 3 ENTRY CATEGORIES
     </h4>,
     <p>
