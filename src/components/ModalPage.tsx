@@ -1,4 +1,4 @@
-import {FC, useContext, useEffect, useState} from "react"
+import {FC, useContext} from "react"
 import {Modal} from "react-bootstrap"
 import {colors} from "../colors"
 import {HistoryContext} from "../context/HistoryContext"
@@ -8,18 +8,13 @@ import {LanguageSelector} from "./LanguageSelector"
 export const ModalPage: FC<{ title: Record<TLanguage, string> }> = ({children, title}) => {
   const languageContext = useContext(LanguageContext)
   const historyContext = useContext(HistoryContext)
-  const [show, setShow] = useState<boolean>(true)
-
-  useEffect(() => {
-    if (!show) setTimeout(() => historyContext.goBack(), 150)
-  }, [show])
 
   document.title = `MVMF 2022 | ${title[languageContext.language]}`
 
-  return <Modal fullscreen={true} backdrop={false} show={show} onHide={() => setShow(false)} scrollable={true}>
+  return <Modal fullscreen={true} backdrop={false} scrollable={true} show>
     <Modal.Header className="p-2 border-0 container">
       <div className="d-inline">
-        <div className="d-inline-block pointer" onClick={() => setShow(false)}>
+        <div className="d-inline-block pointer" onClick={() => historyContext.goBack()}>
           <svg viewBox="0 0 64 64" fill={colors.au7comp} style={{width: "2.375rem", height: "2.375rem"}}>
             <path
               d="M38.454 13.627a2 2 0 00-2.827-.081l-18 17a2.001 2.001 0 000 2.908l18 17c.386.365.88.546 1.373.546a2 2 0 001.374-3.454L21.913 32l16.46-15.546a2 2 0 00.081-2.827z"/>
