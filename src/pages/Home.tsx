@@ -129,7 +129,7 @@ export const Home: FC = () => {
 
   // noinspection HtmlUnknownTarget
   return (
-    <Container id="main" fluid>
+    <Container id="main" style={{animation: "fade-in .3s linear"}} fluid>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "80vh", minHeight: "325px"}}>
         <div className="position-absolute top-0 start-0 h-100 w-100">
           <div className="position-absolute" style={{top: ".75rem", left: ".75rem"}}>
