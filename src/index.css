@@ -72,6 +72,16 @@
     font-style: normal
 }
 
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 a {
     color: var(--au-color-8);
 }
