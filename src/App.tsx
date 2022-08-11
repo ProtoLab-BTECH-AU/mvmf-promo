@@ -1,6 +1,5 @@
 import {FC} from "react"
 import {BrowserRouter, Route, Routes} from "react-router-dom"
-import {Background} from "./components/Background"
 import {ModalPage} from "./components/ModalPage"
 import {HistoryContextProvider} from "./context/HistoryContext"
 import {LanguageContextProvider} from "./context/LanguageContext"
@@ -13,7 +12,6 @@ import {Program, title as programTitle} from "./pages/Program"
 
 export const App: FC = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Background/>
     <HistoryContextProvider>
       <LanguageContextProvider>
         <Routes>
