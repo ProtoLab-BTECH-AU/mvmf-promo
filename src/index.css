@@ -218,7 +218,7 @@ a.black {
         opacity: 0;
     }
 
-    div.interactive.link:hover > * {
+    div.interactive.link:hover, div.interactive.link:hover > * {
         border-radius: .375rem !important;
     }
 
