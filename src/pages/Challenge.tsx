@@ -1,10 +1,11 @@
 import {FC, useContext, useState} from "react"
-import {CloseButton, Col, Container, Row} from "react-bootstrap"
+import {Col, Container, Row} from "react-bootstrap"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 export const title: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
+const close: Record<TLanguage, string> = {danish: "Luk", english: "Close"}
 
 const text1: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
@@ -433,7 +434,15 @@ export const Challenge: FC = () => {
     <Container>
       <Row className="sticky-top">
         <Col xs={12} lg={7} xl={6} className="mx-auto text-end">
-          <CloseButton onClick={() => setShowChallenge(0)}/>
+          <div className="d-inline-block text-center pointer interactive link p-2 py-1"
+               style={{
+                 fontSize: "90%",
+                 background: colors.au7,
+                 color: colors.au7comp,
+               }}
+               onClick={() => setShowChallenge(0)}>
+            {close[languageContext.language]}
+          </div>
         </Col>
       </Row>
       <Row>
