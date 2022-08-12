@@ -58,9 +58,6 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Ved MidtVest Maker Fest Challenge modtager vinderne en pris og muligheden for at samarbejde om produktudvikling
       med BTECH Labs på Aarhus Universitet i Herning.
     </p>,
-    <p className="text-center fw-bold">
-      <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
-    </p>,
   ],
   english: [
     <h2 className="text-center fw-bold my-5">
@@ -78,9 +75,6 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     <p>
       At the MidtVest Maker Fest Challenge winners will receive an award and the possibility to collaborate on product
       development with BTECH Labs at Aarhus university in Herning.
-    </p>,
-    <p className="text-center fw-bold">
-      <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
     </p>,
   ],
 }
@@ -110,7 +104,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         præsentere til MidtVest Maker Fest 2022 fredag den 23. september.
       </li>
       <li>
-        Del gerne jeres proces med at arbejde med udfordringer
+        Del gerne jeres proces med at arbejde med udfordringer på sociale medier
         med <strong>#mvmf2022</strong> og <strong>@btech_herning</strong> så vi kan følge med!
       </li>
     </ul>,
@@ -152,7 +146,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         MidtVest Makers Fest on the 23<sup>rd</sup> of September.
       </li>
       <li>
-        Feel free to share your process of working with challenges
+        Feel free to share your process of working with the challenges on social media
         with <strong>#mvmf2022</strong> and <strong>@btech_herning</strong> so we can follow along!
       </li>
     </ul>,
