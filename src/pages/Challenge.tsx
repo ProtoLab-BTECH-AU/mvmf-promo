@@ -146,7 +146,7 @@ const titleChallenges: Record<TLanguage, [string, string, string]> = {
 const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element | string)[], (JSX.Element | string)[]]> = {
   danish: [
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 01: Om 3D Printing</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 01: 3D Printing</h4>,
       <ul>
         <li>
           Du/din gruppe, har anvendt et hvilket som helst CAD-program til at modellere <strong>OG</strong> 3D-printe
@@ -196,7 +196,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 02: Om Laserskæring</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 02: Laserskæring</h4>,
       <ul>
         <li>Du/din gruppe, har anvendt et hvilket som helst CAD-program til at modellere <strong>OG</strong> 3D-printe
           et objekt eller et produkt af enhver dimension.
@@ -239,7 +239,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 03: Om Interaktive Objekt(er):</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 03: Interaktive Objekt(er):</h4>,
       <ul>
         <li>Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
           interaktivt objekt/er eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv...)
@@ -276,8 +276,9 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           A4-sider</strong>.
         </li>
         <li>
-          Hvis det er relevant og nødvendigt, opfordres der til at et link til en uploadet video (f.eks. Youtube, Vimeo
-          osv...) af projektet, men det er ikke obligatorisk.
+          Hvis det er relevant og nødvendigt, opfordres der til at et link til en uploadet video filmede på
+          højkant &#8597; i 9:16 format (f.eks. på Youtube, Vimeo osv...) af projektet, men det er ikke obligatorisk.
+          Husk at tilføje <strong>#mvmf2022</strong> og <strong>@btech_herning</strong>.
         </li>
       </ol>,
       <p>
@@ -409,8 +410,9 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           pages</strong>.
         </li>
         <li>
-          As applicable and necessary a link to an uploaded video (eg. Youtube, Vimeo etc…) of the project is encouraged
-          but not mandatory.
+          As applicable and necessary a link to an uploaded video filmed portrait mode &#8597; in 9:16 format (eg. at
+          Youtube, Vimeo etc…) of the project is encouraged but not mandatory – remember to
+          use <strong>#mvmf2022</strong> and <strong>@btech_herning</strong>.
         </li>
       </ol>,
       <p>
