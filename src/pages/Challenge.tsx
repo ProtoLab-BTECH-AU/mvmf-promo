@@ -24,6 +24,9 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Ved MidtVest Maker Fest Challenge modtager vinderne en pris og muligheden for at samarbejde om produktudvikling
       med BTECH Labs på Aarhus Universitet i Herning.
     </p>,
+    <p className="text-center fw-bold">
+      <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
+    </p>
   ],
   english: [
     <h2 className="text-center fw-bold my-5">
@@ -42,6 +45,9 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       At the MidtVest Maker Fest Challenge winners will receive an award and the possibility to collaborate on product
       development with BTECH Labs at Aarhus university in Herning.
     </p>,
+    <p className="text-center fw-bold">
+      <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
+    </p>
   ],
 }
 
