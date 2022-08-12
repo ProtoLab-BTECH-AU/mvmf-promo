@@ -1,11 +1,44 @@
-import {FC, useContext, useState} from "react"
+import {FC, useContext} from "react"
 import {Col, Container, Row} from "react-bootstrap"
+import {Link} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 export const title: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
-const close: Record<TLanguage, string> = {danish: "Luk", english: "Close"}
+export const challengeTitles: [Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>] = [
+  {danish: "3D Printing", english: "3D Printing"},
+  {danish: "Laserskæring", english: "Laser-Cutting"},
+  {danish: "Interaktive Objekt(er)", english: "Interactive Object(s)"},
+]
+export const challengeTitlesFull: [Record<TLanguage, string>, Record<TLanguage, string>, Record<TLanguage, string>] = [
+  {
+    danish: `${challenge.danish} 01: ${challengeTitles[0].danish}`,
+    english: `${challenge.english} 01: ${challengeTitles[0].danish}`,
+  },
+  {
+    danish: `${challenge.danish} 02: ${challengeTitles[0].danish}`,
+    english: `${challenge.english} 02: ${challengeTitles[0].danish}`,
+  },
+  {
+    danish: `${challenge.danish} 03: ${challengeTitles[0].danish}`,
+    english: `${challenge.english} 03: ${challengeTitles[0].danish}`,
+  },
+]
+export const challengeTitlesHeader: [Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>] = [
+  {
+    danish: <><span className="d-none d-lg-inline">{challenge.danish} 01: </span>{challengeTitles[0].danish}</>,
+    english: <><span className="d-none d-lg-inline">{challenge.english} 01: </span>{challengeTitles[0].english}</>,
+  },
+  {
+    danish: <><span className="d-none d-lg-inline">{challenge.danish} 02: </span>{challengeTitles[1].danish}</>,
+    english: <><span className="d-none d-lg-inline">{challenge.english} 02: </span>{challengeTitles[1].english}</>,
+  },
+  {
+    danish: <><span className="d-none d-lg-inline">{challenge.danish} 03: </span>{challengeTitles[2].danish}</>,
+    english: <><span className="d-none d-lg-inline">{challenge.english} 03: </span>{challengeTitles[2].english}</>,
+  },
+]
 
 const text1: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
@@ -139,10 +172,6 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
   ],
 }
 
-const titleChallenges: Record<TLanguage, [string, string, string]> = {
-  danish: ["3D Printing", "Laser-Cutting", "Interactive Object(s)"],
-  english: ["3D Printing", "Laser-Cutting", "Interactive Object(s)"],
-}
 
 const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element | string)[], (JSX.Element | string)[]]> = {
   danish: [
@@ -425,35 +454,52 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
   ],
 }
 
-export const Challenge: FC = () => {
+export const Challenge1: FC = () => {
   const languageContext = useContext(LanguageContext)
 
-  const [showChallenge, setShowChallenge] = useState<0 | 1 | 2 | 3>(0)
-
-  if (showChallenge) return (
+  return (
     <Container>
-      <Row className="sticky-top">
-        <Col xs={12} lg={7} xl={6} className="mx-auto text-end">
-          <div className="d-inline-block text-center pointer interactive link p-2 py-1"
-               style={{
-                 fontSize: "90%",
-                 background: colors.au7,
-                 color: colors.au7comp,
-               }}
-               onClick={() => setShowChallenge(0)}>
-            {close[languageContext.language]}
-          </div>
-        </Col>
-      </Row>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
-          {textChallenges[languageContext.language][showChallenge - 1]
-            ?.map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
+          {textChallenges[languageContext.language][0].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
         </Col>
       </Row>
     </Container>
   )
-  else return (
+}
+
+export const Challenge2: FC = () => {
+  const languageContext = useContext(LanguageContext)
+
+  return (
+    <Container>
+      <Row>
+        <Col xs={12} lg={7} xl={6} className="mx-auto">
+          {textChallenges[languageContext.language][1].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+export const Challenge3: FC = () => {
+  const languageContext = useContext(LanguageContext)
+
+  return (
+    <Container>
+      <Row>
+        <Col xs={12} lg={7} xl={6} className="mx-auto">
+          {textChallenges[languageContext.language][2].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
+        </Col>
+      </Row>
+    </Container>
+  )
+}
+
+export const Challenge: FC = () => {
+  const languageContext = useContext(LanguageContext)
+
+  return (
     <Container>
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
@@ -465,9 +511,9 @@ export const Challenge: FC = () => {
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
-                 }}
-                 onClick={() => setShowChallenge(1)}>
-              {titleChallenges[languageContext.language][0]} {challenge[languageContext.language]}
+                 }}>
+              {challengeTitles[0][languageContext.language]} {challenge[languageContext.language]}
+              <Link to="/challenge1" className="stretched-link"/>
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
@@ -475,9 +521,9 @@ export const Challenge: FC = () => {
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
-                 }}
-                 onClick={() => setShowChallenge(2)}>
-              {titleChallenges[languageContext.language][1]} {challenge[languageContext.language]}
+                 }}>
+              {challengeTitles[1][languageContext.language]} {challenge[languageContext.language]}
+              <Link to="/challenge2" className="stretched-link"/>
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
@@ -485,9 +531,9 @@ export const Challenge: FC = () => {
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
-                 }}
-                 onClick={() => setShowChallenge(3)}>
-              {titleChallenges[languageContext.language][2]} {challenge[languageContext.language]}
+                 }}>
+              {challengeTitles[2][languageContext.language]} {challenge[languageContext.language]}
+              <Link to="/challenge3" className="stretched-link"/>
             </div>
           </div>
           {text2[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
