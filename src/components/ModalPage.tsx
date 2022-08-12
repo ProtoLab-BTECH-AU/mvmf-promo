@@ -5,7 +5,12 @@ import {HistoryContext} from "../context/HistoryContext"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 import {LanguageSelector} from "./LanguageSelector"
 
-export const ModalPage: FC<{ title: Record<TLanguage, string> }> = ({children, title}) => {
+interface IProps {
+  title: Record<TLanguage, string>
+  headerTitle?: Record<TLanguage, string>
+}
+
+export const ModalPage: FC<IProps> = ({children, title, headerTitle}) => {
   const languageContext = useContext(LanguageContext)
   const historyContext = useContext(HistoryContext)
 
@@ -26,7 +31,7 @@ export const ModalPage: FC<{ title: Record<TLanguage, string> }> = ({children, t
       </div>
 
       <h1 className="text-big fw-bold d-inline text-nowrap">
-        {title[languageContext.language]}
+        {(headerTitle ?? title)[languageContext.language]}
       </h1>
     </Modal.Header>
     <Modal.Body className="px-0 pt-0" style={{paddingBottom: "25mm"}} children={children}/>
