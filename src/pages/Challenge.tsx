@@ -26,7 +26,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
     <p className="text-center fw-bold">
       <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
-    </p>
+    </p>,
   ],
   english: [
     <h2 className="text-center fw-bold my-5">
@@ -47,7 +47,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
     <p className="text-center fw-bold">
       <span className="me-4">@btech_herning</span> <span className="ms-4">#mvmf2022</span>
-    </p>
+    </p>,
   ],
 }
 
@@ -62,15 +62,22 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         Inden for denne måned kan du indsende dit bidrag som maksimalt fylder 3 sider i pdf-format (inklusive fotos og
         beskrivelse).
       </li>
-      <li>Vælg en eller flere kategorier fra designtrussen, der skal anvendes</li>
+      <li>
+        Vælg en eller flere kategorier af udfordringer (uddybning for hver kategori kan findes med at klikke på de
+        forskellige orange felter).
+      </li>
       <li>
         Send dit bidrag med pdf'en som vedhæftet fil til <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som "MVMF Challenge (Se briefs
-        nedenfor)". Maksimal filstørrelse for den vedhæftede pdf er 10 MB.
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som "MVMF Challenge XX". Maksimal
+        filstørrelse for den vedhæftede pdf er 10 MB.
       </li>
       <li className="fw-bold">
         Vi informerer dig/jer den 14. september, om dit bidrag er blevet valgt og om din/jeres deltagelse i at
         præsentere til MidtVest Maker Fest 2022 fredag den 23. september.
+      </li>
+      <li>
+        Del gerne jeres proces med at arbejde med udfordringer
+        med <strong>#mvmf2022</strong> og <strong>@btech_herning</strong> så vi kan følge med!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
@@ -97,14 +104,22 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         Within this month you can submit your entry as a maximum of 3 pages as a pdf (Including photos and
         description).
       </li>
-      <li>Choose one or more categories from the design briefs to apply.</li>
       <li>
-        Send your entry to <a href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as “MVMF
-        Challenge (number)”.
+        Choose one or more categories from the design briefs to apply (more detail for each challenge can be found by
+        clicking on the different orange boxes)
+      </li>
+      <li>
+        Send your entry with the pdf as an attachment to <a
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as “MVMF Challenge XX”. Maximum
+        file size for the pdf attachment is 10mb.
       </li>
       <li className="fw-bold">
         We will inform you on the 14<sup>th</sup> of September if your entry has been selected to participate in the
-        MidtVest Makers Hule on the 23<sup>th</sup> of September.
+        MidtVest Makers Fest on the 23<sup>rd</sup> of September.
+      </li>
+      <li>
+        Feel free to share your process of working with challenges
+        with <strong>#mvmf2022</strong> and <strong>@btech_herning</strong> so we can follow along!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
@@ -118,8 +133,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <p>
       The eligibility for this competition is that you reside in Denmark and if your entry were selected by us then are
       willing to participate in the <strong>MidtVest Makers Fest on the 23<sup>rd</sup> of September 2022</strong> in
-      person at
-      Birk Centerpark, Herning.
+      person at Birk Centerpark, Herning.
     </p>,
   ],
 }
@@ -435,17 +449,32 @@ export const Challenge: FC = () => {
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
           <div className="w-100 d-flex justify-content-between">
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
+                 style={{
+                   width: "calc(33.33334% - .5rem)",
+                   fontSize: "75%",
+                   background: colors.au7,
+                   color: colors.au7comp,
+                 }}
                  onClick={() => setShowChallenge(1)}>
               {titleChallenges[languageContext.language][0]} {challenge[languageContext.language]}
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
+                 style={{
+                   width: "calc(33.33334% - .5rem)",
+                   fontSize: "75%",
+                   background: colors.au7,
+                   color: colors.au7comp,
+                 }}
                  onClick={() => setShowChallenge(2)}>
               {titleChallenges[languageContext.language][1]} {challenge[languageContext.language]}
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center"
-                 style={{width: "calc(33.33334% - .5rem)", fontSize: "75%", background: colors.au7, color: colors.au7comp}}
+                 style={{
+                   width: "calc(33.33334% - .5rem)",
+                   fontSize: "75%",
+                   background: colors.au7,
+                   color: colors.au7comp,
+                 }}
                  onClick={() => setShowChallenge(3)}>
               {titleChallenges[languageContext.language][2]} {challenge[languageContext.language]}
             </div>
