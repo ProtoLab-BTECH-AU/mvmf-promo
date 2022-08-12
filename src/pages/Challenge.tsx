@@ -450,7 +450,7 @@ export const Challenge: FC = () => {
         <Col xs={12} lg={7} xl={6} className="mx-auto">
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
           <div className="w-100 d-flex justify-content-between">
-            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+            <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
@@ -460,7 +460,7 @@ export const Challenge: FC = () => {
                  onClick={() => setShowChallenge(1)}>
               {titleChallenges[languageContext.language][0]} {challenge[languageContext.language]}
             </div>
-            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+            <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
@@ -470,7 +470,7 @@ export const Challenge: FC = () => {
                  onClick={() => setShowChallenge(2)}>
               {titleChallenges[languageContext.language][1]} {challenge[languageContext.language]}
             </div>
-            <div className="d-inline-block text-center fw-bold pointer align-items-center"
+            <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
