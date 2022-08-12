@@ -240,7 +240,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 03: Interaktive Objekt(er):</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 03: Interaktive Objekt(er)</h4>,
       <ul>
         <li>Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
           interaktivt objekt/er eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv...)
@@ -375,7 +375,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Challenge 01: On 3D Laser-Cutting</h4>,
+      <h4 className="text-center fw-bold mb-4">Challenge 01: On Interactive Object(s)</h4>,
       <ul>
         <li>You/your group has, used electronic hardware <strong>AND</strong> software to build and make an interactive
           object/s or product (eg. Arduino, Raspberry Pi, ESP32 etc…)
