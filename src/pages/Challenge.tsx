@@ -81,7 +81,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
 
 const text2: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
-    <p>Hvad skal du gøre for at deltage?</p>,
+    <h4 className="fw-bold text-uppercase">Hvad skal du gøre for at deltage?</h4>,
     <ul>
       <li className="fw-bold">
         Perioden for deltagelse i denne udfordring er fra 11. august til 11. september 2022
@@ -123,7 +123,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
   ],
   english: [
-    <p>What do you need to participate?</p>,
+    <h4 className="fw-bold text-uppercase">What do you need to participate?</h4>,
     <ul>
       <li className="fw-bold">
         The challenge period is open from 11<sup>th</sup> of August to 11<sup>th</sup> of September.
@@ -498,7 +498,7 @@ export const Challenge: FC = () => {
       <Row>
         <Col xs={12} lg={7} xl={6} className="mx-auto">
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
-          <div className="w-100 d-flex justify-content-between">
+          <div className="w-100 d-flex justify-content-between my-5">
             <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
                  style={{
                    width: "calc(33.33334% - .5rem)",
