@@ -7,7 +7,7 @@ import {LanguageSelector} from "./LanguageSelector"
 
 interface IProps {
   title: Record<TLanguage, string>
-  headerTitle?: Record<TLanguage, string>
+  headerTitle?: Record<TLanguage, string | JSX.Element>
 }
 
 export const ModalPage: FC<IProps> = ({children, title, headerTitle}) => {
