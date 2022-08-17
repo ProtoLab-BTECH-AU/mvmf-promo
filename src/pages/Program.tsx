@@ -30,8 +30,8 @@ const headers: Record<TLanguage, [string, string, string]> = {
 }
 
 const locations: Record<string, Record<TLanguage, string>> = {
-  mainStage: {danish: "Hovedscenen", english: "Main Stage"},
-  btechPlatform: {danish: "BTECH-platform", english: "BTECH Platform"},
+  mainStage: {danish: "Hovedscenen", english: "Main stage"},
+  btechPlatform: {danish: "BTECH-platform", english: "BTECH platform"},
 }
 
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
@@ -41,19 +41,19 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         text: {
           danish: "Åbning og velkomst af MVMF + Introduktion til kommunerne",
-          english: "Opening and welcome to MVMF +  Introduction of the kommunes",
+          english: "Opening and welcome to MVMF +  Introduction of the municipalities",
         },
       },
     ],
     11: [
-      {text: {danish: "Mulighed for at besøge kommune Platforme", english: "Visit the Kommune Platforms"}},
+      {text: {danish: "Mulighed for at besøge kommune Platforme", english: "Visit to the municipality platforms"}},
       {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {hours: 2, text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit the kommune platforms"}},
+      {hours: 2, text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit to the municipality platforms"}},
       {
         hours: 2,
         text: {danish: "Labs-besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
@@ -70,12 +70,12 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       undefined,
     ],
     15: [
-      {text: {danish: "KAFFE: Maker-kage", english: "COFFEE: Maker Kage"}},
+      {text: {danish: "KAFFE: Maker-kage", english: "COFFEE: Maker cake"}},
     ],
     16: [
       {
         location: locations.btechPlatform,
-        text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking Maker Station Screens"},
+        text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking maker station screens"},
       },
     ],
     17: [
@@ -103,7 +103,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         hours: 2,
         text: {
           danish: "PRÆSENTATION: Forskellige forretnings-makers og projekter fra MidtVest                                                                                   ",
-          english: "PRESENTATIONS: 'Making' Business in Midtvest",
+          english: "PRESENTATIONS: 'Making' business in Midtvest",
         },
       },
       {text: {danish: "WORKSHOP: IoT hardware og software", english: "WORKSHOP: IoT hardware and software"}},
@@ -119,7 +119,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         text: {
           danish: "WORKSHOP: Making Digital Trust for SMEs: DIGI Lab",
-          english: "WORKSHOP: Making Digital Trust for SMEs: DIGI Lab",
+          english: "WORKSHOP: Making digital trust for SMEs: DIGI Lab",
         },
       },
     ],
@@ -200,7 +200,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         hours: 3,
         text: {
           danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + mulighed for at besøge kommune platforme",
-          english: "PRESENTATION: Industry-makers showcase projects + visit the Kommune Platforms",
+          english: "PRESENTATION: Industry-makers showcase projects + visit to the municipality platforms",
         },
       },
       undefined,
@@ -219,7 +219,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
 
 export const title: Record<TLanguage, string> = {
   danish: "Program",
-  english: "Program",
+  english: "Programme",
 }
 
 
