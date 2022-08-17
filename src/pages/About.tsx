@@ -49,13 +49,13 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
   ],
   english: [
-    "The Midtvest Maker Fest (MVMF) is an event that supports and celebrates maker culture with their communities by connecting them with local industry and institutions.",
-    "Good craftsmanship, in design, material processes or technology management is the backbone for manufacturing good products, services and experiences. Makerspaces and maker communities not only help inculcate good craftsmanship but they also facilitate the honing of skills with new digital tools like 3D printers, laser cutters and microcontrollers. Our aim as a network of makerspaces in midtvest Jutland is to facilitate maker skill, knowledge and information sharing between educational institutions, businesses, and civic organizations.",
-    "As a three day event at Aarhus University in Herning MVMF will bring together makers, students local companies, entrepreneurs, tool makers to share and celebrate making and good craftmanship with new technologies.",
+    "The Midtvest Maker Fest (MVMF) is an event that supports and celebrates maker culture and its communities by connecting it with local industry and institutions.",
+    "Good craftsmanship in design, material processes or technology management is the backbone for manufacturing good products, services and experiences. Makerspaces and maker communities not only help inculcate good craftsmanship, but also facilitate the honing of skills with new digital tools like 3D printers, laser cutters and microcontrollers. Our aim as a network of makerspaces in central and western Jutland is to facilitate maker skills, knowledge and information sharing between educational institutions, businesses and civic organisations.",
+    "As a three-day event at Birk Centerpark in Herning, MVMF will bring together makers, students, local companies, entrepreneurs and tool makers to share and celebrate making good craftsmanship with new technologies.",
     <p className="mt-5" style={{fontSize: "70%"}}>
       <h5 className="fw-bold">What is a maker?</h5>
 
-      Adam Savage has worded this in an eloquent way:<br/>
+      Adam Savage has worded it in an eloquent way:<br/>
       <Figure className="mb-0">
         <blockquote className="blockquote fst-italic">
           Humans do two things that make us unique from all other animals; we use tools and we tell stories. And when
@@ -69,7 +69,7 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
       </Figure>
     </p>,
     <p style={{fontSize: "70%"}}>
-      For an articulation of "maker movement" please refer to Dale Dougherty’s text:&nbsp;
+      For a definition of "maker movement" please refer to Dale Dougherty’s text:&nbsp;
       <a target="_blank" rel="noreferrer" href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">
         The Maker Movement</a>.
       <br/>
