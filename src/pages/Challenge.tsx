@@ -67,15 +67,15 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     <p className="text-center">
       Are you a digital crafts person?<br/>
       Are you a maker who uses digital tools?<br/>
-      Do you build and make things and objects using tools like 3D printers, laser cutters, computer aided design or
+      Do you build and make things and objects using tools like 3D printers, laser cutters, computer-aided design or
       any other digital tool?<br/>
     </p>,
     <p className="text-center fw-bold">
       Then we are interested in your work!
     </p>,
     <p>
-      At the MidtVest Maker Fest Challenge winners will receive an award and the possibility to collaborate on product
-      development with BTECH Labs at Aarhus university in Herning.
+      At the MidtVest Maker Fest challenge, winners will receive an award and the possibility to collaborate on product
+      development at Aarhus university in Herning with .
     </p>,
     <p>Click the buttons below to read the details of each challenge.</p>,
   ],
@@ -128,42 +128,43 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <h4 className="fw-bold text-uppercase">What do you need to participate?</h4>,
     <ul>
       <li className="fw-bold">
-        The challenge period is open from 11<sup>th</sup> of August to 11<sup>th</sup> of September.
+        The challenge period is open from the 11<sup>th</sup> of August to the 11<sup>th</sup> of September.
       </li>
       <li>
-        Within this month you can submit your entry as a maximum of 3 pages as a pdf (Including photos and
+        During this month you can submit your entry as a maximum of three-page pdf file (including photos and
         description).
       </li>
       <li>You are welcome to create a group of several people for a challenge</li>
       <li>
-        Choose one or more categories from the design briefs to apply (more detail for each challenge can be found by
+        Choose one or more categories from the design briefs to apply (more details for each challenge can be found by
         clicking on the different orange boxes)
       </li>
       <li>
         Send your entry with the pdf as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as “MVMF Challenge XX”. Maximum
-        file size for the pdf attachment is 10mb.
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title “MVMF Challenge XX”. Maximum
+        file size for the pdf attachment is 10MB.
       </li>
       <li className="fw-bold">
-        We will inform you on the 14<sup>th</sup> of September if your entry has been selected to participate in the
+        We will inform you on the 14<sup>th</sup> of September if your entry has been selected for participation in the
         MidtVest Makers Fest on the 23<sup>rd</sup> of September.
       </li>
       <li>
         Feel free to share your process of working with the challenges on social media
-        with <strong>#mvmf2022</strong> and tag us with <strong>@btech_herning</strong> so we can follow along!
+        with <strong>#mvmf2022</strong> and tag us with <strong>@btech_herning</strong>, so we can follow along!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
     <h4 className="text-center fw-bold mb-3 mt-5">
-      SELECTION CRITERIA FOR ALL 3 ENTRY CATEGORIES
+      SELECTION CRITERIA FOR ALL THREE CATEGORIES
     </h4>,
     <p>
-      The design object or product can be something that you have already made or then you can make a new object by the
-      deadline, which is the <strong>11<sup>th</sup> of September (23.59) 2022</strong>.
+      The design object or product can be something that you have already made, or you can make a new object by the
+      deadline, which is the <strong>11<sup>th</sup> of September 2022 (23:59)</strong>.
     </p>,
     <p>
-      To participate in you must reside in Denmark and you must participate in person in Herning (Birk Centerpark 15) on
-      Friday the 23rd of September, provided that your submission is among the chosen ones.
+      To be eligible for the competition, you must reside in Denmark, and if your entry is selected by us, you must be
+      willing to participate in the <strong>MidtVest Maker Fest on the 23<sup>rd</sup> September 2022</strong> in person
+      at Birk Centerpark, Herning.
     </p>,
   ],
 }
