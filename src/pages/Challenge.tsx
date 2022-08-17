@@ -7,9 +7,9 @@ import {LanguageContext, TLanguage} from "../context/LanguageContext"
 export const title: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 export const challengeTitles: [Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>] = [
-  {danish: "3D Printing", english: "3D Printing"},
+  {danish: "3D-Printing", english: "3D Printing"},
   {danish: "Laserskæring", english: "Laser-Cutting"},
-  {danish: "Interaktive Objekt(er)", english: "Interactive Object(s)"},
+  {danish: "Interaktive objekter", english: "Interactive Objects"},
 ]
 export const challengeTitlesFull: [Record<TLanguage, string>, Record<TLanguage, string>, Record<TLanguage, string>] = [
   {
@@ -56,9 +56,9 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
     <p>
       Ved MidtVest Maker Fest Challenge modtager vinderne en pris og muligheden for at samarbejde om produktudvikling
-      med BTECH Labs på Aarhus Universitet i Herning.
+      med BTECH-labs på Aarhus Universitet i Herning.
     </p>,
-    <p>Klik på nedenstående knapper for at læse detaljerne om hver udfordring.</p>
+    <p>Klik på nedenstående knapper for at læse detaljerne om hver udfordring.</p>,
   ],
   english: [
     <h2 className="text-center fw-bold my-5">
@@ -77,7 +77,7 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       At the MidtVest Maker Fest Challenge winners will receive an award and the possibility to collaborate on product
       development with BTECH Labs at Aarhus university in Herning.
     </p>,
-    <p>Click the buttons below to read the details of each challenge.</p>
+    <p>Click the buttons below to read the details of each challenge.</p>,
   ],
 }
 
@@ -92,6 +92,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         Inden for denne måned kan du indsende dit bidrag som maksimalt fylder 3 sider i pdf-format (inklusive fotos og
         beskrivelse).
       </li>
+      <li>I må gerne gå flere personer sammen om en udfordring.</li>
       <li>
         Vælg en eller flere kategorier af udfordringer (uddybning for hver kategori kan findes med at klikke på de
         forskellige orange felter).
@@ -102,12 +103,12 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         filstørrelse for den vedhæftede pdf er 10 MB.
       </li>
       <li className="fw-bold">
-        Vi informerer dig/jer den 14. september, om dit bidrag er blevet valgt og om din/jeres deltagelse i at
+        Vi informerer dig den 14. september om, hvorvidt bidraget er blevet valgt og om din deltagelse i at
         præsentere til MidtVest Maker Fest 2022 fredag den 23. september.
       </li>
       <li>
-        Del gerne jeres proces med at arbejde med udfordringer på sociale medier
-        med <strong>#mvmf2022</strong> og <strong>@btech_herning</strong> så vi kan følge med!
+        Del gerne din proces med at arbejde med udfordringer på sociale medier med <strong>#mvmf2022</strong> og "tag"
+        os med <strong>@btech_herning</strong> så vi kan følge med!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
@@ -119,9 +120,8 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
       deadline, som er <strong>den 11. september (23.59) 2022</strong>.
     </p>,
     <p>
-      Berettigelsen til denne konkurrence er, at du er bosat i Danmark, og hvis dit bidrag er udvalgt af os, er du
-      villig til at deltage fysisk ved <strong>MidtVest Maker Fest den 23. september 2022</strong> i Birk Centerpark,
-      Herning.
+      For at kunne deltage skal du være bosat i Denmark, og du skal kunne deltage fysisk i Herning (Birk Centerpark 15)
+      fredag den 23. september, såfremt dit bidrag er blandt de udvalgte.
     </p>,
   ],
   english: [
@@ -134,6 +134,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         Within this month you can submit your entry as a maximum of 3 pages as a pdf (Including photos and
         description).
       </li>
+      <li>You are welcome to create a group of several people for a challenge</li>
       <li>
         Choose one or more categories from the design briefs to apply (more detail for each challenge can be found by
         clicking on the different orange boxes)
@@ -149,7 +150,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
       </li>
       <li>
         Feel free to share your process of working with the challenges on social media
-        with <strong>#mvmf2022</strong> and <strong>@btech_herning</strong> so we can follow along!
+        with <strong>#mvmf2022</strong> and tag us with <strong>@btech_herning</strong> so we can follow along!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
@@ -161,9 +162,8 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
       deadline, which is the <strong>11<sup>th</sup> of September (23.59) 2022</strong>.
     </p>,
     <p>
-      The eligibility for this competition is that you reside in Denmark and if your entry were selected by us then are
-      willing to participate in the <strong>MidtVest Makers Fest on the 23<sup>rd</sup> of September 2022</strong> in
-      person at Birk Centerpark, Herning.
+      To participate in you must reside in Denmark and you must participate in person in Herning (Birk Centerpark 15) on
+      Friday the 23rd of September, provided that your submission is among the chosen ones.
     </p>,
   ],
 }
@@ -172,7 +172,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
 const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element | string)[], (JSX.Element | string)[]]> = {
   danish: [
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 01: 3D Printing</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 01: {challengeTitles[0].danish}</h4>,
       <ul>
         <li>
           Du/din gruppe, har anvendt et hvilket som helst CAD-program til at modellere <strong>OG</strong> 3D-printe
@@ -197,17 +197,17 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mail-id og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
         <li>
-          Skriv en frit flydende beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
+          Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
-            <li>Eller hvad udtrykker det kunstnerisk?</li>
+            <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
             <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
-            <li>Hvad er historien bag dens tilblivelse?</li>
+            <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
         </li>
         <li>
@@ -222,9 +222,9 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 02: Laserskæring</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 02: {challengeTitles[1].danish}</h4>,
       <ul>
-        <li>Du/din gruppe, har anvendt et hvilket som helst CAD-program til at modellere <strong>OG</strong> 3D-printe
+        <li>Du/din gruppe har anvendt et hvilket som helst CAD-program til at modellere <strong>OG</strong> 3D-printe
           et objekt eller et produkt af enhver dimension.
         </li>
         <li>Dette objekt kan være til personlig brug, en prototype, et kunstnerisk udtryk eller endda et kommercielt
@@ -235,22 +235,22 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           sig <strong>IKKE</strong>.
         </li>
         <li>Scannede tegninger er kun kvalificerede, <strong>HVIS</strong> du har scannet og genereret filen.</li>
-        <li>Objektet kan være laserskåret af ethvert materiale, f.eks. træ, akryl, papir, læder osv...</li>
+        <li>Objektet kan være laserskåret af ethvert materiale, f.eks. træ, akryl, papir, læder osv.</li>
       </ul>,
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mail-id og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
         <li>
-          Skriv en frit flydende beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
+          Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
-            <li>Eller hvad udtrykker det kunstnerisk?</li>
+            <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
             <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
-            <li>Hvad er historien bag dens tilblivelse?</li>
+            <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
         </li>
         <li>
@@ -265,17 +265,16 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 03: Interaktive Objekt(er)</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 03:  {challengeTitles[2].danish}</h4>,
       <ul>
         <li>Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
-          interaktivt objekt/er eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv...)
+          interaktivt objekt(er) eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv.)
         </li>
         <li>Dette objekt kan være til personlig brug, en prototype, et kunstnerisk udtryk eller endda et kommercielt
           produkt.
         </li>
         <li>Det indsendte <strong>SKAL</strong> have en hardware- og softwarekomponent og <strong>KAN IKKE</strong> kun
-          være software. Genbrugt kode fra eksempelprojekter fra internettet er i orden til kvalificering,
-          hovedkriterierne vil være den overbevisende fortælling og gestaltpræsentation af projektet.
+          være software.
         </li>
         <li>Projekter, der tilføjer hardware og software til at hacke eksisterende apparater, instrumenter eller
           værktøjer, er velkvalificerede som indgange.
@@ -284,17 +283,17 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mail-id og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
         <li>
-          Skriv en frit flydende beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
+          Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
-            <li>Eller hvad udtrykker det kunstnerisk?</li>
+            <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
             <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
-            <li>Hvad er historien bag dens tilblivelse?</li>
+            <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
         </li>
         <li>
@@ -302,7 +301,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           A4-sider</strong>.
         </li>
         <li>
-          Hvis det er relevant og nødvendigt, opfordres der til at et link til en uploadet video filmede på
+          Hvis det er relevant og nødvendigt, opfordres du til at linke til en uploadet video filmet på
           højkant &#8597; i 9:16 format (f.eks. på Youtube, Vimeo osv...) af projektet, men det er ikke obligatorisk.
           Husk at tilføje <strong>#mvmf2022</strong> og <strong>@btech_herning</strong>.
         </li>
@@ -316,7 +315,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
   ],
   english: [
     [
-      <h4 className="text-center fw-bold mb-4">Challenge 01: On 3D Printing</h4>,
+      <h4 className="text-center fw-bold mb-4">Challenge 01: {challengeTitles[0].english}</h4>,
       <ul>
         <li>
           You/your group has used any CAD program to model <strong>AND</strong> 3D print an object or product of any
@@ -334,14 +333,14 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
       <ol>
         <li>Provide a name/title for your entry.</li>
-        <li>Type your contact details, your name, your email id and/or phone number.</li>
+        <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a free-flowing description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For eg.
           <ul className="fst-italic">
             <li>What is the object?</li>
             <li>How could it be used, by who?</li>
             <li>Is it a commercial product or could it be transformed into one?</li>
-            <li>Or what does it artistically express?</li>
+            <li>What does it artistically express?</li>
             <li>How did you come about deciding to model and 3D print it?</li>
             <li>How did you model it? What printer did you use?</li>
             <li>What is the story behind its making?</li>
@@ -359,7 +358,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Challenge 01: On 3D Laser-Cutting</h4>,
+      <h4 className="text-center fw-bold mb-4">Challenge 02: {challengeTitles[1].english}</h4>,
       <ul>
         <li>You/your group has used any CAD program to draw/model <strong>AND</strong> laser-cut an object or product of
           any dimension.
@@ -375,14 +374,14 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
       <ol>
         <li>Provide a name/title for your entry.</li>
-        <li>Type your contact details, your name, your email id and/or phone number.</li>
+        <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a free-flowing description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For eg.
           <ul className="fst-italic">
             <li>What is the object?</li>
             <li>How could it be used, by who?</li>
             <li>Is it a commercial product or could it be transformed into one?</li>
-            <li>Or what does it artistically express?</li>
+            <li>What does it artistically express?</li>
             <li>How did you come about deciding to model and 3D print it?</li>
             <li>How did you model it? What printer did you use?</li>
             <li>What is the story behind its making?</li>
@@ -400,7 +399,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Challenge 01: On Interactive Object(s)</h4>,
+      <h4 className="text-center fw-bold mb-4">Challenge 03: {challengeTitles[2].english}</h4>,
       <ul>
         <li>You/your group has, used electronic hardware <strong>AND</strong> software to build and make an interactive
           object/s or product (eg. Arduino, Raspberry Pi, ESP32 etc…)
@@ -418,14 +417,14 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
       <ol>
         <li>Provide a name/title for your entry.</li>
-        <li>Type your contact details, your name, your email id and/or phone number.</li>
+        <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a free-flowing description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For eg.
           <ul className="fst-italic">
             <li>What is the object?</li>
             <li>How could it be used, by who?</li>
             <li>Is it a commercial product or could it be transformed into one?</li>
-            <li>Or what does it artistically express?</li>
+            <li>What does it artistically express?</li>
             <li>How did you come about deciding to model and 3D print it?</li>
             <li>How did you model it? What printer did you use?</li>
             <li>What is the story behind its making?</li>
@@ -436,8 +435,8 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           pages</strong>.
         </li>
         <li>
-          As applicable and necessary a link to an uploaded video filmed portrait mode &#8597; in 9:16 format (eg. at
-          Youtube, Vimeo etc…) of the project is encouraged but not mandatory – remember to
+          As applicable and necessary, linking to an uploaded video filmed in portrait mode &#8597; in 9:16 format (eg. on
+          Youtube, Vimeo etc.) of the project is encouraged but not mandatory – remember to
           use <strong>#mvmf2022</strong> and <strong>@btech_herning</strong>.
         </li>
       </ol>,
@@ -508,7 +507,7 @@ export const Challenge: FC = () => {
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              {challengeTitles[0][languageContext.language]} {challenge[languageContext.language]}
+              {challengeTitles[0][languageContext.language]}
               <Link to="/challenge1" className="stretched-link"/>
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
@@ -518,7 +517,7 @@ export const Challenge: FC = () => {
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              {challengeTitles[1][languageContext.language]} {challenge[languageContext.language]}
+              {challengeTitles[1][languageContext.language]}
               <Link to="/challenge2" className="stretched-link"/>
             </div>
             <div className="d-inline-block text-center fw-bold pointer align-items-center interactive link"
@@ -528,7 +527,7 @@ export const Challenge: FC = () => {
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              {challengeTitles[2][languageContext.language]} {challenge[languageContext.language]}
+              {challengeTitles[2][languageContext.language]}
               <Link to="/challenge3" className="stretched-link"/>
             </div>
           </div>
