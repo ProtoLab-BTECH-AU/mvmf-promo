@@ -205,7 +205,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
-            <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
+            <li>Hvordan planlagde du din proces?</li>
             <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
             <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
@@ -248,8 +248,8 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
-            <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
-            <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
+            <li>Hvordan planlagde du din proces?</li>
+            <li>Hvordan modellerede du det? Hvilken laser-cutter brugte du?</li>
             <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
         </li>
@@ -265,7 +265,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       </p>,
     ],
     [
-      <h4 className="text-center fw-bold mb-4">Udfordring 03:  {challengeTitles[2].danish}</h4>,
+      <h4 className="text-center fw-bold mb-4">Udfordring 03: {challengeTitles[2].danish}</h4>,
       <ul>
         <li>Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
           interaktivt objekt(er) eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv.)
@@ -291,8 +291,8 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
             <li>Hvordan kan det bruges, og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
-            <li>Hvordan besluttede du dig for at modellere og 3D-printe det?</li>
-            <li>Hvordan modellerede du det? Hvilken printer brugte du?</li>
+            <li>Hvilken hardware brugte du?</li>
+            <li>Hvordan planlagde du din proces og programmering?</li>
             <li>Hvad er historien bag tilblivelsen?</li>
           </ul>
         </li>
@@ -324,22 +324,22 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
         <li>This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
         <li>
-          The 3D file <strong>HAS</strong> to be modelled by the participant/s to the challenge. 3D files downloaded
-          from the internet, or then downloaded and manipulated even partially <strong>DO NOT</strong> qualify.
+          The 3D file <strong>MUST</strong> to be modelled by the participant/s to the challenge. 3D files downloaded
+          from the internet or downloaded and then manipulated even partially <strong>DO NOT</strong> qualify.
         </li>
         <li>3D scans of objects qualify only <strong>IF</strong> you have scanned and generated the file.</li>
-        <li>The object can be a 3D print of any material, for eg. PLA, ABS, PETG, metal, ceramic etc…</li>
+        <li>The object can be a 3D print of any material, for instance PLA, ABS, PETG, metal, ceramic etc…</li>
       </ul>,
-      "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
+      "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
       <ol>
         <li>Provide a name/title for your entry.</li>
         <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, by who?</li>
-            <li>Is it a commercial product or could it be transformed into one?</li>
+            <li>How could it be used, and by who?</li>
+            <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
             <li>What does it artistically express?</li>
             <li>How did you come about deciding to model and 3D print it?</li>
             <li>How did you model it? What printer did you use?</li>
@@ -347,103 +347,108 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           </ul>
         </li>
         <li>
-          Below the descriptive text compose a <strong>minimum of 3 and a maximum of 5 photos of the object within 3 A4
-          pages</strong>.
+          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          within three A4 pages</strong>.
         </li>
       </ol>,
       <p>
-        Send us your entry with the pdf (max 10mb) as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as <strong>MVMF
-        Challenge-3DPrinting-name/title of your entry</strong>.
+        Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
+        challenge-3Dprinting-name/title of your entry</strong>.
       </p>,
     ],
     [
       <h4 className="text-center fw-bold mb-4">Challenge 02: {challengeTitles[1].english}</h4>,
       <ul>
-        <li>You/your group has used any CAD program to draw/model <strong>AND</strong> laser-cut an object or product of
+        <li>You/your group has used any CAD program to draw/model <strong>AND</strong> laser cut an object or product of
           any dimension.
         </li>
         <li>This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
-        <li>The CAD file <strong>HAS</strong> to be modelled by the participant/s to the challenge. CAD files downloaded
-          from the internet, or then downloaded and manipulated even partially <strong>DO NOT</strong> qualify.
+        <li>The CAD file <strong>MUST</strong> to be modelled by the participant/s to the challenge. CAD files
+          downloaded
+          from the internet, or downloaded and then manipulated even partially <strong>DO NOT</strong> qualify.
         </li>
         <li>Scanned drawings qualify only <strong>IF</strong> you have scanned and generated the file.</li>
-        <li>The object can be a laser cut of any material, for eg. wood, acrylic, paper, leather etc…</li>
+        <li>The object can be a laser cut of any material, for instance wood, acrylic, paper, leather etc…</li>
       </ul>,
-      "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
+      "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
       <ol>
         <li>Provide a name/title for your entry.</li>
         <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, by who?</li>
-            <li>Is it a commercial product or could it be transformed into one?</li>
+            <li>How could it be used, and by who?</li>
+            <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
             <li>What does it artistically express?</li>
-            <li>How did you come about deciding to model and 3D print it?</li>
-            <li>How did you model it? What printer did you use?</li>
+            <li>How did you come about deciding to model and laser cut it?</li>
+            <li>How did you model it? What laser cutter did you use?</li>
             <li>What is the story behind its making?</li>
           </ul>
         </li>
         <li>
-          Below the descriptive text compose a <strong>minimum of 3 and a maximum of 5 photos of the object within 3 A4
-          pages</strong>.
+          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          within three A4 pages</strong>.
         </li>
       </ol>,
       <p>
-        Send us your entry with the pdf (max 10mb) as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as <strong>MVMF
-        Challenge-Laser Cutting-name/title of your entry</strong>.
+        Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
+        challenge-3Dlaser cutting-name/title of your entry</strong>.
       </p>,
     ],
     [
       <h4 className="text-center fw-bold mb-4">Challenge 03: {challengeTitles[2].english}</h4>,
       <ul>
-        <li>You/your group has, used electronic hardware <strong>AND</strong> software to build and make an interactive
-          object/s or product (eg. Arduino, Raspberry Pi, ESP32 etc…)
+        <li>
+          You/your group has, used electronic hardware <strong>AND</strong> software to build and make an interactive
+          object/s or product (for instance Arduino, Raspberry Pi, ESP32 etc…)
         </li>
-        <li>This object could be for personal use, a prototype, an artistic expression or even a commercial product.
+        <li>
+          This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
-        <li>The entry <strong>HAS</strong> to have hardware and software component and <strong>CANNOT</strong> be only
-          software. Reused code from example projects from the internet are okay for qualification, the main criteria
+        <li>
+          The entry <strong>MUST</strong> to have hardware and software component and <strong>CANNOT</strong> be only
+          software. Reused code from example projects from the internet is okay for qualification, the main criteria
           will be the compelling narrative and gestalt presentation of the project.
         </li>
-        <li>Projects that add a hardware and software for hacking existing appliances, instruments or tools are well
-          qualified as entries.
+        <li>
+          Projects that add a hardware and software for hacking existing appliances, instruments or tools are
+          well-qualified as entries.
         </li>
       </ul>,
-      "For sending us your entry use a A4 paper size (in either landscape or portrait orientation) and compose it using the following four steps in a maximum of 3 pages in pdf format:",
+      "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
       <ol>
         <li>Provide a name/title for your entry.</li>
         <li>Type your contact details, your name, your email address and/or phone number.</li>
         <li>
-          Write a description of maximum 300 words for the object. For eg.
+          Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, by who?</li>
-            <li>Is it a commercial product or could it be transformed into one?</li>
+            <li>How could it be used, and by who?</li>
+            <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
             <li>What does it artistically express?</li>
-            <li>How did you come about deciding to model and 3D print it?</li>
-            <li>How did you model it? What printer did you use?</li>
+            <li>What hardware did you use?</li>
+            <li>How did you plan your process and programming?</li>
             <li>What is the story behind its making?</li>
           </ul>
         </li>
         <li>
-          Below the descriptive text compose a <strong>minimum of 3 and a maximum of 5 photos of the object within 3 A4
-          pages</strong>.
+          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          within three A4 pages</strong>.
         </li>
         <li>
-          As applicable and necessary, linking to an uploaded video filmed in portrait mode &#8597; in 9:16 format (eg. on
-          Youtube, Vimeo etc.) of the project is encouraged but not mandatory – remember to
+          If applicable and necessary, provide a link to an uploaded video filmed in portrait mode &#8597; in 9:16
+          format (for instance on Youtube, Vimeo etc.). This is encouraged but not mandatory. Remember to
           use <strong>#mvmf2022</strong> and <strong>@btech_herning</strong>.
         </li>
       </ol>,
       <p>
-        Send us your entry with the pdf (max 10mb) as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with subject title as <strong>MVMF
-        Challenge-Interactive Object-name/title of your entry</strong>.
+        Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
+        challenge-interactive object-name/title of your entry</strong>.
       </p>,
     ],
   ],
