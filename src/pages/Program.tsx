@@ -9,7 +9,7 @@ import "./Program.css"
 interface IEvent {
   text: Record<TLanguage, string | JSX.Element>
   details?: Record<TLanguage, string | JSX.Element>
-  location?: string
+  location?: Record<TLanguage, string>
   hours?: number
   span?: number
 }
@@ -17,8 +17,8 @@ interface IEvent {
 
 const headers: Record<TLanguage, [string, string, string]> = {
   danish: [
-    "Maker Skov",
-    "BTECH Labs",
+    "Maker-Skov",
+    "BTECH-Labs",
     "Oplev Birk",
   ],
   english: [
@@ -28,11 +28,16 @@ const headers: Record<TLanguage, [string, string, string]> = {
   ],
 }
 
+const locations: Record<string, Record<TLanguage, string>> = {
+  mainStage: {danish: "Hovedscenen", english: "Main Stage"},
+  btechPlatform: {danish: "BTECH-platform", english: "BTECH Platform"},
+}
+
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
   "2022-09-22": {
     10: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {
           danish: "Åbning og Velkomst af MVMF + Introduktion til Kommunerne",
           english: "Opening and welcome to MVMF +  Introduction of the Kommunes",
@@ -68,19 +73,19 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     16: [
       {
-        location: "BTECH Platform",
+        location: locations.btechPlatform,
         text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking Maker Station Screens"},
       },
     ],
     17: [
-      {location: "Main Stage", text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
+      {location: locations.mainStage, text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
     ],
     18: [
       {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
     ],
     19: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         hours: 2,
         text: {
           danish: "MUSIK: Smashing Pumpkins Jam",
@@ -93,7 +98,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
   "2022-09-23": {
     9: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         hours: 2,
         text: {
           danish: "PRÆSENTATION: Forskellige forretnings-makers og projekter fra MidtVest                                                                                   ",
@@ -119,7 +124,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     11: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {
           danish: "PANELDEBAT: med udvalgte makers fra MidtVest",
           english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
@@ -132,7 +137,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     13: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {
           danish: "MAKERS UDFORDRING P1: Repræsentanter fra hver af kommunerne",
           english: "MAKERS CHALLENGE P1: Representatives from Kommunes",
@@ -149,7 +154,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     14: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {
           danish: <>MAKER UDFORDRING P2: Åben tilmelding for alle – se <Link to="/challenge">MVMF Udfordring</Link> for
             tilmelding</>,
@@ -160,13 +165,13 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     15: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {danish: "KEYNOTE: Digital Craftsmanship", english: "KEYNOTE: Digital Craftsmanship"},
       },
     ],
     16: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {
           danish: "Fireside talk modereret af Bæredygtig Herning",
           english: "Fireside talk moderated by Bæredygtig Herning",
@@ -175,7 +180,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     17: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
       },
     ],
@@ -184,7 +189,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     19: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         hours: 2,
         text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
       },
@@ -194,7 +199,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
   "2022-09-24": {
     9: [
       {
-        location: "Main Stage",
+        location: locations.mainStage,
         hours: 3,
         text: {
           danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + Mulighed for at Besøge Kommune Platforme",
@@ -278,7 +283,8 @@ export const Program: FC = () => {
                   let col3: JSX.Element | null = null
 
                   if (ev1) col1 = <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>
-                    {ev1.location && <div style={{fontSize: "75%"}}><em>{ev1.location}</em></div>}
+                    {ev1.location &&
+                      <div style={{fontSize: "75%"}}><em>{ev1.location[languageContext.language]}</em></div>}
                     {ev1.text[languageContext.language]}
                   </td>
                   else if (ev1 === null) col1 = null
@@ -286,7 +292,8 @@ export const Program: FC = () => {
                   else if (i === 0) col1 = <td className="empty"/>
 
                   if (ev2) col2 = <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>
-                    {ev2.location && <div style={{fontSize: "75%"}}><em>{ev2.location}</em></div>}
+                    {ev2.location &&
+                      <div style={{fontSize: "75%"}}><em>{ev2.location[languageContext.language]}</em></div>}
                     {ev2.text[languageContext.language]}
                   </td>
                   else if (ev2 === null) col2 = null
@@ -294,7 +301,8 @@ export const Program: FC = () => {
                   else if (i === 0) col2 = <td className="empty"/>
 
                   if (ev3) col3 = <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>
-                    {ev3.location && <div style={{fontSize: "75%"}}><em>{ev3.location}</em></div>}
+                    {ev3.location &&
+                      <div style={{fontSize: "75%"}}><em>{ev3.location[languageContext.language]}</em></div>}
                     {ev3.text[languageContext.language]}
                   </td>
                   else if (ev3 === null) col3 = null
