@@ -40,7 +40,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
   },
   description: {
     danish: "Maker-kompetencer, læring, vidensdeling og showcases fra midt- og vestjyske kommuner",
-    english: "Maker skills, learning, sharing of knowledge, and showcases from central and western Jutland kommunes",
+    english: "Maker skills, learning, knowledge, and showcases from the central and western Jutland municipalities",
   },
   date: {
     danish: <>
@@ -50,7 +50,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       Herning
     </>,
     english: <>
-      22-24 Sep. 2022<br/>
+      22-24 Sept. 2022<br/>
       Aarhus Universitet<br/>
       Birk Centerpark 15<br/>
       Herning
@@ -69,7 +69,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       <li>Demos of maker technologies</li>
       <li>Maker market</li>
       <li>Workshops and presentations</li>
-      <li>Kreative coding performances</li>
+      <li>Creative coding performances</li>
       <li>Fireside talk</li>
       <li>Design-inspired talks and walks around Birk Centerpark</li>
     </ul>,
