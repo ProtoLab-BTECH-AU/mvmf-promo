@@ -3,6 +3,7 @@ import {Col, Container, Row} from "react-bootstrap"
 import {Link} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
+import {title as challengeTitle} from "./Challenge"
 import "./Program.css"
 
 
@@ -39,23 +40,23 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "Åbning og Velkomst af MVMF + Introduktion til Kommunerne",
-          english: "Opening and welcome to MVMF +  Introduction of the Kommunes",
+          danish: "Åbning og velkomst af MVMF + Introduktion til kommunerne",
+          english: "Opening and welcome to MVMF +  Introduction of the kommunes",
         },
       },
     ],
     11: [
-      {text: {danish: "Mulighed for at Besøge Kommune Platforme", english: "Visit the Kommune Platforms"}},
+      {text: {danish: "Mulighed for at besøge kommune Platforme", english: "Visit the Kommune Platforms"}},
       {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {hours: 2, text: {danish: "Mulighed for at Besøge Kommune Platforme", english: "Visit the Kommune Platforms"}},
+      {hours: 2, text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit the kommune platforms"}},
       {
         hours: 2,
-        text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
+        text: {danish: "Labs-besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
       },
       {
         hours: 5,
@@ -69,7 +70,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       undefined,
     ],
     15: [
-      {text: {danish: "KAFFE: Maker Kage", english: "COFFEE: Maker Kage"}},
+      {text: {danish: "KAFFE: Maker-kage", english: "COFFEE: Maker Kage"}},
     ],
     16: [
       {
@@ -130,7 +131,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
           english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
         },
       },
-      {text: {danish: "WORKSHOP: Making with laser cutting", english: "WORKSHOP: Making with laser cutting"}},
+      {text: {danish: "WORKSHOP: Making med laserskæring", english: "WORKSHOP: Making with laser cutting"}},
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
@@ -138,9 +139,13 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     13: [
       {
         location: locations.mainStage,
+        hours: 2,
         text: {
-          danish: "MAKERS UDFORDRING P1: Repræsentanter fra hver af kommunerne",
-          english: "MAKERS CHALLENGE P1: Representatives from Kommunes",
+          danish: <>MAKER UDFORDRING: Åben tilmelding for alle – se <Link
+            to="/challenge">{challengeTitle.danish}</Link> for
+            tilmelding</>,
+          english: <>MAKERS CHALLENGE: Open Call and Competition - see <Link
+            to="/challenge">{challengeTitle.english}</Link> for joining</>,
         },
       },
       undefined,
@@ -153,15 +158,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
     ],
     14: [
-      {
-        location: locations.mainStage,
-        text: {
-          danish: <>MAKER UDFORDRING P2: Åben tilmelding for alle – se <Link to="/challenge">MVMF Udfordring</Link> for
-            tilmelding</>,
-          english: <>MAKERS CHALLENGE P2: Open Call and Competition - see <Link to="/challenge">MVMF
-            Challenge</Link> for joining</>,
-        },
-      },
+      null,
     ],
     15: [
       {
@@ -202,15 +199,15 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 3,
         text: {
-          danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + Mulighed for at Besøge Kommune Platforme",
-          english: "PRESENTATION: Industry-makers showcase projects + Visit the Kommune Platforms",
+          danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + mulighed for at besøge kommune platforme",
+          english: "PRESENTATION: Industry-makers showcase projects + visit the Kommune Platforms",
         },
       },
       undefined,
       {
         hours: 3,
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Museum og Haver</>,
+          danish: <>BIRK DESIGN WALK<br/>Museum og haver</>,
           english: <>BIRK DESIGN WALK<br/>Museum and Gardens</>,
         },
       },
