@@ -16,10 +16,15 @@ interface IEvent {
 }
 
 
+const location: Record<TLanguage, string> = {
+  danish: "LOKATIONER",
+  english: "LOCATIONS",
+}
+
 const headers: Record<TLanguage, [string, string, string]> = {
   danish: [
-    "Maker-Skov",
-    "BTECH-Labs",
+    "Maker-skov",
+    "BTECH-labs",
     "Oplev Birk",
   ],
   english: [
@@ -31,7 +36,7 @@ const headers: Record<TLanguage, [string, string, string]> = {
 
 const locations: Record<string, Record<TLanguage, string>> = {
   mainStage: {danish: "Hovedscenen", english: "Main stage"},
-  btechPlatform: {danish: "BTECH-platform", english: "BTECH platform"},
+  btechPlatform: {danish: "ENGTECH-platform", english: "ENGTECH platform"},
 }
 
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
@@ -41,19 +46,22 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         text: {
           danish: "Åbning og velkomst af MVMF + Introduktion til kommunerne",
-          english: "Opening and welcome to MVMF +  Introduction of the municipalities",
+          english: "Opening and welcome to MVMF + introduction of the municipalities",
         },
       },
     ],
     11: [
-      {text: {danish: "Mulighed for at besøge kommune Platforme", english: "Visit to the municipality platforms"}},
+      {text: {danish: <>Mulighed for at besøge kommune&#8203;platforme</>, english: "Visit to the municipality platforms"}},
       {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
     ],
     13: [
-      {hours: 2, text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit to the municipality platforms"}},
+      {
+        hours: 2,
+        text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit to the municipality platforms"},
+      },
       {
         hours: 2,
         text: {danish: "Labs-besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
@@ -70,7 +78,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       undefined,
     ],
     15: [
-      {text: {danish: "KAFFE: Maker-kage", english: "COFFEE: Maker cake"}},
+      {text: {danish: "Kaffe og maker-kage", english: "Coffee break and maker cake"}},
     ],
     16: [
       {
@@ -106,7 +114,12 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
           english: "PRESENTATIONS: 'Making' business in Midtvest",
         },
       },
-      {text: {danish: "WORKSHOP: IoT hardware og software", english: "WORKSHOP: IoT hardware and software"}},
+      {
+        text: {
+          danish: "WORKSHOP 1: Prototyper med open-source hardware",
+          english: "WORKSHOP 1: Prototyping with open source hardware",
+        },
+      },
       {
         hours: 3,
         text: {
@@ -118,8 +131,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     10: [
       {
         text: {
-          danish: "WORKSHOP: Making Digital Trust for SMEs: DIGI Lab",
-          english: "WORKSHOP: Making digital trust for SMEs: DIGI Lab",
+          danish: "WORKSHOP 2: Laser cutting and 3D printing",
+          english: "WORKSHOP 2: Laser-cutting og 3D-printing",
         },
       },
     ],
@@ -128,10 +141,15 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         text: {
           danish: "PANELDEBAT: med udvalgte makers fra MidtVest",
-          english: "PANEL DISCUSSION: 'Making' Business in Midtvest",
+          english: "PANEL DISCUSSION: 'Making' business in MidtVest",
         },
       },
-      {text: {danish: "WORKSHOP: Making med laserskæring", english: "WORKSHOP: Making with laser cutting"}},
+      {
+        text: {
+          danish: "WORKSHOP 3: Wooden drones in supply chains",
+          english: "WORKSHOP 3: Droner af træ i forsyningskæde",
+        },
+      },
     ],
     12: [
       {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
@@ -141,14 +159,19 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 2,
         text: {
-          danish: <>MAKER UDFORDRING: Åben tilmelding for alle – se <Link
+          danish: <>MIDTVEST MAKER UDFORDRING: Åben for alle, se mere her: <Link
             to="/challenge">{challengeTitle.danish}</Link> for
             tilmelding</>,
-          english: <>MAKERS CHALLENGE: Open Call and Competition - see <Link
+          english: <>MIDTVEST MAKERS CHALLENGE: Open call, see more here: <Link
             to="/challenge">{challengeTitle.english}</Link> for joining</>,
         },
       },
-      undefined,
+      {
+        text: {
+          danish: "WORKSHOP 4: Crafting digital",
+          english: "WORKSHOP 4: Crafting digital",
+        },
+      },
       {
         hours: 5,
         text: {
@@ -199,16 +222,16 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 3,
         text: {
-          danish: "PRÆSENTATION: Teknologi-makers fortæller om projekter + mulighed for at besøge kommune platforme",
-          english: "PRESENTATION: Industry-makers showcase projects + visit to the municipality platforms",
+          danish: <>Mulighed for at besøge kommune&#8203;platforme</>,
+          english: "Visit to the municipality platforms",
         },
       },
       undefined,
       {
         hours: 3,
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Museum og haver</>,
-          english: <>BIRK DESIGN WALK<br/>Museum and Gardens</>,
+          danish: <>BIRK DESIGN WALK<br/>Museer og haver</>,
+          english: <>BIRK DESIGN WALK<br/>Museums and gardens</>,
         },
       },
     ],
@@ -231,6 +254,10 @@ export const Program: FC = () => {
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
+          <div style={{background: colors.au7comp, color: colors.au7, marginBottom: -2}} className="text-center pt-2">
+            {location[languageContext.language]}
+          </div>
+
           <table className="sticky-top" style={{zIndex: 1020}}>
             <thead>
             <tr style={{background: colors.au7comp, color: colors.au7}}>

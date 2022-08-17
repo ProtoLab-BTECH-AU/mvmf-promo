@@ -4,9 +4,23 @@ import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 const text: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
-    "Midtvest Maker Fest (MVMF) er en begivenhed, der støtter og hylder maker-kulturen som et fællesskab ved at forbinde det med lokalsamfund, industri og andre interesserede organisationer.",
-    "Godt håndværk inden for design, materialeprocesser eller teknologiledelse er fundamentet for at fremstille gode produkter, services og oplevelser. Maker-spaces og maker-fællesskaber hjælper ikke blot med at udbrede godt håndværk, men de skaber og forfiner også færdigheder i anvendelsen af nye digitale værktøjer som eksempelvis 3D-printere, laserskærere og mikrocontrollere. Som et netværk af maker-spaces i Midt- og Vestjylland er det vores mål at facilitere maker-færdigheder, viden og informationsdeling mellem borgere, virksomheder, uddannelsesinstitutioner og civile organisationer.",
-    "Som et tre-dages arrangement, der afholdes hos Aarhus Universitetet i Herning, vil MVMF samle makers, lokale virksomheder, iværksættere og andre skabere for at dele erfaringer og fejre maker-kulturen og det gode håndværk med nye teknologier.",
+    <p>
+      Midtvest Maker Fest (MVMF) er en begivenhed, der støtter og hylder maker-kulturen som et fællesskab ved at
+      forbinde det med lokalsamfund, industri og andre interesserede organisationer.
+    </p>,
+    <p>
+      Godt håndværk inden for design, materialeprocesser eller teknologiledelse er fundamentet for at fremstille gode
+      produkter, services og oplevelser. Maker-spaces og maker-fællesskaber hjælper ikke blot med at udbrede godt
+      håndværk, men de skaber og forfiner også færdigheder i anvendelsen af nye digitale værktøjer som eksempelvis
+      3D-printere, laserskærere og mikrocontrollere. Som et netværk af maker-spaces i Midt- og Vestjylland er det vores
+      mål at facilitere maker-færdigheder, viden og informationsdeling mellem borgere, virksomheder,
+      uddannelsesinstitutioner og civile organisationer.
+    </p>,
+    <p>
+      Som et tre-dages arrangement, der afholdes hos Aarhus Universitetet i Herning, vil MVMF samle makers, lokale
+      virksomheder, iværksættere og andre skabere for at dele erfaringer og fejre maker-kulturen og det gode håndværk
+      med nye teknologier.
+    </p>,
     <p className="mt-5" style={{fontSize: "70%"}}>
       <h5 className="fw-bold">Hvad er en maker?</h5>
 
@@ -49,9 +63,21 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
     </p>,
   ],
   english: [
-    "The Midtvest Maker Fest (MVMF) is an event that supports and celebrates maker culture and its communities by connecting it with local industry and institutions.",
-    "Good craftsmanship in design, material processes or technology management is the backbone for manufacturing good products, services and experiences. Makerspaces and maker communities not only help inculcate good craftsmanship, but also facilitate the honing of skills with new digital tools like 3D printers, laser cutters and microcontrollers. Our aim as a network of makerspaces in central and western Jutland is to facilitate maker skills, knowledge and information sharing between educational institutions, businesses and civic organisations.",
-    "As a three-day event at Birk Centerpark in Herning, MVMF will bring together makers, students, local companies, entrepreneurs and tool makers to share and celebrate making good craftsmanship with new technologies.",
+    <p>
+      The Midtvest Maker Fest (MVMF) is an event that supports and celebrates maker culture and its communities by
+      connecting it with local industry and institutions.
+    </p>,
+    <p>
+      Good craftsmanship in design, material processes or technology management is the backbone for manufacturing good
+      products, services and experiences. Makerspaces and maker communities not only help inculcate good craftsmanship,
+      but also facilitate the honing of skills with new digital tools like 3D printers, laser cutters and
+      microcontrollers. Our aim as a network of makerspaces in central and western Jutland is to facilitate maker
+      skills, knowledge and information sharing between educational institutions, businesses and civic organisations.
+    </p>,
+    <p>
+      As a three-day event at Aarhus University in Herning, MVMF will bring together makers, students, local companies,
+      entrepreneurs and tool makers to share and celebrate making good craftsmanship with new technologies.
+    </p>,
     <p className="mt-5" style={{fontSize: "70%"}}>
       <h5 className="fw-bold">What is a maker?</h5>
 
@@ -69,11 +95,11 @@ const text: Record<TLanguage, (JSX.Element | string)[]> = {
       </Figure>
     </p>,
     <p style={{fontSize: "70%"}}>
-      For a definition of "maker movement" please refer to Dale Dougherty’s text:&nbsp;
+      For a definition of "maker movement", please refer to Dale Dougherty’s text:&nbsp;
       <a target="_blank" rel="noreferrer" href="https://direct.mit.edu/itgg/article-pdf/7/3/11/704919/inov_a_00135.pdf">
         The Maker Movement</a>.
       <br/>
-      For a more generic understanding of maker culture please refer to the&nbsp;
+      For a more generic understanding of maker culture, please refer to the&nbsp;
       <a target="_blank" rel="noreferrer" href="https://en.wikipedia.org/wiki/Maker_culture">
         Maker culture article on Wikipedia
       </a>.

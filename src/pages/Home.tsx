@@ -42,15 +42,19 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
     danish: "Maker-kompetencer, læring, vidensdeling og showcases fra midt- og vestjyske kommuner",
     english: "Maker skills, learning, knowledge, and showcases from the central and western Jutland municipalities",
   },
+  dateShort: {
+    danish: "22-24 sep. 2022",
+    english: "22-24 Sep 2022",
+  },
   date: {
     danish: <>
-      22-24 sep. 2022<br/>
+      22. - 24. september 2022<br/>
       Aarhus Universitet<br/>
       Birk Centerpark 15<br/>
       Herning
     </>,
     english: <>
-      22-24 Sept. 2022<br/>
+      22-24 September 2022<br/>
       Aarhus Universitet<br/>
       Birk Centerpark 15<br/>
       Herning
@@ -157,7 +161,7 @@ export const Home: FC = () => {
           </h1>
 
           <h1 className="position-absolute text-end text-small" style={{bottom: 0, right: ".75rem"}}>
-            22-24 Sep 2022<br/>
+            {text.dateShort[languageContext.language]}<br/>
             Birk Centerpark 15, Herning, Danmark
           </h1>
         </div>

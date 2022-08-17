@@ -7,9 +7,9 @@ import {LanguageContext, TLanguage} from "../context/LanguageContext"
 export const title: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 const challenge: Record<TLanguage, string> = {danish: "Udfordring", english: "Challenge"}
 export const challengeTitles: [Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>, Record<TLanguage, string | JSX.Element>] = [
-  {danish: "3D-Printing", english: "3D Printing"},
-  {danish: "Laserskæring", english: "Laser-Cutting"},
-  {danish: "Interaktive objekter", english: "Interactive Objects"},
+  {danish: "3D-printing", english: "3D Printing"},
+  {danish: "Laser-cutting", english: "Laser-Cutting"},
+  {danish: "Interaktive objekt(er)", english: "Interactive Object(s)"},
 ]
 export const challengeTitlesFull: [Record<TLanguage, string>, Record<TLanguage, string>, Record<TLanguage, string>] = [
   {
@@ -43,7 +43,7 @@ export const challengeTitlesHeader: [Record<TLanguage, string | JSX.Element>, Re
 const text1: Record<TLanguage, (JSX.Element | string)[]> = {
   danish: [
     <h2 className="text-center fw-bold my-5">
-      MIDTVEST MAKER FEST UDFORDRING
+      MIDTVEST MAKER UDFORDRING
     </h2>,
     <p className="text-center">
       Er du en digital håndværker?<br/>
@@ -55,14 +55,14 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Så er vi interesserede i dit arbejde!
     </p>,
     <p>
-      Ved MidtVest Maker Fest Challenge modtager vinderne en pris og muligheden for at samarbejde om produktudvikling
+      Ved "MidtVest Maker udfordring" modtager vinderne en pris og muligheden for at samarbejde om produktudvikling
       med BTECH-labs på Aarhus Universitet i Herning.
     </p>,
     <p>Klik på nedenstående knapper for at læse detaljerne om hver udfordring.</p>,
   ],
   english: [
     <h2 className="text-center fw-bold my-5">
-      MIDTVEST MAKER FEST CHALLENGE
+      MIDTVEST MAKER CHALLENGE
     </h2>,
     <p className="text-center">
       Are you a digital crafts person?<br/>
@@ -74,8 +74,8 @@ const text1: Record<TLanguage, (JSX.Element | string)[]> = {
       Then we are interested in your work!
     </p>,
     <p>
-      At the MidtVest Maker Fest challenge, winners will receive an award and the possibility to collaborate on product
-      development at Aarhus university in Herning with .
+      At the "MidtVest Maker challenge", winners will receive an award and the possibility to collaborate on product
+      development at Aarhus university in Herning with BTECH labs.
     </p>,
     <p>Click the buttons below to read the details of each challenge.</p>,
   ],
@@ -116,7 +116,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
       UDVÆLGELSESKRITERIER FOR ALLE 3 KATEGORIER
     </h4>,
     <p>
-      Designobjektet eller produktet kan være noget, du allerede har lavet, eller så kan du lave et nyt objekt indtil
+      Designobjektet eller produktet kan være noget, du allerede har lavet, eller så kan du lave et nyt objekt inden
       deadline, som er <strong>den 11. september (23.59) 2022</strong>.
     </p>,
     <p>
@@ -128,29 +128,29 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <h4 className="fw-bold text-uppercase">What do you need to participate?</h4>,
     <ul>
       <li className="fw-bold">
-        The challenge period is open from the 11<sup>th</sup> of August to the 11<sup>th</sup> of September.
+        The challenge period is open from 11 August to 11 September.
       </li>
       <li>
-        During this month you can submit your entry as a maximum of three-page pdf file (including photos and
+        During this month, you can submit your entry as a maximum of three-page pdf file (including photos and
         description).
       </li>
       <li>You are welcome to create a group of several people for a challenge</li>
       <li>
         Choose one or more categories from the design briefs to apply (more details for each challenge can be found by
-        clicking on the different orange boxes)
+        clicking the orange boxes)
       </li>
       <li>
         Send your entry with the pdf as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title “MVMF Challenge XX”. Maximum
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title “MVM Challenge XX”. Maximum
         file size for the pdf attachment is 10MB.
       </li>
       <li className="fw-bold">
-        We will inform you on the 14<sup>th</sup> of September if your entry has been selected for participation in the
-        MidtVest Makers Fest on the 23<sup>rd</sup> of September.
+        We will inform you on 14 September if your entry has been selected for participation in the MidtVest Makers Fest
+        on 23 September.
       </li>
       <li>
         Feel free to share your process of working with the challenges on social media
-        with <strong>#mvmf2022</strong> and tag us with <strong>@btech_herning</strong>, so we can follow along!
+        with <strong>#mvmf2022</strong> and tag us with <strong>@btech_herning</strong>, so we can follow your progress!
       </li>
     </ul>,
     <div className="mt-5" style={{borderBottom: ".2175rem solid var(--au-color-7-comp)"}}/>,
@@ -159,12 +159,12 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     </h4>,
     <p>
       The design object or product can be something that you have already made, or you can make a new object by the
-      deadline, which is the <strong>11<sup>th</sup> of September 2022 (23:59)</strong>.
+      deadline, which is <strong>11 September 2022 (23:59)</strong>.
     </p>,
     <p>
       To be eligible for the competition, you must reside in Denmark, and if your entry is selected by us, you must be
-      willing to participate in the <strong>MidtVest Maker Fest on the 23<sup>rd</sup> September 2022</strong> in person
-      at Birk Centerpark, Herning.
+      willing to participate in the <strong>MidtVest Maker Fest on 23 September 2022</strong> in person at Birk
+      Centerpark, Herning.
     </p>,
   ],
 }
@@ -192,18 +192,18 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           3D-scanninger af objekter kvalificerer kun, <strong>HVIS</strong> du har scannet og genereret filen.
         </li>
         <li>
-          Objektet kan være et 3D-print af ethvert materiale, f.eks. PLA, ABS, PETG, metal, keramik osv...
+          Objektet kan være et 3D-print af ethvert materiale, f.eks. PLA, ABS, PETG, metal, keramik osv.
         </li>
       </ul>,
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, din e-mailadresse og/eller telefonnummer.</li>
         <li>
           Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
-            <li>Hvordan kan det bruges, og af hvem?</li>
+            <li>Hvordan kan det bruges og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvordan planlagde du din proces?</li>
@@ -219,7 +219,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       <p>
         Send os dit bidrag med pdf'en (max 10mb) som vedhæftet fil til <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som <strong>MVMF
-        Challenge-3DPrinting-navn/titel på dit bidrag.</strong>
+        Challenge {challengeTitles[0].danish} navn/titel på dit bidrag.</strong>
       </p>,
     ],
     [
@@ -232,7 +232,7 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           produkt.
         </li>
         <li>3D-filen <strong>SKAL</strong> modelleres af deltageren/deltagerne til udfordringen. 3D-filer, der er
-          downloadede fra internettet eller der er downloadede og herpå manipuleres, selv delvist, kvalificerer
+          downloadede fra internettet, eller der er downloadede og herpå manipuleres, selv delvist, kvalificerer
           sig <strong>IKKE</strong>.
         </li>
         <li>Scannede tegninger er kun kvalificerede, <strong>HVIS</strong> du har scannet og genereret filen.</li>
@@ -241,12 +241,12 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, din e-mailadresse og/eller telefonnummer.</li>
         <li>
           Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
-            <li>Hvordan kan det bruges, og af hvem?</li>
+            <li>Hvordan kan det bruges og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvordan planlagde du din proces?</li>
@@ -262,34 +262,38 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       <p>
         Send os dit bidrag med pdf'en (max 10mb) som vedhæftet fil til <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som <strong>MVMF
-        Challenge-Laserskæring-navn/titel på dit bidrag.</strong>
+        Challenge {challengeTitles[1].danish} navn/titel på dit bidrag.</strong>
       </p>,
     ],
     [
       <h4 className="text-center fw-bold mb-4">Udfordring 03: {challengeTitles[2].danish}</h4>,
       <ul>
-        <li>Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
+        <li>
+          Du/din gruppe har brugt elektronisk hardware <strong>OG</strong> software til at bygge og lave et
           interaktivt objekt(er) eller et produkt (f.eks. Arduino, Raspberry Pi, ESP32 osv.)
         </li>
-        <li>Dette objekt kan være til personlig brug, en prototype, et kunstnerisk udtryk eller endda et kommercielt
+        <li>
+          Dette objekt kan være til personlig brug, en prototype, et kunstnerisk udtryk eller endda et kommercielt
           produkt.
         </li>
-        <li>Det indsendte <strong>SKAL</strong> have en hardware- og softwarekomponent og <strong>KAN IKKE</strong> kun
-          være software.
+        <li>
+          Det indsendte <strong>SKAL</strong> have en hardware- og softwarekomponent og <strong>KAN IKKE</strong> kun
+          være software. Genbrugt kode fra f.eks. projekter fundet på internettet er i orden.
         </li>
-        <li>Projekter, der tilføjer hardware og software til at hacke eksisterende apparater, instrumenter eller
-          værktøjer, er velkvalificerede som indgange.
+        <li>
+          Projekter, der tilføjer hardware og software til at hacke eksisterende apparater, instrumenter er i orden
+          for at blive kvalificeret.
         </li>
       </ul>,
       "For at sende os dit bidrag, brug en A4-papirstørrelse (i enten liggende eller stående retning) og sammensæt den ved hjælp af følgende fire trin på maksimalt 3 sider i pdf-format:",
       <ol>
         <li>Angiv et navn/titel til dit indlæg.</li>
-        <li>Indtast dine kontaktoplysninger, dit navn, dit e-mailadresse og/eller telefonnummer.</li>
+        <li>Indtast dine kontaktoplysninger, dit navn, din e-mailadresse og/eller telefonnummer.</li>
         <li>
           Skriv en beskrivelse på maksimalt 300 ord for objektet. Hvor f.eks. følgende spørgsmål besvares:
           <ul className="fst-italic">
             <li>Hvad er objektet?</li>
-            <li>Hvordan kan det bruges, og af hvem?</li>
+            <li>Hvordan kan det bruges og af hvem?</li>
             <li>Er det et kommercielt produkt, eller kan det omdannes til et?</li>
             <li>Hvad udtrykker det kunstnerisk?</li>
             <li>Hvilken hardware brugte du?</li>
@@ -303,14 +307,14 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
         </li>
         <li>
           Hvis det er relevant og nødvendigt, opfordres du til at linke til en uploadet video filmet på
-          højkant &#8597; i 9:16 format (f.eks. på Youtube, Vimeo osv...) af projektet, men det er ikke obligatorisk.
+          højkant &#8597; i 9:16-format (f.eks. på Youtube, Vimeo osv.) af projektet, men det er ikke obligatorisk.
           Husk at tilføje <strong>#mvmf2022</strong> og <strong>@btech_herning</strong>.
         </li>
       </ol>,
       <p>
         Send os dit bidrag med pdf'en (max 10mb) som vedhæftet fil til <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> med emnetitel som <strong>MVMF
-        Challenge-Interaktiv Objekt-navn/titel på dit bidrag.</strong>
+        Challenge {challengeTitles[2].danish} navn/titel på dit bidrag.</strong>
       </p>,
     ],
   ],
@@ -325,11 +329,11 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
         <li>This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
         <li>
-          The 3D file <strong>MUST</strong> to be modelled by the participant/s to the challenge. 3D files downloaded
+          The 3D file <strong>MUST</strong> be modelled by the participant(s) to the challenge. 3D files downloaded
           from the internet or downloaded and then manipulated even partially <strong>DO NOT</strong> qualify.
         </li>
         <li>3D scans of objects qualify only <strong>IF</strong> you have scanned and generated the file.</li>
-        <li>The object can be a 3D print of any material, for instance PLA, ABS, PETG, metal, ceramic etc…</li>
+        <li>The object can be a 3D print of any material, for instance PLA, ABS, PETG, metal, ceramics etc.</li>
       </ul>,
       "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
       <ol>
@@ -339,39 +343,40 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, and by who?</li>
+            <li>How could it be used and by whom?</li>
             <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
-            <li>What does it artistically express?</li>
             <li>How did you come about deciding to model and 3D print it?</li>
             <li>How did you model it? What printer did you use?</li>
             <li>What is the story behind its making?</li>
           </ul>
         </li>
         <li>
-          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          Below the descriptive text, provide a <strong>minimum of three and a maximum of five photos of the object
           within three A4 pages</strong>.
         </li>
       </ol>,
       <p>
         Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
-        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
-        challenge-3Dprinting-name/title of your entry</strong>.
+        href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVM
+        challenge {challengeTitles[0].english} name/title of your entry</strong>.
       </p>,
     ],
     [
       <h4 className="text-center fw-bold mb-4">Challenge 02: {challengeTitles[1].english}</h4>,
       <ul>
-        <li>You/your group has used any CAD program to draw/model <strong>AND</strong> laser cut an object or product of
+        <li>
+          You/your group has used any CAD program to draw/model <strong>AND</strong> laser-cut an object or product of
           any dimension.
         </li>
         <li>This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
-        <li>The CAD file <strong>MUST</strong> to be modelled by the participant/s to the challenge. CAD files
-          downloaded
-          from the internet, or downloaded and then manipulated even partially <strong>DO NOT</strong> qualify.
+        <li>
+          The CAD file <strong>MUST</strong> be modelled by the participant(s) to the challenge. CAD files
+          downloaded from the internet, or downloaded and then manipulated even partially <strong>DO
+          NOT</strong> qualify.
         </li>
         <li>Scanned drawings qualify only <strong>IF</strong> you have scanned and generated the file.</li>
-        <li>The object can be a laser cut of any material, for instance wood, acrylic, paper, leather etc…</li>
+        <li>The object can be a laser cut of any material, for instance wood, acrylic, paper, leather etc.</li>
       </ul>,
       "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
       <ol>
@@ -381,23 +386,22 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, and by who?</li>
+            <li>How could it be used and by whom?</li>
             <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
-            <li>What does it artistically express?</li>
-            <li>How did you come about deciding to model and laser cut it?</li>
+            <li>How did you come about deciding to model and laser-cut it?</li>
             <li>How did you model it? What laser cutter did you use?</li>
             <li>What is the story behind its making?</li>
           </ul>
         </li>
         <li>
-          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          Below the descriptive text, provide a <strong>minimum of three and a maximum of five photos of the object
           within three A4 pages</strong>.
         </li>
       </ol>,
       <p>
         Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
-        challenge-3Dlaser cutting-name/title of your entry</strong>.
+        challenge {challengeTitles[1].english} name/title of your entry</strong>.
       </p>,
     ],
     [
@@ -405,22 +409,21 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
       <ul>
         <li>
           You/your group has, used electronic hardware <strong>AND</strong> software to build and make an interactive
-          object/s or product (for instance Arduino, Raspberry Pi, ESP32 etc…)
+          object or product (for instance Arduino, Raspberry Pi, ESP32 etc.)
         </li>
         <li>
           This object could be for personal use, a prototype, an artistic expression or even a commercial product.
         </li>
         <li>
-          The entry <strong>MUST</strong> to have hardware and software component and <strong>CANNOT</strong> be only
-          software. Reused code from example projects from the internet is okay for qualification, the main criteria
-          will be the compelling narrative and gestalt presentation of the project.
+          The entry <strong>MUST</strong> have hardware and software component and <strong>CANNOT</strong> only be
+          software. Reused code from example projects from the internet is okay for qualification.
         </li>
         <li>
           Projects that add a hardware and software for hacking existing appliances, instruments or tools are
           well-qualified as entries.
         </li>
       </ul>,
-      "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following four steps:",
+      "Use a standard A4 paper size (in either landscape or portrait orientation) for your entry, and compose it using the following five steps:",
       <ol>
         <li>Provide a name/title for your entry.</li>
         <li>Type your contact details, your name, your email address and/or phone number.</li>
@@ -428,28 +431,27 @@ const textChallenges: Record<TLanguage, [(JSX.Element | string)[], (JSX.Element 
           Write a description of maximum 300 words for the object. For example:
           <ul className="fst-italic">
             <li>What is the object?</li>
-            <li>How could it be used, and by who?</li>
+            <li>How could it be used and by whom?</li>
             <li>Is it a commercial product, could it be transformed into one or what does it artistically express?</li>
-            <li>What does it artistically express?</li>
-            <li>What hardware did you use?</li>
+            <li>What type of hardware did you use?</li>
             <li>How did you plan your process and programming?</li>
             <li>What is the story behind its making?</li>
           </ul>
         </li>
         <li>
-          Below the descriptive text provide a <strong>minimum of three and a maximum of five photos of the object
+          Below the descriptive text, provide a <strong>minimum of three and a maximum of five photos of the object
           within three A4 pages</strong>.
         </li>
         <li>
-          If applicable and necessary, provide a link to an uploaded video filmed in portrait mode &#8597; in 9:16
-          format (for instance on Youtube, Vimeo etc.). This is encouraged but not mandatory. Remember to
-          use <strong>#mvmf2022</strong> and <strong>@btech_herning</strong>.
+          If applicable and necessary, provide a link to an uploaded video filmed in portrait mode &#8597; in
+          9:16-format (for instance on YouTube, Vimeo etc.) of the project. This is encouraged but not mandatory.
+          Remember to use <strong>#mvmf2022</strong> and <strong>@btech_herning</strong>.
         </li>
       </ol>,
       <p>
         Send us your entry with the pdf (maximum three pages and 10MB) as an attachment to <a
         href="mailto:mvmf2022@btech.au.dk">mvmf2022@btech.au.dk</a> with the subject title <strong>MVMF
-        challenge-interactive object-name/title of your entry</strong>.
+        challenge {challengeTitles[2].english} name/title of your entry</strong>.
       </p>,
     ],
   ],
