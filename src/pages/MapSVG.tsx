@@ -4,7 +4,7 @@ export const MapSVG: FC<{ language: string }> = ({language}) => (
   <svg className={`language-${language} img-fluid`} width="1404" height="934" viewBox="0 0 1404 934"
        xmlns="http://www.w3.org/2000/svg"
        xmlnsXlink="http://www.w3.org/1999/xlink">
-    <image id="Layer" x="0" y="0" width="1404" height="934" xlinkHref={`${process.env.PUBLIC_URL}/images/birk.png`}/>
+    <image id="Layer" x="0" y="0" width="1404" height="934" xlinkHref={`${process.env.PUBLIC_URL}/images/birk.jpg`}/>
     <g id="Museums">
       <g id="CHP-and-EA">
         <image id="Mask" x="401" y="39" width="192" height="182"
