@@ -16,6 +16,11 @@ interface IEvent {
 }
 
 
+const warning: Record<TLanguage, string> = {
+  danish: "Bemærk venligst, at programmet og aktiviteterne sandsynligvis vil ændre sig baseret på interesse og tilmeldinger af deltagere.",
+  english: "Kindly note that, based on the interest and registrations from participants, the program and activities are likely to change.",
+}
+
 const location: Record<TLanguage, string> = {
   danish: "LOKATIONER",
   english: "LOCATIONS",
@@ -275,9 +280,8 @@ export const Program: FC = () => {
             </thead>
           </table>
 
-          <p className="px-2 px-lg-0 pt-4 text-xsmall">
-            {languageContext.language === "danish" && "Programmet er foreløbigt, ændringer kan forekomme"}
-            {languageContext.language === "english" && "The program is preliminary, changes may occur"}
+          <p className="px-2 px-lg-0 pt-4 text-xsmall" style={{fontSize: "75%"}}>
+            {warning[languageContext.language]}
           </p>
 
           {Object.entries(events).map(([day, hours], j) => {
