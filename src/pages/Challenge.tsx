@@ -508,46 +508,40 @@ export const Challenge: FC = () => {
         <Col xs={12} lg={7} xl={6} className="mx-auto">
           {text1[languageContext.language].map((p, i) => typeof p === "string" ? <p key={i}>{p}</p> : p)}
           <div className="w-100 d-flex justify-content-between my-5">
-            <div className="d-inline-block interactive link"
+            <div className="d-inline-flex interactive link align-items-center"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              <div className="d-flex align-items-center h-100">
-                <span className="text-center fw-bold w-100">
-                  {challengeTitles[0][languageContext.language]}
-                </span>
-              </div>
+              <span className="text-center fw-bold w-100">
+                {challengeTitles[0][languageContext.language]}
+              </span>
               <Link to="/challenge1" className="stretched-link"/>
             </div>
-            <div className="d-inline-block interactive link"
+            <div className="d-inline-flex interactive link align-items-center"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              <div className="d-flex align-items-center h-100">
-                <span className="text-center fw-bold w-100">
-                  {challengeTitles[1][languageContext.language]}
-                </span>
-              </div>
+              <span className="text-center fw-bold w-100">
+                {challengeTitles[1][languageContext.language]}
+              </span>
               <Link to="/challenge2" className="stretched-link"/>
             </div>
-            <div className="d-inline-block interactive link"
+            <div className="d-inline-flex interactive link align-items-center"
                  style={{
                    width: "calc(33.33334% - .5rem)",
                    fontSize: "75%",
                    background: colors.au7,
                    color: colors.au7comp,
                  }}>
-              <div className="d-flex align-items-center h-100">
-                <span className="text-center fw-bold w-100">
-                  {challengeTitles[2][languageContext.language]}
-                </span>
-              </div>
+              <span className="text-center fw-bold w-100">
+                {challengeTitles[2][languageContext.language]}
+              </span>
               <Link to="/challenge3" className="stretched-link"/>
             </div>
           </div>
