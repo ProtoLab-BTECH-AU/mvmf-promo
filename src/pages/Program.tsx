@@ -207,6 +207,14 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     18: [
       {span: 3, text: {danish: "Aftensmad – Tak for at deltage!", english: "Dinner break – Thank you for coming!"}},
     ],
+    19: [
+      {
+        location: locations.mainStage,
+        hours: 2,
+        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
+      },
+    ],
+    20: [undefined],
   },
   "2022-09-24": {
     9: [
