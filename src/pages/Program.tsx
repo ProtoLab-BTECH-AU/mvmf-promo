@@ -56,7 +56,12 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
     ],
     11: [
-      {text: {danish: <>Mulighed for at besøge kommune&#8203;platforme</>, english: "Visit to the municipality platforms"}},
+      {
+        text: {
+          danish: <>Mulighed for at besøge kommune&#8203;platforme</>,
+          english: "Visit to the municipality platforms",
+        },
+      },
       {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
     ],
     12: [
