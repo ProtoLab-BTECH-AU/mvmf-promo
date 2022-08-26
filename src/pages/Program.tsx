@@ -44,37 +44,50 @@ const locations: Record<string, Record<TLanguage, string>> = {
   btechPlatform: {danish: "ENGTECH-platform", english: "ENGTECH platform"},
 }
 
+// noinspection SpellCheckingInspection
 const events: Record<string, Record<number, [IEvent | null | undefined] | [IEvent | null | undefined, IEvent | null] | [IEvent | null | undefined, IEvent | null | undefined, IEvent | null]>> = {
   "2022-09-22": {
     10: [
       {
         location: locations.mainStage,
         text: {
-          danish: "Åbning og velkomst af MVMF + Introduktion til kommunerne",
-          english: "Opening and welcome to MVMF + introduction of the municipalities",
+          danish: "Åbning og velkomst af MVMF + Introduktion til platformene i maker-skoven",
+          english: "Opening and welcome to MVMF + introduction to the platforms in the maker forest",
         },
       },
     ],
     11: [
       {
+        location: locations.mainStage,
         text: {
-          danish: <>Mulighed for at besøge kommune&#8203;platforme</>,
-          english: "Visit to the municipality platforms",
+          danish: "BTECH Research seminar – præsentation med Cindy Kohtala fra Umeå Universitet  ",
+          english: "BTECH Research Seminar – presentation with Cindy Kohtala from Umeå University",
         },
       },
-      {text: {danish: "Labs besøg og workshops for studerende", english: "Labs visits and student maker workshops"}},
+      {
+        text: {
+          danish: "Workshops for studerende og elever samt laboratorie-besøg",
+          english: "Student maker workshops and lab visits",
+        },
+      },
     ],
     12: [
-      {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
+      {span: 3, text: {danish: "Frokostpause", english: "Lunch break"}},
     ],
     13: [
       {
         hours: 2,
-        text: {danish: "Mulighed for at besøge kommune-platforme", english: "Visit to the municipality platforms"},
+        text: {
+          danish: "Mulighed for at besøge platformene i maker-skoven",
+          english: "Come visit the municipality platforms in the maker forest",
+        },
       },
       {
-        hours: 2,
-        text: {danish: "Labs-besøg og workshops for studerende", english: "Labs visits and student maker workshops"},
+        hours: 3,
+        text: {
+          danish: "Workshops for studerende og elever samt laboratorie-besøg",
+          english: "Student maker workshops and lab visits",
+        },
       },
       {
         hours: 5,
@@ -84,16 +97,15 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    14: [
-      undefined,
-    ],
-    15: [
-      {text: {danish: "Kaffe og maker-kage", english: "Coffee break and maker cake"}},
-    ],
+    14: [undefined],
+    15: [undefined],
     16: [
       {
-        location: locations.btechPlatform,
-        text: {danish: "WORKSHOP: Hacking Maker Station Skærme ", english: "WORKSHOP: Hacking maker station screens"},
+        location: locations.mainStage,
+        text: {
+          danish: "Maker-kage og fællesopsamling på workshops",
+          english: "Maker cake and gathered impressions on the workshops",
+        },
       },
     ],
     17: [
@@ -120,16 +132,11 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 2,
         text: {
-          danish: "PRÆSENTATION: Forskellige forretnings-makers og projekter fra MidtVest                                                                                   ",
-          english: "PRESENTATIONS: 'Making' business in Midtvest",
+          danish: "Makers fra industrien fortæller om projekter og maker-teknologier",
+          english: "Makers talks from the industry about maker technologies",
         },
       },
-      {
-        text: {
-          danish: "WORKSHOP 1: Prototyper med open-source hardware",
-          english: "WORKSHOP 1: Prototyping with open source hardware",
-        },
-      },
+      undefined,
       {
         hours: 3,
         text: {
@@ -138,31 +145,18 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    10: [
-      {
-        text: {
-          danish: "WORKSHOP 2: Laser cutting and 3D printing",
-          english: "WORKSHOP 2: Laser-cutting og 3D-printing",
-        },
-      },
-    ],
+    10: [undefined],
     11: [
       {
         location: locations.mainStage,
         text: {
-          danish: "PANELDEBAT: med udvalgte makers fra MidtVest",
-          english: "PANEL DISCUSSION: 'Making' business in MidtVest",
-        },
-      },
-      {
-        text: {
-          danish: "WORKSHOP 3: Wooden drones in supply chains",
-          english: "WORKSHOP 3: Droner af træ i forsyningskæde",
+          danish: "PANELDEBAT: At anvende maker-teknologier til at fremme forretning i MidtVest",
+          english: "PANEL DISCUSSION: 'Making' business in MidtVest with maker-technolgies",
         },
       },
     ],
     12: [
-      {span: 3, text: {danish: "Frokost", english: "Lunch break"}},
+      {span: 3, text: {danish: "Frokostpause", english: "Lunch break"}},
     ],
     13: [
       {
@@ -170,18 +164,13 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         hours: 2,
         text: {
           danish: <>MIDTVEST MAKER UDFORDRING: Åben for alle, se mere her: <Link
-            to="/challenge">{challengeTitle.danish}</Link> for
+            to="/challenge" className="fw-normal">{challengeTitle.danish}</Link> for
             tilmelding</>,
           english: <>MIDTVEST MAKERS CHALLENGE: Open call, see more here: <Link
-            to="/challenge">{challengeTitle.english}</Link> for joining</>,
+            to="/challenge" className="fw-normal">{challengeTitle.english}</Link> for joining</>,
         },
       },
-      {
-        text: {
-          danish: "WORKSHOP 4: Crafting digital",
-          english: "WORKSHOP 4: Crafting digital",
-        },
-      },
+      undefined,
       {
         hours: 5,
         text: {
@@ -190,13 +179,14 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    14: [
-      null,
-    ],
+    14: [undefined],
     15: [
       {
         location: locations.mainStage,
-        text: {danish: "KEYNOTE: Digital Craftsmanship", english: "KEYNOTE: Digital Craftsmanship"},
+        text: {
+          danish: "KEYNOTE: Cindy Kohtala om bæredygtig design",
+          english: "KEYNOTE: Cindy Kohtala on how to design for sustainability",
+        },
       },
     ],
     16: [
@@ -215,16 +205,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
     ],
     18: [
-      {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
+      {span: 3, text: {danish: "Aftensmad – Tak for at deltage!", english: "Dinner break – Thank you for coming!"}},
     ],
-    19: [
-      {
-        location: locations.mainStage,
-        hours: 2,
-        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
-      },
-    ],
-    20: [null],
   },
   "2022-09-24": {
     9: [
@@ -232,8 +214,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 3,
         text: {
-          danish: <>Mulighed for at besøge kommune&#8203;platforme</>,
-          english: "Visit to the municipality platforms",
+          danish: "Mulighed for at besøge platformene i maker-skoven",
+          english: "Come visit the municipality platforms in the maker forest",
         },
       },
       undefined,
@@ -245,8 +227,6 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    10: [null],
-    11: [null],
   },
 }
 
