@@ -76,7 +76,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     13: [
       {
-        hours: 2,
+        hours: 3,
         text: {
           danish: "Mulighed for at besøge platformene i maker-skoven",
           english: "Come visit the municipality platforms in the maker forest",
