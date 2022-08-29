@@ -217,10 +217,10 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     20: [undefined],
   },
   "2022-09-24": {
-    9: [
+    10: [
       {
         location: locations.mainStage,
-        hours: 3,
+        hours: 2,
         text: {
           danish: "Mulighed for at besøge platformene i maker-skoven",
           english: "Come visit the municipality platforms in the maker forest",
@@ -228,13 +228,14 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
       undefined,
       {
-        hours: 3,
+        hours: 2,
         text: {
           danish: <>BIRK DESIGN WALK<br/>Museer og haver</>,
           english: <>BIRK DESIGN WALK<br/>Museums and gardens</>,
         },
       },
     ],
+    11: [undefined],
   },
 }
 
