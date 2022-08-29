@@ -349,6 +349,14 @@ export const Home: FC = () => {
                  style={{maxHeight: "65px"}} alt=""/>
           </a>
         </Col>
+
+        <Col xs={6} md={4} lg={3} className="mt-5 mt-lg-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="https://www.bravida.dk/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/bravida.svg`}
+                 style={{maxHeight: "25px"}} alt=""/>
+          </a>
+        </Col>
       </Row>
 
       <Row className="mt-5 mb-5">
