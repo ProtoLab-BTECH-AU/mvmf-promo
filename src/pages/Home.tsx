@@ -257,7 +257,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 px-lg-5">
+      <Row className="mt-5 pb-lg-5">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.organizers[languageContext.language]}</h3>
           <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
@@ -277,7 +277,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 px-lg-5">
+      <Row className="mt-5 py-lg-5 px-lg-10">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.partners[languageContext.language]}</h3>
         </Col>
@@ -320,7 +320,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 mb-5 px-lg-5">
+      <Row className="mt-5 mb-5 py-lg-5 px-lg-10">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.sponsors[languageContext.language]}</h3>
         </Col>
@@ -359,7 +359,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 mb-5">
+      <Row className="mt-5 mb-5 pt-lg-5">
         <Col xs={12} className="text-center" style={{fontSize: "75%"}}>
           <h4 className="fw-bold">{text.contact[languageContext.language]}</h4>
 
