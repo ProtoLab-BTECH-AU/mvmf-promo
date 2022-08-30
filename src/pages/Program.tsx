@@ -60,8 +60,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "BTECH Research seminar – præsentation med Cindy Kohtala fra Umeå Universitet  ",
-          english: "BTECH Research Seminar – presentation with Cindy Kohtala from Umeå University",
+          danish: "BTECH Research seminar – præsentation med professor Cindy Kohtala fra Umeå Universitet  ",
+          english: "BTECH Research Seminar – presentation with Professor Cindy Kohtala from Umeå University",
         },
       },
       {
