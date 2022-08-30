@@ -103,8 +103,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "Maker-kage og fællesopsamling på workshops",
-          english: "Maker cake and gathered impressions on the workshops",
+          danish: "Maker-is og fællesopsamling på workshops",
+          english: "Maker icecream and gathered impressions on the workshops",
         },
       },
     ],
@@ -127,10 +127,10 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     20: [undefined],
   },
   "2022-09-23": {
-    9: [
+    10: [
       {
         location: locations.mainStage,
-        hours: 2,
+        hours: 1,
         text: {
           danish: "Makers fra industrien fortæller om projekter og maker-teknologier",
           english: "Makers talks from the industry about maker technologies",
@@ -138,14 +138,13 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
       undefined,
       {
-        hours: 3,
+        hours: 2,
         text: {
           danish: <>BIRK DESIGN WALK<br/>Museum</>,
           english: <>BIRK DESIGN WALK<br/>Museum</>,
         },
       },
     ],
-    10: [undefined],
     11: [
       {
         location: locations.mainStage,
@@ -184,8 +183,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "KEYNOTE: Cindy Kohtala om bæredygtig design",
-          english: "KEYNOTE: Cindy Kohtala on how to design for sustainability",
+          danish: "KEYNOTE: Professor Cindy Kohtala om bæredygtig design",
+          english: "KEYNOTE: Professor Cindy Kohtala on how to design for sustainability",
         },
       },
     ],
@@ -207,14 +206,6 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     18: [
       {span: 3, text: {danish: "Aftensmad – Tak for at deltage!", english: "Dinner break – Thank you for coming!"}},
     ],
-    19: [
-      {
-        location: locations.mainStage,
-        hours: 2,
-        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
-      },
-    ],
-    20: [undefined],
   },
   "2022-09-24": {
     10: [
