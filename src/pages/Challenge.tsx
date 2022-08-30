@@ -86,7 +86,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <h4 className="fw-bold text-uppercase">Hvad skal du gøre for at deltage?</h4>,
     <ul>
       <li className="fw-bold">
-        Perioden for deltagelse i denne udfordring er fra 11. august til 11. september 2022
+        Perioden for deltagelse i denne udfordring er fra 11. august til 18. september 2022
       </li>
       <li>
         Inden for denne måned kan du indsende dit bidrag som maksimalt fylder 3 sider i pdf-format (inklusive fotos og
@@ -103,7 +103,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         filstørrelse for den vedhæftede pdf er 10 MB.
       </li>
       <li className="fw-bold">
-        Vi informerer dig den 14. september om, hvorvidt bidraget er blevet valgt og om din deltagelse i at
+        Vi informerer dig den 19. september om, hvorvidt bidraget er blevet valgt og om din deltagelse i at
         præsentere til MidtVest Maker Fest 2022 fredag den 23. september.
       </li>
       <li>
@@ -117,7 +117,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     </h4>,
     <p>
       Designobjektet eller produktet kan være noget, du allerede har lavet, eller så kan du lave et nyt objekt inden
-      deadline, som er <strong>den 11. september (23.59) 2022</strong>.
+      deadline, som er <strong>den 18. september (23.59) 2022</strong>.
     </p>,
     <p>
       For at kunne deltage skal du være bosat i Denmark, og du skal kunne deltage fysisk i Herning (Birk Centerpark 15)
@@ -128,7 +128,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     <h4 className="fw-bold text-uppercase">What do you need to participate?</h4>,
     <ul>
       <li className="fw-bold">
-        The challenge period is open from 11 August to 11 September.
+        The challenge period is open from 11 August to 18 September.
       </li>
       <li>
         During this month, you can submit your entry as a maximum of three-page pdf file (including photos and
@@ -145,7 +145,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
         file size for the pdf attachment is 10MB.
       </li>
       <li className="fw-bold">
-        We will inform you on 14 September if your entry has been selected for participation in the MidtVest Makers Fest
+        We will inform you on 19 September if your entry has been selected for participation in the MidtVest Makers Fest
         on 23 September.
       </li>
       <li>
@@ -159,7 +159,7 @@ const text2: Record<TLanguage, (JSX.Element | string)[]> = {
     </h4>,
     <p>
       The design object or product can be something that you have already made, or you can make a new object by the
-      deadline, which is <strong>11 September 2022 (23:59)</strong>.
+      deadline, which is <strong>18 September 2022 (23:59)</strong>.
     </p>,
     <p>
       To be eligible for the competition, you must reside in Denmark, and if your entry is selected by us, you must be
