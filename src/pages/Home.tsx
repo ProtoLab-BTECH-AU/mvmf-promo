@@ -257,7 +257,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5">
+      <Row className="mt-5 px-lg-5">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.organizers[languageContext.language]}</h3>
           <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
@@ -277,7 +277,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5">
+      <Row className="mt-5 px-lg-5">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.partners[languageContext.language]}</h3>
         </Col>
@@ -320,7 +320,7 @@ export const Home: FC = () => {
         </Col>
       </Row>
 
-      <Row className="mt-5 mb-5">
+      <Row className="mt-5 mb-5 px-lg-5">
         <Col xs={12} className="text-center">
           <h3 className="fw-bold">{text.sponsors[languageContext.language]}</h3>
         </Col>
