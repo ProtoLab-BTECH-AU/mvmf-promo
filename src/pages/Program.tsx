@@ -1,5 +1,5 @@
-import {FC, useContext, useRef} from "react"
-import {Col, Container, Row} from "react-bootstrap"
+import {FC, useContext, useEffect, useRef, useState} from "react"
+import {Col, Container, Modal, Row} from "react-bootstrap"
 import {Link} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
@@ -239,8 +239,22 @@ export const title: Record<TLanguage, string> = {
 export const Program: FC = () => {
   const languageContext = useContext(LanguageContext)
   const containerRef = useRef<HTMLDivElement>(null)
+  const [showDetails, setShowDetails] = useState<boolean>(false)
+  const [eventDetails, setEventDetails] = useState<IEvent | null>(null)
 
-  return (
+  useEffect(() => setShowDetails(!!eventDetails), [eventDetails])
+  useEffect(() => {
+    if (!showDetails) setEventDetails(null)
+  }, [showDetails])
+
+  return <>
+    <Modal className="rounded-0 border-0" show={showDetails} onHide={() => setShowDetails(false)} centered>
+      <Modal.Header className="border-0" style={{backgroundColor: "#D9B6A1"}} closeButton/>
+      <Modal.Body style={{backgroundColor: "#D9B6A1"}}>
+        {(eventDetails?.details ?? {})[languageContext.language]}
+      </Modal.Body>
+    </Modal>
+
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
@@ -295,27 +309,40 @@ export const Program: FC = () => {
                   let col2: JSX.Element | null = null
                   let col3: JSX.Element | null = null
 
-                  if (ev1) col1 = <td colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}>
+                  if (ev1) col1 = <td
+                    colSpan={ev1.span ?? 1} rowSpan={ev1.hours ?? 1}
+                    onClick={ev1.details && (() => setEventDetails(ev1))}
+                    className={ev1.details && "pointer"}>
                     {ev1.location &&
                       <div style={{fontSize: "75%"}}><em>{ev1.location[languageContext.language]}</em></div>}
+                    {ev1.details && <span className="position-absolute top-0 end-0 pe-1 text-small fw-bold"
+                                          style={{lineHeight: 1}}>+</span>}
                     {ev1.text[languageContext.language]}
                   </td>
                   else if (ev1 === null) col1 = null
                   else if (ev2 || ev3) col1 = <td className="empty"/>
                   else if (i === 0) col1 = <td className="empty"/>
 
-                  if (ev2) col2 = <td colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}>
+                  if (ev2) col2 = <td
+                    colSpan={ev2.span ?? 1} rowSpan={ev2.hours ?? 1}
+                    onClick={ev2.details && (() => setEventDetails(ev2))}
+                    className={ev2.details && "pointer"}>
                     {ev2.location &&
                       <div style={{fontSize: "75%"}}><em>{ev2.location[languageContext.language]}</em></div>}
+                    {ev2.details && <span className="position-absolute top-0 end-0 pe-2 fw-bold">+</span>}
                     {ev2.text[languageContext.language]}
                   </td>
                   else if (ev2 === null) col2 = null
                   else if (ev3) col2 = <td className="empty"/>
                   else if (i === 0) col2 = <td className="empty"/>
 
-                  if (ev3) col3 = <td colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}>
+                  if (ev3) col3 = <td
+                    colSpan={ev3.span ?? 1} rowSpan={ev3.hours ?? 1}
+                    onClick={ev3.details && (() => setEventDetails(ev3))}
+                    className={ev3.details && "pointer"}>
                     {ev3.location &&
                       <div style={{fontSize: "75%"}}><em>{ev3.location[languageContext.language]}</em></div>}
+                    {ev3.details && <span className="position-absolute top-0 end-0 pe-2 fw-bold">+</span>}
                     {ev3.text[languageContext.language]}
                   </td>
                   else if (ev3 === null) col3 = null
@@ -337,5 +364,5 @@ export const Program: FC = () => {
         </Col>
       </Row>
     </Container>
-  )
+  </>
 }
