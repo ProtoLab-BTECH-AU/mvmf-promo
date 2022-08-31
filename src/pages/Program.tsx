@@ -132,8 +132,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 1,
         text: {
-          danish: "Makers fra industrien fortæller om projekter og maker-teknologier",
-          english: "Makers talks from the industry about maker technologies",
+          danish: "Makerforretning: industrien fortæller om maker-teknologier",
+          english: "Maker business: talks from the industry about maker technologies",
         },
       },
       undefined,
