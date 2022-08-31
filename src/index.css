@@ -123,17 +123,37 @@ body {
     position: relative;
 }
 
-.modal-backdrop {
+.modal.modal-page {
+    z-index: 1000 !important;
+}
+
+.modal:not(.modal-page) {
+    z-index: 2000 !important;
+}
+
+.modal-page .modal-backdrop {
     display: none;
 }
 
-.main-modal .modal-dialog {
+.modal-page .main-modal .modal-dialog {
     transition-delay: 250ms !important;
     transform: none !important;
 }
 
-.modal-dialog, .modal-content {
+.modal-page .modal-dialog,
+.modal-page .modal-content {
     background: none;
+}
+
+.modal.rounded-0 .modal-content,
+.modal.rounded-0 .modal-dialog,
+.modal.rounded-0 .modal-header,
+.modal.rounded-0 .modal-footer {
+    border-radius: 0 !important;
+}
+
+.modal.border-0 .modal-content {
+    border: none !important;
 }
 
 .px-0_5 {

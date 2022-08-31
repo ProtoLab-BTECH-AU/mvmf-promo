@@ -16,7 +16,7 @@ export const ModalPage: FC<IProps> = ({children, title, headerTitle}) => {
 
   document.title = `MVMF 2022 | ${title[languageContext.language]}`
 
-  return <Modal fullscreen={true} backdrop={false} scrollable={true} show>
+  return <Modal className="modal-page" fullscreen={true} backdrop={false} scrollable={true} show>
     <Modal.Header className="p-2 border-0 container">
       <div className="d-inline">
         <div className="d-inline-block pointer" onClick={() => historyContext.goBack()}>
