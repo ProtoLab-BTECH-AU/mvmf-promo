@@ -51,8 +51,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "Åbning og velkomst af MVMF + Introduktion til platformene i maker-skoven",
-          english: "Opening and welcome to MVMF + introduction to the platforms in the maker forest",
+          danish: "Åbning og velkomst af MVMF af Anders Fredriksen institutleder på AU i Herning + Introduktion til platformene i maker-skoven",
+          english: "Opening and welcome to MVMF by Anders Fredriksen Head of Department at AU in Herning + introduction to the platforms in the maker forest",
         },
       },
     ],
@@ -66,8 +66,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
       {
         text: {
-          danish: "Workshops for studerende og elever samt laboratorie-besøg",
-          english: "Student maker workshops and lab visits",
+          danish: "Workshops for studerende og elever samt laboratorie-besøg til PROTO* Lab, DIGI og Concept Development Lab",
+          english: "Student maker workshops and lab visits to PROTO* Lab, DIGI Lab, and Concept Development Lab",
         },
       },
     ],
@@ -78,8 +78,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         hours: 3,
         text: {
-          danish: "Mulighed for at besøge platformene i maker-skoven",
-          english: "Come visit the municipality platforms in the maker forest",
+          danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
+          english: "Come visit the municipality platforms in the maker forest moderated by among other Elværket from Skive, ITC from Ringkøbing-Skjern, and various laboratories from AU in Herning",
         },
       },
       {
@@ -103,8 +103,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "Maker-is og fællesopsamling på workshops",
-          english: "Maker icecream and gathered impressions on the workshops",
+          danish: "Maker-is fra Vildis og fællesopsamling på workshops",
+          english: "Maker icecream from Vildis and gathered impressions on the workshops",
         },
       },
     ],
@@ -132,8 +132,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 1,
         text: {
-          danish: "Makerforretning: industrien fortæller om maker-teknologier",
-          english: "Maker business: talks from the industry about maker technologies",
+          danish: "Maker-forretning: industrien fortæller om maker-teknologier fra blandt andet Steffen Haslund Schmidt fra Danish AM Hub, Brian Lykke Christensen fra Teknologisk institut og Peter Eduard fra eduard.dk",
+          english: "Maker business: talks from the industry about maker technologies from among other Steffen Haslund Schmidt from Danish AM Hub, Brian Lykke Christensen from Technological Institute, and Peter Eduard from eduard.dk",
         },
       },
       undefined,
@@ -183,8 +183,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "KEYNOTE: Professor Cindy Kohtala om bæredygtig design",
-          english: "KEYNOTE: Professor Cindy Kohtala on how to design for sustainability",
+          danish: "KEYNOTE: Professor Cindy Kohtala fra Umeå universitet om bæredygtig design",
+          english: "KEYNOTE: Professor Cindy Kohtala from Umeå University on how to design for sustainability",
         },
       },
     ],
@@ -192,8 +192,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         text: {
-          danish: "Fireside talk modereret af Bæredygtig Herning",
-          english: "Fireside talk moderated by Bæredygtig Herning",
+          danish: "Fireside talk modereret af Morten Rønde Rasmussen fra Bæredygtig Herning. Peter Dahl fra Spinderihallerne kommer til en uformed samtale i deres komfortable grønne sofaer",
+          english: "Fireside talk moderated by Morten Rønde Rasmussen from Bæredygtig Herning. Peter Dahl from Spinderihallerne joins an informal conversation in their comfortable green sofas",
         },
       },
     ],
@@ -213,8 +213,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 2,
         text: {
-          danish: "Mulighed for at besøge platformene i maker-skoven",
-          english: "Come visit the municipality platforms in the maker forest",
+          danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
+          english: "Come visit the municipality platforms in the maker forest moderated by among other Elværket from Skive, ITC from Ringkøbing-Skjern, and various laboratories from AU in Herning",
         },
       },
       undefined,
