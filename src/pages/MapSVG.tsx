@@ -188,11 +188,11 @@ export const MapSVG: FC<{ language: string }> = ({language}) => (
         <path id="path2" fill="#f8fa00" fillRule="evenodd" stroke="none"
               d="M 166 797.5 C 166 790.596436 160.403564 785 153.5 785 C 146.596436 785 141 790.596436 141 797.5 C 141 804.403564 146.596436 810 153.5 810 C 160.403564 810 166 804.403564 166 797.5 Z"/>
         <text id="text11" className="english" xmlSpace="preserve" x="192" y="802" fontFamily="AU Passata" fontSize="15"
-              fontWeight="700" fill="#000000">BIRK DESIGN WALK: Museums
+              fontWeight="700" fill="#000000">BIRK DESIGN WALK: Museums*
         </text>
         <text id="text12" className="danish" xmlSpace="preserve" x="192" y="802" fontFamily="AU Passata" fontSize="15"
               fontWeight="700"
-              fill="#000000">BIRK DESIGN WALK: Museer
+              fill="#000000">BIRK DESIGN WALK: Museer*
         </text>
       </g>
       <g id="g3">
@@ -204,6 +204,16 @@ export const MapSVG: FC<{ language: string }> = ({language}) => (
         <text id="text14" className="danish" xmlSpace="preserve" x="192" y="724" fontFamily="AU Passata" fontSize="15"
               fontWeight="700"
               fill="#000000">Maker-skov og AU Herning
+        </text>
+      </g>
+      <g id="g3">
+        <text id="text15" className="danish" xmlSpace="preserve" x="142" y="844" fontFamily="AU Passata" fontSize="13"
+              fontStyle="italic" fill="#000000">
+          * Entré til museet er ikke inkluderet i arrangementet
+        </text>
+        <text id="text16" className="english" xmlSpace="preserve" x="142" y="844" fontFamily="AU Passata" fontSize="13"
+              fontStyle="italic" fill="#000000">
+          * Entrance to the museum is not included in the event
         </text>
       </g>
     </g>
