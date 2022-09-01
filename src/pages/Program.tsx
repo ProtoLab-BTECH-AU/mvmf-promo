@@ -286,8 +286,8 @@ export const Program: FC = () => {
           {Object.entries(events).map(([day, hours], j) => {
             const date = new Date(day)
 
-            return [
-              <div key={0} className="my-3 sticky-top text-xsmall ps-1 d-inline-block pointer"
+            return <>
+              <div className="my-3 sticky-top text-xsmall ps-1 d-inline-block pointer"
                    style={{
                      height: "4.50rem", width: "calc(10% + 1px)",
                      zIndex: 1120 + j + 1,
@@ -301,8 +301,8 @@ export const Program: FC = () => {
                    }}>
                 {date.toLocaleString(languageContext.locale, {day: "numeric"})}<br/>
                 {date.toLocaleString(languageContext.locale, {month: "short"})}
-              </div>,
-              <table key={1} id={`day${day}`} className="border-separate">
+              </div>
+              <table id={`day${day}`} className="border-separate">
                 <tbody>
                 {Object.entries(hours).map(([hour, [ev1, ev2, ev3]], i) => {
                   let col1: JSX.Element | null = null
@@ -358,8 +358,8 @@ export const Program: FC = () => {
                   </tr>
                 })}
                 </tbody>
-              </table>,
-            ]
+              </table>
+            </>
           })}
         </Col>
       </Row>
