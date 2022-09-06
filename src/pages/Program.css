@@ -5,9 +5,12 @@
 #program table td,
 #program table th {
     font-size: 1.5rem;
-    font-weight: bold;
     overflow: hidden !important;
     position: relative;
+}
+
+#program table th {
+    font-weight: bold;
 }
 
 #program table.border-separate,
@@ -26,9 +29,11 @@
     #program table th {
         font-size: 1rem;
     }
+
     #program table td {
         font-size: .85rem;
     }
+
     #program table td.time {
         height: 7rem !important;
     }

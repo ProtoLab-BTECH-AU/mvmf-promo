@@ -9,6 +9,7 @@ import "./Program.css"
 
 interface IEvent {
   text: Record<TLanguage, string | JSX.Element>
+  title?: Record<TLanguage, string | JSX.Element>
   details?: Record<TLanguage, string | JSX.Element>
   location?: Record<TLanguage, string>
   hours?: number
@@ -50,50 +51,61 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     10: [
       {
         location: locations.mainStage,
+        title: {danish: "Åbning af MVMF", english: "Opening MVMF"},
         text: {
           danish: "Åbning og velkomst af MVMF af Anders Fredriksen institutleder på AU i Herning + Introduktion til platformene i maker-skoven",
-          english: "Opening and welcome to MVMF by Anders Fredriksen Head of Department at AU in Herning + introduction to the platforms in the maker forest",
+          english: "Welcome address by Anders Fredriksen Head of Department at AU in Herning. Followed by introduction to the platforms in the maker forest",
         },
       },
     ],
     11: [
       {
         location: locations.mainStage,
+        title: {danish: "BTECH Research Seminar", english: "BTECH Research Seminar"},
         text: {
-          danish: "BTECH Research seminar – præsentation med professor Cindy Kohtala fra Umeå Universitet  ",
-          english: "BTECH Research Seminar – presentation with Professor Cindy Kohtala from Umeå University",
+          danish: "Præsentation med professor Cindy Kohtala fra Umeå Universitet  ",
+          english: "Presentation by Professor Cindy Kohtala from Umeå University",
         },
       },
       {
+        title: {danish: "Student maker-workshops", english: "Student Maker Workshops"},
         text: {
           danish: "Workshops for studerende og elever samt laboratorie-besøg til PROTO* Lab, DIGI og Concept Development Lab",
-          english: "Student maker workshops and lab visits to PROTO* Lab, DIGI Lab, and Concept Development Lab",
+          english: "Lab visits to PROTO* Lab, DIGI Lab, and Concept Development Lab and introduction to workshop briefs",
         },
       },
     ],
     12: [
-      {span: 3, text: {danish: "Frokostpause", english: "Lunch break"}},
+      {span: 3, title: {danish: "Frokostpause", english: "Lunch break"}, text: {danish: "", english: ""}},
     ],
     13: [
       {
         hours: 3,
+        title: {danish: "Platform besøg", english: "Platform Visit"},
         text: {
           danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
-          english: "Come visit the municipality platforms in the maker forest moderated by among other Elværket from Skive, ITC from Ringkøbing-Skjern, and various laboratories from AU in Herning",
+          english: "Visit the municipality platforms in the maker forest with Elværket from Skive, ITC from Ringkøbing-Skjern, and labs from AU in Herning",
         },
       },
       {
         hours: 3,
+        title: {danish: "Student maker-workshops", english: "Student Maker Workshops"},
         text: {
           danish: "Workshops for studerende og elever samt laboratorie-besøg",
-          english: "Student maker workshops and lab visits",
+          english: <>
+            PROTO* Lab<br/>
+            Concept Development Lab<br/>
+            DIGI Lab<br/>
+            Drone Lab
+          </>,
         },
       },
       {
         hours: 5,
+        title: {danish: "Birk design walk", english: "Birk Design Walk"},
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Haver</>,
-          english: <>BIRK DESIGN WALK<br/>Gardens</>,
+          danish: "Haver",
+          english: "Gardens",
         },
       },
     ],
@@ -102,26 +114,29 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     16: [
       {
         location: locations.mainStage,
+        title: {danish: "Ice Cream and Reflections", english: "Ice Cream and Reflections"},
         text: {
           danish: "Maker-is fra Vildis og fællesopsamling på workshops",
-          english: "Maker icecream from Vildis and gathered impressions on the workshops",
+          english: "Maker icecream from Vildis and reflections the workshops",
         },
       },
     ],
     17: [
-      {location: locations.mainStage, text: {danish: "MUSIK: Replica", english: "MUSIC: Replica"}},
+      {
+        location: locations.mainStage,
+        title: {danish: "MUSIK", english: "MUSIC"},
+        text: {danish: "Replica", english: "Replica"},
+      },
     ],
     18: [
-      {span: 3, text: {danish: "Aftensmad", english: "Dinner break"}},
+      {span: 3, title: {danish: "Aftensmad", english: "Dinner break"}, text: {danish: "", english: ""}},
     ],
     19: [
       {
         location: locations.mainStage,
         hours: 2,
-        text: {
-          danish: "MUSIK: Smashing Pumpkins Jam",
-          english: "MUSIC: Smashing Pumpkins Jam",
-        },
+        title: {danish: "Musik", english: "Music"},
+        text: {danish: "Smashing Pumpkins Jam", english: "Smashing Pumpkins Jam"},
       },
     ],
     20: [undefined],
@@ -131,50 +146,54 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         hours: 1,
+        title: {danish: "Maker-forretning", english: "Maker business"},
         text: {
-          danish: "Maker-forretning: industrien fortæller om maker-teknologier fra blandt andet Steffen Haslund Schmidt fra Danish AM Hub, Brian Lykke Christensen fra Teknologisk institut og Peter Eduard fra eduard.dk",
-          english: "Maker business: talks from the industry about maker technologies from among other Steffen Haslund Schmidt from Danish AM Hub, Brian Lykke Christensen from Technological Institute, and Peter Eduard from eduard.dk",
+          danish: "Industrien fortæller om maker-teknologier fra blandt andet Steffen Haslund Schmidt fra Danish AM Hub, Brian Lykke Christensen fra Teknologisk institut og Peter Eduard fra eduard.dk",
+          english: "Talks from the industry on maker technologies: Steffen Haslund Schmidt from Danish AM Hub, Brian Lykke Christensen from Technological Institute, and Peter K from eduard.dk",
         },
       },
       undefined,
       {
         hours: 2,
+        title: {danish: "Birk design walk", english: "Birk Design Walk"},
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Museum</>,
-          english: <>BIRK DESIGN WALK<br/>Museum</>,
+          danish: "Museum",
+          english: "Museum",
         },
       },
     ],
     11: [
       {
         location: locations.mainStage,
+        title: {danish: "Paneldebat", english: "Panel Discussion"},
         text: {
-          danish: "PANELDEBAT: At anvende maker-teknologier til at fremme forretning i MidtVest",
-          english: "PANEL DISCUSSION: 'Making' business in MidtVest with maker-technolgies",
+          danish: "At anvende maker-teknologier til at fremme forretning i MidtVest",
+          english: "'Making business’ in MidtVest with maker-technologies",
         },
       },
     ],
     12: [
-      {span: 3, text: {danish: "Frokostpause", english: "Lunch break"}},
+      {span: 3, title: {danish: "Frokostpause", english: "Lunch break"}, text: {danish: "", english: ""}},
     ],
     13: [
       {
         location: locations.mainStage,
         hours: 2,
+        title: {danish: "Midtvest maker udfordring", english: "Midtvest Makers Challenge"},
         text: {
-          danish: <>MIDTVEST MAKER UDFORDRING: Åben for alle, se mere her: <Link
-            to="/challenge" className="fw-normal">{challengeTitle.danish}</Link> for
-            tilmelding</>,
-          english: <>MIDTVEST MAKERS CHALLENGE: Open call, see more here: <Link
-            to="/challenge" className="fw-normal">{challengeTitle.english}</Link> for joining</>,
+          danish: <>Åben for alle, se mere her for tilmelding: <Link
+            to="/challenge" className="fw-normal">{challengeTitle.danish}</Link></>,
+          english: <>Open call, see more here for joining: <Link
+            to="/challenge" className="fw-normal">{challengeTitle.english}</Link></>,
         },
       },
       undefined,
       {
         hours: 5,
+        title: {danish: "Birk design walk", english: "Birk Design Walk"},
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Museum</>,
-          english: <>BIRK DESIGN WALK<br/>Museum</>,
+          danish: "Museum",
+          english: "Museum",
         },
       },
     ],
@@ -182,29 +201,36 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     15: [
       {
         location: locations.mainStage,
+        title: {danish: "Festival keynote", english: "Festival Keynote"},
         text: {
-          danish: "KEYNOTE: Professor Cindy Kohtala fra Umeå universitet om bæredygtig design",
-          english: "KEYNOTE: Professor Cindy Kohtala from Umeå University on how to design for sustainability",
+          danish: "Professor Cindy Kohtala fra Umeå universitet om bæredygtig design",
+          english: "Professor Cindy Kohtala from Umeå University on how to design for sustainability",
         },
       },
     ],
     16: [
       {
         location: locations.mainStage,
+        title: {danish: "Fireside talk", english: "Fireside Talk"},
         text: {
-          danish: "Fireside talk modereret af Morten Rønde Rasmussen fra Bæredygtig Herning. Peter Dahl fra Spinderihallerne kommer til en uformed samtale i deres komfortable grønne sofaer",
-          english: "Fireside talk moderated by Morten Rønde Rasmussen from Bæredygtig Herning. Peter Dahl from Spinderihallerne joins an informal conversation in their comfortable green sofas",
+          danish: "Morten Rønde Rasmussen fra Bæredygtig Herning og Peter Dahl fra Spinderihallerne kommer til en uformed samtale i deres komfortable grønne sofaer",
+          english: "Morten Rønde Rasmussen from Bæredygtig Herning and Peter Dahl from FabLab Spinderihallerne Vejle on comfortable green sofas",
         },
       },
     ],
     17: [
       {
         location: locations.mainStage,
-        text: {danish: "MUSIK: DJ Rishanthan Rajarajan", english: "MUSIC: DJ Rishanthan Rajarajan"},
+        title: {danish: "Musik", english: "Music"},
+        text: {danish: "DJ Rishanthan Rajarajan", english: "DJ Rishanthan Rajarajan"},
       },
     ],
     18: [
-      {span: 3, text: {danish: "Aftensmad – Tak for at deltage!", english: "Dinner break – Thank you for coming!"}},
+      {
+        span: 3,
+        title: {danish: "Aftensmad – Tak for at deltage!", english: "Dinner break – Thank you for coming!"},
+        text: {danish: "", english: ""},
+      },
     ],
   },
   "2022-09-24": {
@@ -212,17 +238,22 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         hours: 2,
+        title: {
+          danish: "Besøge kommunernes platformene i maker-skoven",
+          english: "Visit the municipality platforms in the maker forest",
+        },
         text: {
           danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
-          english: "Come visit the municipality platforms in the maker forest moderated by among other Elværket from Skive, ITC from Ringkøbing-Skjern, and various laboratories from AU in Herning",
+          english: "With Elværket from Skive, ITC from Ringkøbing-Skjern, Eduard and labs from AU in Herning",
         },
       },
       undefined,
       {
         hours: 2,
+        title: {danish: "Birk design walk", english: "Birk Design Walk"},
         text: {
-          danish: <>BIRK DESIGN WALK<br/>Museer og haver</>,
-          english: <>BIRK DESIGN WALK<br/>Museums and gardens</>,
+          danish: "Museer og haver",
+          english: "Museums and gardens",
         },
       },
     ],
@@ -314,10 +345,12 @@ export const Program: FC = () => {
                     onClick={ev1.details && (() => setEventDetails(ev1))}
                     className={ev1.details && "pointer"}>
                     {ev1.location &&
-                      <div style={{fontSize: "75%"}}><em>{ev1.location[languageContext.language]}</em></div>}
+                      <div className="text-xsmall"><em><strong>{ev1.location[languageContext.language]}</strong></em>
+                      </div>}
                     {ev1.details && <span className="position-absolute top-0 end-0 pe-1 text-small fw-bold"
                                           style={{lineHeight: 1}}>+</span>}
-                    {ev1.text[languageContext.language]}
+                    {ev1.title && <h3 className="fw-bold">{ev1.title[languageContext.language]}</h3>}
+                    <div className="text-xsmall" style={{lineHeight: 1.25}}>{ev1.text[languageContext.language]}</div>
                   </td>
                   else if (ev1 === null) col1 = null
                   else if (ev2 || ev3) col1 = <td className="empty"/>
@@ -328,9 +361,11 @@ export const Program: FC = () => {
                     onClick={ev2.details && (() => setEventDetails(ev2))}
                     className={ev2.details && "pointer"}>
                     {ev2.location &&
-                      <div style={{fontSize: "75%"}}><em>{ev2.location[languageContext.language]}</em></div>}
+                      <div className="text-xsmall"><em><strong>{ev2.location[languageContext.language]}</strong></em>
+                      </div>}
                     {ev2.details && <span className="position-absolute top-0 end-0 pe-2 fw-bold">+</span>}
-                    {ev2.text[languageContext.language]}
+                    {ev2.title && <h3 className="fw-bold">{ev2.title[languageContext.language]}</h3>}
+                    <div className="text-xsmall" style={{lineHeight: 1.25}}>{ev2.text[languageContext.language]}</div>
                   </td>
                   else if (ev2 === null) col2 = null
                   else if (ev3) col2 = <td className="empty"/>
@@ -341,9 +376,11 @@ export const Program: FC = () => {
                     onClick={ev3.details && (() => setEventDetails(ev3))}
                     className={ev3.details && "pointer"}>
                     {ev3.location &&
-                      <div style={{fontSize: "75%"}}><em>{ev3.location[languageContext.language]}</em></div>}
+                      <div className="text-xsmall"><em><strong>{ev3.location[languageContext.language]}</strong></em>
+                      </div>}
                     {ev3.details && <span className="position-absolute top-0 end-0 pe-2 fw-bold">+</span>}
-                    {ev3.text[languageContext.language]}
+                    {ev3.title && <h3 className="fw-bold">{ev3.title[languageContext.language]}</h3>}
+                    <div className="text-xsmall" style={{lineHeight: 1.25}}>{ev3.text[languageContext.language]}</div>
                   </td>
                   else if (ev3 === null) col3 = null
                   else if (i === 0) col3 = <td className="empty"/>
