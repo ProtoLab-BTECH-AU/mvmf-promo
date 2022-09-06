@@ -5,16 +5,20 @@ import {colors} from "../colors"
 import {LanguageSelector} from "../components/LanguageSelector"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 import {title as aboutTitle} from "./About"
+import {title as forCompaniesTitle} from "./ForCompanies"
+import {title as forStudentsTitle} from "./ForStudents"
 import {title as challengeTitle} from "./Challenge"
 import {title as mapTitle} from "./Map"
 import {title as programTitle} from "./Program"
 
 
-type TTiles = "about" | "register" | "program" | "map" | "challenge"
+type TTiles = "about" | "forCompanies" | "forStudents" | "register" | "program" | "map" | "challenge"
 type TTileDetails = { [l in TLanguage]: string } & { link: string }
 
 const tiles: Record<TTiles, TTileDetails> = {
   about: {link: "about", ...aboutTitle},
+  forCompanies: {link: "for-companies", ...forCompaniesTitle},
+  forStudents: {link: "for-students", ...forStudentsTitle},
   register: {link: "https://forms.office.com/r/i5m431jhpK", danish: "Tilmeld Dig", english: "Register"},
   program: {link: "program", ...programTitle},
   map: {link: "map", ...mapTitle},
@@ -216,11 +220,13 @@ export const Home: FC = () => {
         <Col xs={12} md={6} xl={5} style={{height: "fit-content"}}>
           <Row className="px-0_5">
             <Col xs={4} className="px-0_5">
-              <Tile background="images/3D printer.jpg"/>
+              <Tile background="images/3D printer.jpg" title={tiles.forCompanies[languageContext.language]}
+                    link={tiles.forCompanies.link}/>
             </Col>
 
             <Col xs={4} className="px-0_5">
-              <Tile background="images/SDG.jpg"/>
+              <Tile background="images/SDG.jpg" title={tiles.forStudents[languageContext.language]}
+                    link={tiles.forStudents.link}/>
             </Col>
 
             <Col xs={4} className="px-0_5">

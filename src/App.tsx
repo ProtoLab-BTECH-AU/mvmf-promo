@@ -17,6 +17,8 @@ import {Home} from "./pages/Home"
 import {Map, title as mapTitle} from "./pages/Map"
 import {NotFound, title as notFoundTitle} from "./pages/NotFound"
 import {Program, title as programTitle} from "./pages/Program"
+import {ForCompanies, title as forCompaniesTitle} from "./pages/ForCompanies"
+import {ForStudents, title as forStudentsTitle} from "./pages/ForStudents"
 
 export const App: FC = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -25,6 +27,8 @@ export const App: FC = () => (
         <Routes>
           <Route path="" element={<Home/>}/>
           <Route path="about" element={<ModalPage title={aboutTitle} children={<About/>}/>}/>
+          <Route path="for-companies" element={<ModalPage title={forCompaniesTitle} children={<ForCompanies/>}/>}/>
+          <Route path="for-students" element={<ModalPage title={forStudentsTitle} children={<ForStudents/>}/>}/>
           <Route path="challenge" element={<ModalPage title={challengeTitle} children={<Challenge/>}/>}/>
           <Route path="challenge1"
                  element={<ModalPage title={challengeTitlesFull[0]} headerTitle={challengeTitlesHeader[0]}
