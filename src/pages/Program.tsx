@@ -289,7 +289,7 @@ export const Program: FC = () => {
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
-          <div style={{background: colors.au7comp, color: colors.au7, marginBottom: -2}} className="text-center pt-2">
+          <div style={{background: colors.au7comp, color: colors.au7, marginBottom: -2, paddingLeft: "10%"}} className="text-center pt-2">
             {location[languageContext.language]}
           </div>
 
