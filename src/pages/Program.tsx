@@ -125,7 +125,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         title: {danish: "MUSIK", english: "MUSIC"},
-        text: {danish: "Replica", english: "Replica"},
+        text: {danish: "DJ Rishanthan Rajarajan", english: "DJ Rishanthan Rajarajan"},
       },
     ],
     18: [
@@ -136,7 +136,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         hours: 2,
         title: {danish: "Musik", english: "Music"},
-        text: {danish: "Smashing Pumpkins Jam", english: "Smashing Pumpkins Jam"},
+        text: {danish: "DJ Rishanthan Rajarajan", english: "DJ Rishanthan Rajarajan"},
       },
     ],
     20: [undefined],
@@ -222,7 +222,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       {
         location: locations.mainStage,
         title: {danish: "Musik", english: "Music"},
-        text: {danish: "DJ Rishanthan Rajarajan", english: "DJ Rishanthan Rajarajan"},
+        text: {danish: "Smashing Pumpkins Jam", english: "Smashing Pumpkins Jam"},
       },
     ],
     18: [
