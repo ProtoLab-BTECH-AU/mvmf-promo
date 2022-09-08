@@ -148,8 +148,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         hours: 1,
         title: {danish: "Maker-forretning", english: "Maker business"},
         text: {
-          danish: "Industrien fortæller om maker-teknologier fra blandt andet Steffen Haslund Schmidt fra Danish AM Hub, Brian Lykke Christensen fra Teknologisk institut og Peter Eduard fra eduard.dk",
-          english: "Talks from the industry on maker technologies: Steffen Haslund Schmidt from Danish AM Hub, Brian Lykke Christensen from Technological Institute, and Peter K from eduard.dk",
+          danish: "Industrien fortæller om maker-teknologier fra blandt andet Steffen Haslund Schmidt fra Danish AM Hub, Brian Lykke Christensen fra Teknologisk institut og Kevin James Egan fra eduard.dk",
+          english: "Talks from the industry on maker technologies: Steffen Haslund Schmidt from Danish AM Hub, Brian Lykke Christensen from Technological Institute, and Kevin James Egan from eduard.dk",
         },
       },
       undefined,
