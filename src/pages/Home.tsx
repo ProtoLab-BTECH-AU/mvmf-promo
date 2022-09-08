@@ -135,7 +135,7 @@ export const Home: FC = () => {
 
   document.title = "MVMF 2022"
 
-  // noinspection HtmlUnknownTarget
+  // noinspection HtmlUnknownTarget,HttpUrlsUsage
   return (
     <Container id="main" style={{animation: "fade-in .3s linear"}} fluid>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "80vh", minHeight: "325px"}}>
@@ -331,7 +331,7 @@ export const Home: FC = () => {
           <h3 className="fw-bold">{text.sponsors[languageContext.language]}</h3>
         </Col>
 
-        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+        <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center">
           <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
              href="https://www.velux.dk"
              style={{width: "fit-content", height: "calc(100% - 2.15rem)", marginTop: "0.75rem"}}>
@@ -340,7 +340,7 @@ export const Home: FC = () => {
           </a>
         </Col>
 
-        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
+        <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center">
           <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
              href="https://www.ngiot.eu/eu-iot/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
             <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/euiot.png`}
@@ -348,18 +348,26 @@ export const Home: FC = () => {
           </a>
         </Col>
         
-        <Col xs={6} md={4} lg={3} className="mt-5 mt-md-0 mx-auto text-center">
-          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+        <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center p-0">
+          <a className="d-block mx-auto text-decoration-none text-body grayscale pt-2 px-2 px-xl-0"
              href="https://www.bravida.dk/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
             <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/bravida.svg`}
-                 style={{maxHeight: "25px"}} alt=""/>
+                 style={{maxHeight: "30px"}} alt=""/>
           </a>
         </Col>
 
-        <Col xs={6} md={4} lg={3} className="mt-5 mt-lg-0 mx-auto text-center">
+        <Col xs={6} md={4} xxl={2} className="mt-5 mt-xxl-0 mx-auto text-center">
           <a className="d-block mx-auto text-decoration-none text-body p-2 black"
              href="https://www.tuborgfondet.dk" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
             <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/tuborg-fondet.svg`}
+                 style={{maxHeight: "65px"}} alt=""/>
+          </a>
+        </Col>
+
+        <Col xs={6} md={4} xl={2} className="mt-5 mt-xxl-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
+             href="http://auhefonden.dk/en/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/auhe.png`}
                  style={{maxHeight: "65px"}} alt=""/>
           </a>
         </Col>
