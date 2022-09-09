@@ -348,11 +348,11 @@ export const Home: FC = () => {
           </a>
         </Col>
         
-        <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center p-0">
-          <a className="d-block mx-auto text-decoration-none text-body grayscale pt-2 px-2 px-xl-0"
-             href="https://www.bravida.dk/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
-            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/bravida.svg`}
-                 style={{maxHeight: "30px"}} alt=""/>
+        <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center">
+          <a className="d-block mx-auto text-decoration-none text-body grayscale p-2"
+             href="http://auhefonden.dk/en/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/auhe.png`}
+                 style={{maxHeight: "55px"}} alt=""/>
           </a>
         </Col>
 
@@ -364,11 +364,11 @@ export const Home: FC = () => {
           </a>
         </Col>
 
-        <Col xs={6} md={4} xl={2} className="mt-5 mt-xxl-0 mx-auto text-center">
-          <a className="d-block mx-auto text-decoration-none text-body p-2 grayscale"
-             href="http://auhefonden.dk/en/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
-            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/auhe.png`}
-                 style={{maxHeight: "65px"}} alt=""/>
+        <Col xs={6} md={4} xl={2} className="mt-5 mt-xxl-0 mx-auto text-center p-0">
+          <a className="d-block mx-auto text-decoration-none text-body grayscale pt-2 px-2 px-xl-0"
+             href="https://www.bravida.dk/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
+            <img className="img-fluid" src={`${process.env.PUBLIC_URL}/images/logo/bravida.svg`}
+                 style={{maxHeight: "30px"}} alt=""/>
           </a>
         </Col>
       </Row>
