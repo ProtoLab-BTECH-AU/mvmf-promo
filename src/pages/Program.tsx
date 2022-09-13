@@ -117,7 +117,7 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         title: {danish: "Ice Cream and Reflections", english: "Ice Cream and Reflections"},
         text: {
           danish: "Maker-is fra Vildis og fællesopsamling på workshops",
-          english: "Maker icecream from Vildis and reflections the workshops",
+          english: "Maker icecream from Vildis and reflections from the workshops",
         },
       },
     ],
