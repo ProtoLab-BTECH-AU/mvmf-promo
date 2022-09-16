@@ -62,7 +62,7 @@
 #program table td:not(.empty) {
     vertical-align: top !important;
     background: rgba(var(--au-color-7-rgb), .0625) !important;
-    box-shadow: 0 0 0 2px var(--au-color-7);
+    outline: 2px solid var(--au-color-7);
 }
 
 #program table td.time {
