@@ -14,6 +14,7 @@ import {
   title as challengeTitle,
 } from "./pages/Challenge"
 import {Home} from "./pages/Home"
+import {HomeSimple} from "./pages/HomeSimple"
 import {Map, title as mapTitle} from "./pages/Map"
 import {NotFound, title as notFoundTitle} from "./pages/NotFound"
 import {Program, title as programTitle} from "./pages/Program"
@@ -26,6 +27,8 @@ export const App: FC = () => (
       <LanguageContextProvider>
         <Routes>
           <Route path="" element={<Home/>}/>
+          <Route path="blob" element={null}/>
+          <Route path="blob-titles" element={<HomeSimple/>}/>
           <Route path="about" element={<ModalPage title={aboutTitle} children={<About/>}/>}/>
           <Route path="for-companies" element={<ModalPage title={forCompaniesTitle} children={<ForCompanies/>}/>}/>
           <Route path="for-students" element={<ModalPage title={forStudentsTitle} children={<ForStudents/>}/>}/>
