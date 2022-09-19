@@ -147,9 +147,7 @@ export const Workshops: FC = () => {
   return <Container>
     <h2><strong>{text.title[languageContext.language]}</strong></h2>
 
-    <div className="my-5">
-      {text.introduction[languageContext.language]}
-    </div>
+    {text.introduction[languageContext.language]}
 
     <h4 className="mt-5"><strong>Concept Development Lab</strong></h4>
     {text.concept_development[languageContext.language]}
