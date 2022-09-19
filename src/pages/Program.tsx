@@ -165,8 +165,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         location: locations.mainStage,
         title: {danish: "Paneldebat", english: "Panel Discussion"},
         text: {
-          danish: "At anvende maker-teknologier til at fremme forretning i MidtVest",
-          english: "'Making business’ in MidtVest with maker-technologies",
+          danish: "At anvende maker-teknologier til at fremme forretning i Midt- og Vestjylland, modereret af Morten Rønde Rasmussen",
+          english: "'Making business' in Midt- and Vestjylland with maker-technologies, moderated by Morten Rønde Rasmussen",
         },
       },
     ],
