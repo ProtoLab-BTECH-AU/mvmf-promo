@@ -1,9 +1,7 @@
 import {FC, useContext, useEffect, useRef, useState} from "react"
 import {Col, Container, Modal, Row} from "react-bootstrap"
-import {Link} from "react-router-dom"
 import {colors} from "../colors"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
-import {title as challengeTitle} from "./Challenge"
 import "./Program.css"
 
 
@@ -177,14 +175,11 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     13: [
       {
-        location: locations.mainStage,
         hours: 2,
-        title: {danish: "Midtvest maker udfordring", english: "Midtvest Makers Challenge"},
+        title: {danish: "Platform besøg", english: "Platform Visit"},
         text: {
-          danish: <>Åben for alle, se mere her for tilmelding: <Link
-            to="/challenge" className="fw-normal">{challengeTitle.danish}</Link></>,
-          english: <>Open call, see more here for joining: <Link
-            to="/challenge" className="fw-normal">{challengeTitle.english}</Link></>,
+          danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
+          english: "Visit the municipality platforms in the maker forest with Elværket from Skive, ITC from Ringkøbing-Skjern, and labs from AU in Herning",
         },
       },
       undefined,
@@ -289,7 +284,8 @@ export const Program: FC = () => {
     <Container id="program" style={{marginBottom: "30vh"}} ref={containerRef} fluid>
       <Row className="mb-5 pb-5">
         <Col xs={12} lg={7} xl={6} className="mx-auto p-0">
-          <div style={{background: colors.au7comp, color: colors.au7, marginBottom: -2, paddingLeft: "10%"}} className="text-center pt-2">
+          <div style={{background: colors.au7comp, color: colors.au7, marginBottom: -2, paddingLeft: "10%"}}
+               className="text-center pt-2">
             {location[languageContext.language]}
           </div>
 
