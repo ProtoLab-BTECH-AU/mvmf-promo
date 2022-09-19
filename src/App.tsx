@@ -20,6 +20,7 @@ import {NotFound, title as notFoundTitle} from "./pages/NotFound"
 import {Program, title as programTitle} from "./pages/Program"
 import {ForCompanies, title as forCompaniesTitle} from "./pages/ForCompanies"
 import {ForStudents, title as forStudentsTitle} from "./pages/ForStudents"
+import {Workshops, title as workshopsTitle} from "./pages/Workshops"
 
 export const App: FC = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
@@ -42,6 +43,7 @@ export const App: FC = () => (
           <Route path="challenge3"
                  element={<ModalPage title={challengeTitlesFull[2]} headerTitle={challengeTitlesHeader[2]}
                                      children={<Challenge3/>}/>}/>
+          <Route path="workshops" element={<ModalPage title={workshopsTitle} children={<Workshops/>}/>}/>
           <Route path="map" element={<ModalPage title={mapTitle} children={<Map/>}/>}/>
           <Route path="program" element={<ModalPage title={programTitle} children={<Program/>}/>}/>
           <Route path="*" element={<ModalPage title={notFoundTitle} children={<NotFound/>}/>}/>

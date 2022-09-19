@@ -5,14 +5,15 @@ import {colors} from "../colors"
 import {LanguageSelector} from "../components/LanguageSelector"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 import {title as aboutTitle} from "./About"
+import {title as challengeTitle} from "./Challenge"
 import {title as forCompaniesTitle} from "./ForCompanies"
 import {title as forStudentsTitle} from "./ForStudents"
-import {title as challengeTitle} from "./Challenge"
 import {title as mapTitle} from "./Map"
 import {title as programTitle} from "./Program"
+import {title as workshopsTitle} from "./Workshops"
 
 
-type TTiles = "about" | "forCompanies" | "forStudents" | "register" | "program" | "map" | "challenge"
+type TTiles = "about" | "forCompanies" | "forStudents" | "register" | "program" | "map" | "challenge" | "workshops"
 type TTileDetails = { [l in TLanguage]: string } & { link: string }
 
 const tiles: Record<TTiles, TTileDetails> = {
@@ -23,6 +24,7 @@ const tiles: Record<TTiles, TTileDetails> = {
   program: {link: "program", ...programTitle},
   map: {link: "map", ...mapTitle},
   challenge: {link: "challenge", ...challengeTitle},
+  workshops: {link: "workshops", ...workshopsTitle},
 }
 
 const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
@@ -230,7 +232,8 @@ export const Home: FC = () => {
             </Col>
 
             <Col xs={4} className="px-0_5">
-              <Tile background="images/Drillbits.jpg"/>
+              <Tile background="images/Drillbits.jpg" title={tiles.workshops[languageContext.language]}
+                    link={tiles.workshops.link}/>
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">
@@ -347,7 +350,7 @@ export const Home: FC = () => {
                  style={{maxHeight: "65px"}} alt=""/>
           </a>
         </Col>
-        
+
         <Col xs={6} md={4} xxl={2} className="mt-5 mt-md-0 mx-auto text-center">
           <a className="d-block mx-auto text-decoration-none text-body grayscale p-2"
              href="http://auhefonden.dk/en/" style={{width: "fit-content", height: "calc(100% - 2.15rem)"}}>
