@@ -1,7 +1,6 @@
-import {FC, useContext, useState} from "react"
-import {Button, Col, Container, Row} from "react-bootstrap"
+import {FC, useContext} from "react"
+import {Container, Row} from "react-bootstrap"
 import {useSearchParams} from "react-router-dom"
-import {LanguageSelector} from "../components/LanguageSelector"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 
@@ -83,10 +82,7 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
 export const HomeSimple: FC = () => {
   const languageContext = useContext(LanguageContext)
   const params = useSearchParams()[0]
-  const customText = params.get("text")
   const language = params.get("language") as TLanguage | null ?? languageContext.language
-
-  const [customTextNew, setCustomTextNew] = useState<string>(customText ?? "")
 
   document.title = "MVMF 2022"
 
@@ -95,12 +91,6 @@ export const HomeSimple: FC = () => {
     <Container id="main" style={{animation: "fade-in .3s linear"}} fluid>
       <Row className="px-0 position-relative overflow-hidden" style={{height: "100vh", minHeight: "325px"}}>
         <div className="position-absolute top-0 start-0 h-100 w-100">
-          {!customText && (
-            <div className="position-absolute" style={{top: ".75rem", left: ".75rem"}}>
-              <h1 className="text-small mb-0 mt-1"><LanguageSelector/></h1>
-            </div>
-          )}
-
           <div className="position-absolute" style={{top: ".75rem", right: ".75rem"}}>
             <h1 className="text-end text-big mb-0">{text.title[language]}</h1>
             <h1 className="orange text-big text-end"
@@ -110,33 +100,6 @@ export const HomeSimple: FC = () => {
                 }}>
               {text.subtitle[language]}
             </h1>
-          </div>
-
-          <div className="position-absolute top-50 start-0 w-100 text-big"
-               style={{transform: "translateY(-50%)"}}>
-            {customText ? (
-              <Row>
-                <Col xs={12} className="text-center" style={{whiteSpace: "pre", lineHeight: 1.125}}>
-                  {customText}
-                </Col>
-                <Col xs={12} className="px-0 text-center mt-5">
-                  <img className="img-fluid" style={{height: "4em"}} src={`${process.env.PUBLIC_URL}/qr-code.svg`}
-                       alt=""/>
-                </Col>
-              </Row>
-            ) : (
-              <div className="mx-5 text-center">
-                <textarea className="form-control" value={customTextNew} rows={3}
-                          onInput={(ev) => setCustomTextNew(ev.currentTarget.value)}
-                          placeholder="Enter custom text here."/>
-                <Button disabled={!customTextNew} onClick={() => {
-                  const url = new URL(window.location.href)
-                  url.searchParams.set("text", customTextNew)
-                  url.searchParams.set("language", languageContext.language)
-                  window.location.href = url.href
-                }}>Use</Button>
-              </div>
-            )}
           </div>
 
           <h1 className="position-absolute fw-bold text-large"
