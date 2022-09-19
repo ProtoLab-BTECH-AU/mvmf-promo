@@ -1,4 +1,4 @@
-pages=("about" "for-companies" "for-students" "program" "map" "challenge" "challenge1" "challenge2" "challenge3" "blob" "blob-titles")
+pages=("about" "for-companies" "for-students" "program" "map" "challenge" "challenge1" "challenge2" "challenge3" "workshops" "blob" "blob-titles")
 
 for page in "${pages[@]}" ; do
     mkdir "build/$page"
