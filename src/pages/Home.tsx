@@ -18,8 +18,8 @@ type TTileDetails = { [l in TLanguage]: string } & { link: string }
 
 const tiles: Record<TTiles, TTileDetails> = {
   about: {link: "about", ...aboutTitle},
-  forCompanies: {link: "for-companies", ...forCompaniesTitle},
-  forStudents: {link: "for-students", ...forStudentsTitle},
+  forCompanies: {link: "for-companies", ...forCompaniesTitle, english: forCompaniesTitle.english + " (Danish)"},
+  forStudents: {link: "for-students", ...forStudentsTitle, english: forStudentsTitle.english + " (Danish)"},
   register: {link: "https://forms.office.com/r/i5m431jhpK", danish: "Tilmeld Dig", english: "Register"},
   program: {link: "program", ...programTitle},
   map: {link: "map", ...mapTitle},
