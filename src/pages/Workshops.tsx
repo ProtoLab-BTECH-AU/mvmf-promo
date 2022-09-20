@@ -127,12 +127,23 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
         Opret gratis bruger på <a href="https://roblox.com" target="_blank" rel="noreferrer">roblox.com</a>, hvis du
         ikke allerede har en bruger
       </li>
+      <li className="mt-2" style={{fontSize: "85%", listStyle: "none"}}>
+        Al koden, der bruges i denne workshop, er tilgængelig på PROTO* Lab's GitHub side: <a
+        href="https://github.com/ProtoLab-BTECH-AU/mvmf2022-workshop" target="_blank"
+        rel="noreferrer">mvmf2022-workshop</a>
+      </li>
     </ul>,
     english: <ul>
       <li>Bring your own laptop (Windows or macOS but not Linux)</li>
       <li>
-        Create a free account at <a href="https://roblox.com" target="_blank" rel="noreferrer">roblox.com</a> if you do
+        Create a free account at <a href="https://roblox.com" target="_blank" rel="noreferrer">roblox.com</a> if you
+        do
         not already have one
+      </li>
+      <li className="mt-2" style={{fontSize: "85%", listStyle: "none"}}>
+        All the code used for this workshop is available on the PROTO* Lab's GitHub page: <a
+        href="https://github.com/ProtoLab-BTECH-AU/mvmf2022-workshop" target="_blank"
+        rel="noreferrer">mvmf2022-workshop</a>
       </li>
     </ul>,
   },
@@ -158,7 +169,7 @@ export const Workshops: FC = () => {
         <h4 className="mt-5"><strong>Drone Lab</strong></h4>
         {text.drone[languageContext.language]}
 
-        <h4 className="mt-5"><strong>Proto Lab</strong></h4>
+        <h4 className="mt-5"><strong>PROTO* Lab</strong></h4>
         {text.proto[languageContext.language]}
       </Col>
     </Row>
