@@ -194,8 +194,8 @@ export const Home: FC = () => {
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1" id="challenge">
-                  <Tile background={"images/Basketball and flower.jpg"} titleLight={highlightCycle}
-                        title={tiles.challenge[languageContext.language]} link={tiles.challenge.link}/>
+                  <Tile background="images/Drillbits.jpg" title={tiles.workshops[languageContext.language]}
+                        titleLight={true} link={tiles.workshops.link}/>
                 </Col>
               </Row>
             </Col>
@@ -232,8 +232,7 @@ export const Home: FC = () => {
             </Col>
 
             <Col xs={4} className="px-0_5">
-              <Tile background="images/Drillbits.jpg" title={tiles.workshops[languageContext.language]}
-                    link={tiles.workshops.link}/>
+              <Tile background={"images/Basketball and flower.jpg"}/>
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">
