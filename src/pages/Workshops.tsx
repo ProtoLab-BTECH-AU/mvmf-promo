@@ -82,7 +82,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
         <ol>
           <li>
             Programmet kan findes her: <a
-            href="https://drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj/view?usp=sharing" target="_blank"
+            href={`${process.env.PUBLIC_URL}/workshops/DobotStudio(Windows)V1.9.4.zip`} target="_blank"
             rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
           </li>
           <li>Installer programmet på din computer, med alle drivers inkluderet</li>
@@ -102,7 +102,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
         <ol>
           <li>
             The program can be found here: <a
-            href="https://drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj/view?usp=sharing" target="_blank"
+            href={`${process.env.PUBLIC_URL}/workshops/DobotStudio(Windows)V1.9.4.zip`} target="_blank"
             rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
           </li>
           <li>Install the program on your computer with all the included drivers</li>
