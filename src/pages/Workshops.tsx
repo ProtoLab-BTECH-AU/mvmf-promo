@@ -137,8 +137,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
       <li>Bring your own laptop (Windows or macOS but not Linux)</li>
       <li>
         Create a free account at <a href="https://roblox.com" target="_blank" rel="noreferrer">roblox.com</a> if you
-        do
-        not already have one
+        do not already have one
       </li>
       <li className="mt-2" style={{fontSize: "85%", listStyle: "none"}}>
         All the code used for this workshop is available on the PROTO* Lab's GitHub page: <a
