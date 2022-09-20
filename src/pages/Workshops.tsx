@@ -83,7 +83,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
           <li>
             Programmet kan findes her: <a
             href="https://drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj/view?usp=sharing" target="_blank"
-            rel="noreferrer">drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj</a>
+            rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
           </li>
           <li>Installer programmet på din computer, med alle drivers inkluderet</li>
           <li>Klik på Dobot studio for "Start"</li>
@@ -93,7 +93,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
         Gennemgå venligst denne vejledning før workshoppen for at gøre dig bekendt med sikkerhed og korrekt betjening
         af robotter: <a
         href="https://docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P/edit#slide=id.p1" target="_blank"
-        rel="noreferrer">docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P</a>
+        rel="noreferrer">Workshop Robotics Fundamentals</a>
       </li>
     </ul>,
     english: <ul>
@@ -104,7 +104,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
           <li>
             The program can be found here: <a
             href="https://drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj/view?usp=sharing" target="_blank"
-            rel="noreferrer">drive.google.com/file/d/1-2-p2yUm40Ip3vpVoF6RPCOi68ddN7Bj</a>
+            rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
           </li>
           <li>Install the program on your computer with all the included drivers</li>
           <li>Open Dobot Studio to start</li>
@@ -114,7 +114,7 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
         Please review this manual prior to the workshop to familiarize yourself with safety and proper operation of the
         robots: <a
         href="https://docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P/edit#slide=id.p1" target="_blank"
-        rel="noreferrer">docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P</a>
+        rel="noreferrer">Workshop Robotics Fundamentals</a>
       </li>
     </ul>,
   },
