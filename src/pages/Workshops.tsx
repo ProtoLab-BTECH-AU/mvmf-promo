@@ -78,18 +78,6 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
     danish: <ul>
       <li>Medbring egen bærbar (Windows eller Mac men ikke Linux)</li>
       <li>
-        Opsætning af program som fungere med Dobot:
-        <ol>
-          <li>
-            Programmet kan findes her: <a
-            href={`${process.env.PUBLIC_URL}/workshops/DobotStudio(Windows)V1.9.4.zip`} target="_blank"
-            rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
-          </li>
-          <li>Installer programmet på din computer, med alle drivers inkluderet</li>
-          <li>Klik på Dobot studio for "Start"</li>
-        </ol>
-      </li>
-      <li>
         Gennemgå venligst denne vejledning før workshoppen for at gøre dig bekendt med sikkerhed og korrekt betjening
         af robotter: <a href={`${process.env.PUBLIC_URL}/workshops/WorkshopRoboticsFundamentals.pdf`} target="_blank"
                         rel="noreferrer">Workshop Robotics Fundamentals (på Engelsk)</a>
@@ -97,18 +85,6 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
     </ul>,
     english: <ul>
       <li>Bring your own laptop (Windows or macOS but not Linux)</li>
-      <li>
-        Setup of the program to control the Dobot:
-        <ol>
-          <li>
-            The program can be found here: <a
-            href={`${process.env.PUBLIC_URL}/workshops/DobotStudio(Windows)V1.9.4.zip`} target="_blank"
-            rel="noreferrer">DobotStudio (Windows) v1.9.4.zip</a>
-          </li>
-          <li>Install the program on your computer with all the included drivers</li>
-          <li>Open Dobot Studio to start</li>
-        </ol>
-      </li>
       <li>
         Please review this manual prior to the workshop to familiarize yourself with safety and proper operation of the
         robots: <a href={`${process.env.PUBLIC_URL}/workshops/WorkshopRoboticsFundamentals.pdf`} target="_blank"
