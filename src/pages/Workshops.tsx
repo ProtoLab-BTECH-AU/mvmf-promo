@@ -91,9 +91,8 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
       </li>
       <li>
         Gennemgå venligst denne vejledning før workshoppen for at gøre dig bekendt med sikkerhed og korrekt betjening
-        af robotter: <a
-        href="https://docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P/edit#slide=id.p1" target="_blank"
-        rel="noreferrer">Workshop Robotics Fundamentals</a>
+        af robotter: <a href={`${process.env.PUBLIC_URL}/workshops/WorkshopRoboticsFundamentals.pdf`} target="_blank"
+                        rel="noreferrer">Workshop Robotics Fundamentals (på Engelsk)</a>
       </li>
     </ul>,
     english: <ul>
@@ -112,9 +111,8 @@ const text: Record<string, Record<TLanguage, string | JSX.Element>> = {
       </li>
       <li>
         Please review this manual prior to the workshop to familiarize yourself with safety and proper operation of the
-        robots: <a
-        href="https://docs.google.com/presentation/d/1-M_RKom2uTPZc1crBnzj2oA9zETwuA9P/edit#slide=id.p1" target="_blank"
-        rel="noreferrer">Workshop Robotics Fundamentals</a>
+        robots: <a href={`${process.env.PUBLIC_URL}/workshops/WorkshopRoboticsFundamentals.pdf`} target="_blank"
+                   rel="noreferrer">Workshop Robotics Fundamentals</a>
       </li>
     </ul>,
   },
