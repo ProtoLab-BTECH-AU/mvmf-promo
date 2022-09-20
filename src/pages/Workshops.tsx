@@ -145,7 +145,7 @@ export const Workshops: FC = () => {
   return <Container>
     <Row>
       <Col xs={12} lg={7} xl={6} className="mx-auto">
-        <h2><strong>{text.title[languageContext.language]}</strong></h2>
+        <h2 className="mb-3 mb-lg-4"><strong>{text.title[languageContext.language]}</strong></h2>
 
         {text.introduction[languageContext.language]}
 
