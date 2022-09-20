@@ -1,5 +1,5 @@
 import {FC, useContext} from "react"
-import {Container} from "react-bootstrap"
+import {Col, Container, Row} from "react-bootstrap"
 import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 
@@ -145,20 +145,24 @@ export const Workshops: FC = () => {
   const languageContext = useContext(LanguageContext)
 
   return <Container>
-    <h2><strong>{text.title[languageContext.language]}</strong></h2>
+    <Row>
+      <Col xs={12} lg={7} xl={6} className="mx-auto">
+        <h2><strong>{text.title[languageContext.language]}</strong></h2>
 
-    {text.introduction[languageContext.language]}
+        {text.introduction[languageContext.language]}
 
-    <h4 className="mt-5"><strong>Concept Development Lab</strong></h4>
-    {text.concept_development[languageContext.language]}
+        <h4 className="mt-5"><strong>Concept Development Lab</strong></h4>
+        {text.concept_development[languageContext.language]}
 
-    <h4 className="mt-5"><strong>DIGI Lab</strong></h4>
-    {text.digi[languageContext.language]}
+        <h4 className="mt-5"><strong>DIGI Lab</strong></h4>
+        {text.digi[languageContext.language]}
 
-    <h4 className="mt-5"><strong>Drone Lab</strong></h4>
-    {text.drone[languageContext.language]}
+        <h4 className="mt-5"><strong>Drone Lab</strong></h4>
+        {text.drone[languageContext.language]}
 
-    <h4 className="mt-5"><strong>Proto Lab</strong></h4>
-    {text.proto[languageContext.language]}
+        <h4 className="mt-5"><strong>Proto Lab</strong></h4>
+        {text.proto[languageContext.language]}
+      </Col>
+    </Row>
   </Container>
 }
