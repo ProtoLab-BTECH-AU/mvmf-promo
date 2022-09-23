@@ -175,11 +175,11 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
     ],
     13: [
       {
-        hours: 2,
-        title: {danish: "Platform besøg", english: "Platform Visit"},
+        location: locations.mainStage,
+        title: {danish: "Festival keynote", english: "Festival Keynote"},
         text: {
-          danish: "Mulighed for at besøge platformene i maker-skoven modereret af blandt andre Elværket fra Skive, ITC fra Ringkøbing-Skjern og forskellige laboratorier fra AU i Herning",
-          english: "Visit the municipality platforms in the maker forest with Elværket from Skive, ITC from Ringkøbing-Skjern, and labs from AU in Herning",
+          danish: "Professor Cindy Kohtala fra Umeå universitet om bæredygtig design",
+          english: "Professor Cindy Kohtala from Umeå University on how to design for sustainability",
         },
       },
       undefined,
@@ -192,19 +192,8 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    14: [undefined],
-    15: [
-      {
-        location: locations.mainStage,
-        title: {danish: "Festival keynote", english: "Festival Keynote"},
-        text: {
-          danish: "Professor Cindy Kohtala fra Umeå universitet om bæredygtig design",
-          english: "Professor Cindy Kohtala from Umeå University on how to design for sustainability",
-        },
-      },
-    ],
-    16: [
-      {
+    14: [
+     {
         location: locations.mainStage,
         title: {danish: "Fireside talk", english: "Fireside Talk"},
         text: {
@@ -213,13 +202,15 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
         },
       },
     ],
-    17: [
+    15: [undefined],
+    16: [
       {
         location: locations.mainStage,
         title: {danish: "Musik", english: "Music"},
         text: {danish: "Smashing Pumpkins Jam", english: "Smashing Pumpkins Jam"},
       },
     ],
+    17: [undefined],
     18: [
       {
         span: 3,
