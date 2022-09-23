@@ -193,8 +193,9 @@ const events: Record<string, Record<number, [IEvent | null | undefined] | [IEven
       },
     ],
     14: [
-     {
+      {
         location: locations.mainStage,
+        hours: 2,
         title: {danish: "Fireside talk", english: "Fireside Talk"},
         text: {
           danish: "Morten Rønde Rasmussen fra Bæredygtig Herning og Peter Dahl fra Spinderihallerne kommer til en uformed samtale i deres komfortable grønne sofaer",
