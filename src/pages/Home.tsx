@@ -7,6 +7,7 @@ import {title as aboutTitle} from "./About"
 import {title as challengeTitle} from "./Challenge"
 import {title as forCompaniesTitle} from "./ForCompanies"
 import {title as forStudentsTitle} from "./ForStudents"
+import {title as imagesTitle} from "./Images"
 import {title as mapTitle} from "./Map"
 import {title as programTitle} from "./Program"
 import {title as workshopsTitle} from "./Workshops"
@@ -23,6 +24,7 @@ const tiles: Record<string, TTileDetails> = {
   map: {link: "map", ...mapTitle},
   challenge: {link: "challenge", ...challengeTitle},
   workshops: {link: "workshops", ...workshopsTitle},
+  images: {link: "images", ...imagesTitle},
 }
 
 const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
@@ -208,7 +210,8 @@ export const Home: FC = () => {
             </Col>
 
             <Col xs={4} className="px-0_5">
-              <Tile background={"images/Basketball and flower.jpg"}/>
+              <Tile background={"images/Basketball and flower.jpg"} title={tiles.images[languageContext.language]}
+                    link={tiles.images.link}/>
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">

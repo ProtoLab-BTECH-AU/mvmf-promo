@@ -8,6 +8,7 @@ import {ForCompanies, title as forCompaniesTitle} from "./pages/ForCompanies"
 import {ForStudents, title as forStudentsTitle} from "./pages/ForStudents"
 import {Home} from "./pages/Home"
 import {HomeSimple} from "./pages/HomeSimple"
+import {Images, title as imagesTitle} from "./pages/Images"
 import {Map, title as mapTitle} from "./pages/Map"
 import {NotFound, title as notFoundTitle} from "./pages/NotFound"
 import {Program, title as programTitle} from "./pages/Program"
@@ -27,6 +28,7 @@ export const App: FC = () => (
           <Route path="workshops" element={<ModalPage title={workshopsTitle} children={<Workshops/>}/>}/>
           <Route path="map" element={<ModalPage title={mapTitle} children={<Map/>}/>}/>
           <Route path="program" element={<ModalPage title={programTitle} children={<Program/>}/>}/>
+          <Route path="images" element={<ModalPage title={imagesTitle} children={<Images/>}/>}/>
           <Route path="*" element={<ModalPage title={notFoundTitle} children={<NotFound/>}/>}/>
         </Routes>
       </LanguageContextProvider>
