@@ -66,6 +66,14 @@ const text: Record<string, Record<TLanguage, JSX.Element | string>> = {
       Herning
     </>,
   },
+  thankTitle: {
+    danish: "Tak for i år!",
+    english: "Thank you for this year!",
+  },
+  thank: {
+    danish: "Din deltagelse og dit bidrag har været med til at gøre denne første prototype af MidtVest Maker Fest til en succes!",
+    english: "Your participation and contribution have made this first prototype of the MidtVest Maker Fest a success!",
+  },
   events: {
     danish: <ul>
       <li>Demoer af maker-teknologier</li>
@@ -228,19 +236,22 @@ export const Home: FC = () => {
           </Row>
         </Col>
 
-        <Col xs={12} md={6} xl={7} className="mt-2 mt-md-0 px-0" style={{fontSize: "75%"}}>
-          <div className="ps-2 fw-bold">
-            {text.description[languageContext.language]}
+        <Col xs={12} md={6} xl={7} className="mt-2 mt-md-0 px-0">
+          <div className="mb-3 ps-2">
+            <h1 className="text-center fw-bold text-big">{text.thankTitle[languageContext.language]}</h1>
+            {text.thank[languageContext.language]}
           </div>
-          <div className="fw-bold mt-3 ps-2 ps-md-4" style={{fontSize: "125%"}}>
-            {text.date[languageContext.language]}
+          <div style={{fontSize: "75%"}}>
+            <div className="ps-2 fw-bold">
+              {text.description[languageContext.language]}
+            </div>
+            <div className="fw-bold mt-3 ps-2 ps-md-4" style={{fontSize: "125%"}}>
+              {text.date[languageContext.language]}
+            </div>
+            <div className="fw-bold mt-3">
+              {text.events[languageContext.language]}
+            </div>
           </div>
-          <div className="fw-bold mt-3">
-            {text.events[languageContext.language]}
-          </div>
-          {/*<div className="ps-2 fw-bold mt-4 fst-italic" style={{fontSize: "75%"}}>
-            {text.research[languageContext.language]}
-          </div>*/}
         </Col>
       </Row>
 
