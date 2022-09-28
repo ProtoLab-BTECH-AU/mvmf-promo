@@ -1,10 +1,10 @@
-import {FC} from "react"
+import {FC, MouseEventHandler} from "react"
 import {Link} from "react-router-dom"
 import {colors} from "../colors"
 
 
-export const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, background?: string }> = (props) => (
-  <div className={`interactive h-100 ${props.link ? "link" : ""}`}>
+export const Tile: FC<{ title?: string, titleLight?: boolean, background?: string, link?: string, onClick?: MouseEventHandler<HTMLDivElement> }> = (props) => (
+  <div className={`interactive h-100 ${props.link || props.onClick ? "link" : ""}`} onClick={props.onClick}>
     {props.background &&
       <div className="square-image h-100"
            style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${encodeURIComponent(props.background)})`}}/>}
@@ -16,7 +16,7 @@ export const Tile: FC<{ title?: string, titleLight?: boolean, link?: string, bac
         </span>
       </div>
     )}
-    {props.link && (
+    {(props.link && !props.onClick) && (
       props.link.search(/^https?:\/\//) >= 0 ?
         <a target="_blank" rel="noreferrer" href={props.link} className="stretched-link"/> :
         <Link to={props.link} className="stretched-link"/>
