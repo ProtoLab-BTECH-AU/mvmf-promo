@@ -4,7 +4,8 @@ import {colors} from "../colors"
 
 
 export const Tile: FC<{ title?: string, titleLight?: boolean, background?: string, link?: string, onClick?: MouseEventHandler<HTMLDivElement> }> = (props) => (
-  <div className={`interactive h-100 ${props.link || props.onClick ? "link" : ""}`} onClick={props.onClick}>
+  <div className={`interactive h-100 ${props.link || props.onClick ? "link" : ""} ${props.onClick ? "pointer" : ""}`}
+       onClick={props.onClick}>
     {props.background &&
       <div className="square-image h-100"
            style={{backgroundImage: `url(${process.env.PUBLIC_URL}/${encodeURIComponent(props.background)})`}}/>}
