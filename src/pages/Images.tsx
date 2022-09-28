@@ -1,7 +1,7 @@
-import React, {FC, useState} from "react"
+import React, {FC, useContext, useState} from "react"
 import {Col, Container, Modal, Row} from "react-bootstrap"
 import {Tile} from "../components/Tile"
-import {TLanguage} from "../context/LanguageContext"
+import {LanguageContext, TLanguage} from "../context/LanguageContext"
 
 const imageURLs: [string, string][] = [
   ["_DUE8068 1.jpg", "thumbnail-_DUE8068 1.jpg"],
@@ -108,7 +108,14 @@ export const title: Record<TLanguage, string> = {
   english: "Photos",
 }
 
+
+const text: Record<TLanguage, string> = {
+  danish: "Billeder af Jacob Due.",
+  english: "Photos by Jacob Due.",
+}
+
 export const Images: FC = () => {
+  const languageContext = useContext(LanguageContext)
   const [image, setImage] = useState<string | null>(null)
   const [showImage, setShowImage] = useState<boolean>(false)
 
@@ -122,7 +129,7 @@ export const Images: FC = () => {
     </Modal>
 
     <Container>
-      <Row><Col></Col></Row>
+      <Row><Col className="text-xsmall"><em>{text[languageContext.language]}</em></Col></Row>
 
       <Row xs={2} sm={3} md={3} lg={4} xl={5} xxl={6}>
         {imageURLs.map(([url, thumbnail]) => (
