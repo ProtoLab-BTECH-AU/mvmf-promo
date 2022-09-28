@@ -12,10 +12,9 @@ import {title as programTitle} from "./Program"
 import {title as workshopsTitle} from "./Workshops"
 
 
-type TTiles = "about" | "forCompanies" | "forStudents" | "register" | "program" | "map" | "challenge" | "workshops"
 type TTileDetails = { [l in TLanguage]: string } & { link: string }
 
-const tiles: Record<TTiles, TTileDetails> = {
+const tiles: Record<string, TTileDetails> = {
   about: {link: "about", ...aboutTitle},
   forCompanies: {link: "for-companies", ...forCompaniesTitle, english: forCompaniesTitle.english + " (Danish)"},
   forStudents: {link: "for-students", ...forStudentsTitle, english: forStudentsTitle.english + " (Danish)"},
