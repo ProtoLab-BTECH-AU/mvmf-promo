@@ -170,8 +170,8 @@ export const Home: FC = () => {
                 </Col>
 
                 <Col xs={6} className="px-0_5">
-                  <Tile background={"images/Ivy.jpg"} title={tiles.register[languageContext.language]}
-                        link={tiles.register.link + `?lang=${languageContext.locale}`}/>
+                  <Tile background={"images/Ivy.jpg"} title={tiles.images[languageContext.language]}
+                        link={tiles.images.link}/>
                 </Col>
 
                 <Col xs={6} className="px-0_5 mt-1" id="map">
@@ -218,8 +218,7 @@ export const Home: FC = () => {
             </Col>
 
             <Col xs={4} className="px-0_5">
-              <Tile background={"images/Basketball and flower.jpg"} title={tiles.images[languageContext.language]}
-                    link={tiles.images.link}/>
+              <Tile background={"images/Basketball and flower.jpg"}/>
             </Col>
 
             <Col xs={4} className="px-0_5 mt-1">
