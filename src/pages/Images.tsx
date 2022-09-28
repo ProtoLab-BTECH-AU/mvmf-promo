@@ -120,7 +120,7 @@ export const Images: FC = () => {
   const [showImage, setShowImage] = useState<boolean>(false)
 
   return <>
-    <Modal className="bg-transparent" size="lg" show={showImage} onClick={() => setShowImage(false)}
+    <Modal className="bg-transparent border-0" size="lg" show={showImage} onClick={() => setShowImage(false)}
            onHide={() => setShowImage(false)}>
       <div className="text-center">
         {image && <img src={`${process.env.PUBLIC_URL}/${image}`} alt="" className="img-fluid"
