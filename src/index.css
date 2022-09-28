@@ -145,6 +145,10 @@ body {
     background: none;
 }
 
+.modal.bg-transparent .modal-content {
+    background: none;
+}
+
 .modal.rounded-0 .modal-content,
 .modal.rounded-0 .modal-dialog,
 .modal.rounded-0 .modal-header,
